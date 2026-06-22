@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>目次 | 話せる・読める英語</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDF1F9;
+    --paper-2:#FFFFFF;
+    --ink:#15233F;
+    --ink-soft:#3B4A68;
+    --muted:#727D96;
+    --accent:#2F6BFF;
+    --accent-deep:#1B4FD6;
+    --accent-soft:#DCE7FF;
+    --jade:#0E9488;
+    --jade-soft:#D7EBE9;
+    --line:#DCE3F1;
+    --shadow:0 1px 0 rgba(21,35,63,.04), 0 10px 30px -18px rgba(21,35,63,.35);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Plus Jakarta Sans","Noto Sans JP",system-ui,sans-serif;
+    font-size:17px;line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .jp{font-family:"Noto Sans JP","Plus Jakarta Sans",sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+
+  /* header */
+  header.bar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,243,234,.82);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar-in{max-width:860px;margin:0 auto;padding:11px 22px;display:flex;align-items:center}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:18px;letter-spacing:.2px}
+  .brand .dot{color:var(--accent)}
+
+  /* hero */
+  .hero{padding:56px 0 36px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent-deep);margin-bottom:20px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);border-radius:2px}
+  h1{
+    font-family:"Fraunces",serif;font-weight:600;
+    font-size:clamp(34px,6vw,52px);line-height:1.1;letter-spacing:-.5px;
+    margin:0 0 14px;
+  }
+  .hero p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--ink-soft);margin:0;font-weight:500}
+
+  /* index list */
+  .toc{padding:8px 0 60px}
+  .toc-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  .toc-list a{
+    display:flex;align-items:center;gap:16px;
+    background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
+    padding:16px 20px;text-decoration:none;color:inherit;
+    box-shadow:var(--shadow);
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .toc-list a:hover{transform:translateY(-2px);box-shadow:0 4px 20px -8px rgba(21,35,63,.2)}
+  .toc-num{
+    font-family:"Fraunces",serif;font-weight:600;font-size:13px;
+    color:var(--accent-deep);background:var(--accent-soft);
+    border-radius:8px;padding:4px 10px;white-space:nowrap;flex-shrink:0;
+  }
+  .toc-title{font-weight:600;font-size:16px;color:var(--ink)}
+  .toc-arrow{margin-left:auto;color:var(--muted);font-size:18px;flex-shrink:0}
+
+  footer{padding:34px 0 60px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <span class="brand">話せる・読める英語<span class="dot">.</span></span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Contents</div>
+    <h1>目次</h1>
+    <p class="lead jp">学ぶ順番に並んでいます。第0部から順に進めましょう。</p>
+  </div>
+</section>
+
+<div class="toc">
+  <div class="wrap">
+    <ul class="toc-list">
+<!-- INDEX_START -->
+      <li><a href="page0.html">
+        <span class="toc-num jp">第0部</span>
+        <span class="toc-title jp">はじめに・サバイバル英語</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page1.html">
+        <span class="toc-num jp">第1部</span>
+        <span class="toc-title jp">音と文字</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page2.html">
+        <span class="toc-num jp">第2部</span>
+        <span class="toc-title jp">英語の骨組み</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page3.html">
+        <span class="toc-num jp">第3部</span>
+        <span class="toc-title jp">広げる</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page4.html">
+        <span class="toc-num jp">第4部</span>
+        <span class="toc-title jp">つなぐ</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page5.html">
+        <span class="toc-num jp">第5部</span>
+        <span class="toc-title jp">自然に話す</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-1.html">
+        <span class="toc-num jp">第6部①</span>
+        <span class="toc-title jp">日常・家のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-2.html">
+        <span class="toc-num jp">第6部②</span>
+        <span class="toc-title jp">食べ物・飲み物のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-3.html">
+        <span class="toc-num jp">第6部③</span>
+        <span class="toc-title jp">体・健康のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-4.html">
+        <span class="toc-num jp">第6部④</span>
+        <span class="toc-title jp">気持ち・性格のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-5.html">
+        <span class="toc-num jp">第6部⑤</span>
+        <span class="toc-title jp">時間・天気・自然のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-6.html">
+        <span class="toc-num jp">第6部⑥</span>
+        <span class="toc-title jp">街・移動・乗り物のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-7.html">
+        <span class="toc-num jp">第6部⑦</span>
+        <span class="toc-title jp">仕事・お金のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-8.html">
+        <span class="toc-num jp">第6部⑧</span>
+        <span class="toc-title jp">買い物・服のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-9.html">
+        <span class="toc-num jp">第6部⑨</span>
+        <span class="toc-title jp">学び・IT・趣味のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-10.html">
+        <span class="toc-num jp">第6部⑩</span>
+        <span class="toc-title jp">動物・植物のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-11.html">
+        <span class="toc-num jp">第6部⑪</span>
+        <span class="toc-title jp">行事・場所のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-12.html">
+        <span class="toc-num jp">第6部⑫</span>
+        <span class="toc-title jp">動作・形・色のことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+      <li><a href="page6-13.html">
+        <span class="toc-num jp">第6部⑬</span>
+        <span class="toc-title jp">数・量・つなぎのことば</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+<!-- INDEX_END -->
+    </ul>
+  </div>
+</div>
+
+<footer class="jp">話せる・読める英語 ／ 目次</footer>
+
+</body>
+</html>
