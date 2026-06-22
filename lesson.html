@@ -367,6 +367,13 @@
   .chat-top .scene{font-weight:800;color:var(--accent-deep);font-size:15px;flex:1}
   .chat-top button{border:1px solid var(--line);background:var(--paper);font-family:inherit;font-weight:700;font-size:12.5px;color:var(--ink-soft);padding:7px 13px;border-radius:999px;cursor:pointer}
   .chat-top button:hover{border-color:var(--accent);color:var(--accent-deep)}
+  .chat-top button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .fix{align-self:flex-end;max-width:88%;background:var(--warn-soft);border:1px solid #f0d98a;border-radius:13px;border-top-right-radius:4px;padding:9px 13px;font-size:13px;color:#7a5208;line-height:1.6;margin-top:-4px}
+  .fix .fb{font-weight:800;display:block;margin-bottom:2px}
+  .fix .better{color:var(--accent-deep);font-weight:700}
+  .fix .note{color:#8a6a1e;margin-top:3px}
+  .fix .sayfix{border:none;background:none;cursor:pointer;color:inherit;font-size:12px;padding:0 0 0 4px}
+  .fixok{align-self:flex-end;font-size:11.5px;color:var(--jade);font-weight:700;margin-top:-2px}
   .stream{display:flex;flex-direction:column;gap:12px;min-height:200px;margin-bottom:16px}
   .msg{display:flex;gap:9px;max-width:88%}
   .msg.ai{align-self:flex-start}
@@ -453,7 +460,8 @@
       <b>使い方のメモ</b>
       ・マイクを使うので <b>Chrome か Edge</b> で開いてください（Safari/Firefoxは音声認識が不安定）。<br>
       ・最初にマイクの許可を求められたら「許可」を選んでください。<br>
-      ・APIキーは自分専用に。公開サイトにそのまま置くと他人に使われる可能性があるので、利用上限の設定や非公開での利用がおすすめです。
+      ・APIキーは自分専用に。公開サイトにそのまま置くと他人に使われる可能性があるので、利用上限の設定や非公開での利用がおすすめです。<br>
+      ・会話画面の「⏱ 間」で送信までの<b>待ち時間</b>を調整できます（食い気味なら「長い」に）。「✍ 指摘」をONにすると、<b>不自然な英語に自然な言い方を提案</b>します。
     </div>
   </div>
 
@@ -463,6 +471,8 @@
       <span class="scene jp" id="sceneLabel"></span>
       <button id="jpToggle">和訳：OFF</button>
       <button id="hintBtn">💡 ヒント</button>
+      <button id="pauseBtn">⏱ 間：長い</button>
+      <button id="fixBtn">✍ 指摘：OFF</button>
       <button id="endBtn">やめる</button>
     </div>
     <div id="hintArea"></div>
@@ -571,7 +581,7 @@ function addMsg(role,text){
   window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
   return wrap;
 }
-let jpAuto=false;
+let jpAuto=false,correctOn=false;
 async function maybeAutoJp(wrap,text){if(!jpAuto)return;const btn=wrap.querySelector('[data-act="jp"]');if(btn)btn.click();}
 
 function showTyping(){const t=document.createElement('div');t.className='typing';t.id='typing';t.textContent='AIが考えています…';$('stream').appendChild(t);window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});}
@@ -591,28 +601,88 @@ function addSystemError(m){const w=document.createElement('div');w.className='hi
 
 async function userSays(text){
   text=(text||'').trim();if(!text)return;
-  addMsg('me',text);
+  const w=addMsg('me',text);
   history.push({role:'user',parts:[{text:text}]});
+  if(correctOn){checkCorrection(text,w);}
+  await new Promise(r=>setTimeout(r,350));
   await aiReply();
+}
+
+/* ---- 指摘モード（自然な言い方のチェック） ---- */
+async function checkCorrection(text,wrap){
+  const note=document.createElement('div');note.className='fixok';note.textContent='✍ 確認中…';
+  wrap.insertAdjacentElement('afterend',note);
+  try{
+    const prompt='You are a friendly English teacher. A Japanese learner said this in an English conversation: "'+text+'"\n'
+      +'Decide if it is natural, correct English. Reply with ONLY a JSON object, no markdown:\n'
+      +'If it is already natural: {"ok":true}\n'
+      +'If it can be more natural or has a mistake: {"ok":false,"better":"a short, natural version close to their meaning","note":"短い日本語の説明（1文）"}\n'
+      +'Keep "better" simple and natural. "note" must be in Japanese.';
+    const out=await callGemini([{role:'user',parts:[{text:prompt}]}],null,300);
+    let obj=null;try{const m=out.match(/\{[\s\S]*\}/);obj=JSON.parse(m?m[0]:out);}catch(e){obj=null;}
+    if(obj&&obj.ok===true){note.className='fixok';note.textContent='👍 自然な英語です';}
+    else if(obj&&obj.better){
+      const better=String(obj.better||'').trim();const jp=String(obj.note||'').trim();
+      note.className='fix';
+      note.innerHTML='<span class="fb jp">✍ もっと自然に言うなら</span><span class="better">'+better+'</span><button class="sayfix" data-say="'+better.replace(/"/g,'&quot;')+'">🔊</button><div class="note jp">'+jp+'</div>';
+      const b=note.querySelector('.sayfix');if(b)b.onclick=()=>speak(better);
+    } else { note.remove(); }
+  }catch(err){note.remove();}
 }
 
 /* ---- マイク（音声認識） ---- */
 const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-let recog=null,listening=false;
+let recog=null,wantListen=false,shouldSend=false,silenceTimer=null,accum='';
+let pauseMs=2600; const PAUSES=[['短い',1300],['ふつう',2000],['長い',2600]]; let pauseIdx=2;
+function baseHint(){return SR?'🎤 を押して話す → 少し黙ると自動で送信（間：'+PAUSES[pauseIdx][0]+'）':'下の入力欄に英語を打ってください（Chrome/Edge推奨）。';}
 function setupMic(){
   if(!SR){$('micBtn').style.display='none';$('dockHint').textContent='このブラウザは音声認識に未対応。下の入力欄に英語を打ってください（Chrome/Edge推奨）。';return;}
-  $('micBtn').onclick=()=>{
-    if(listening){try{recog.stop();}catch(e){}return;}
-    recog=new SR();recog.lang='en-US';recog.interimResults=true;recog.maxAlternatives=1;
-    let finalText='';
-    listening=true;$('micBtn').classList.add('live');$('dockHint').textContent='🎙 聞いています… 英語で話してください';
-    recog.onresult=e=>{let interim='';for(let i=e.resultIndex;i<e.results.length;i++){const r=e.results[i];if(r.isFinal)finalText+=r[0].transcript;else interim+=r[0].transcript;}$('textInput').value=finalText+interim;};
-    recog.onerror=ev=>{listening=false;$('micBtn').classList.remove('live');if(ev.error==='not-allowed'){$('dockHint').textContent='マイクが許可されていません。ブラウザの設定で許可してください。';}else{$('dockHint').textContent='🎤 を押して話す → 自動でAIが返事します';}};
-    recog.onend=()=>{listening=false;$('micBtn').classList.remove('live');$('dockHint').textContent='🎤 を押して話す → 自動でAIが返事します';const t=$('textInput').value.trim();if(t){$('textInput').value='';userSays(t);}};
-    try{recog.start();}catch(e){listening=false;$('micBtn').classList.remove('live');}
-  };
+  $('dockHint').textContent=baseHint();
+  $('micBtn').onclick=micToggle;
 }
-$('sendBtn').onclick=()=>{const t=$('textInput').value.trim();if(!t)return;$('textInput').value='';userSays(t);};
+function micToggle(){
+  if(wantListen){ // もう一度押す＝今ある内容で送信
+    shouldSend=true;wantListen=false;clearTimeout(silenceTimer);try{recog&&recog.stop();}catch(e){}
+    return;
+  }
+  wantListen=true;shouldSend=false;accum='';$('textInput').value='';startRecog();
+}
+function startRecog(){
+  recog=new SR();recog.lang='en-US';recog.continuous=true;recog.interimResults=true;recog.maxAlternatives=1;
+  $('micBtn').classList.add('live');
+  $('dockHint').textContent='🎙 聞いています…（ゆっくりでOK。途中で止まっても切れません。話し終えたら少し待つか、もう一度 🎤 で送信）';
+  recog.onresult=e=>{
+    let interim='';
+    for(let i=e.resultIndex;i<e.results.length;i++){const r=e.results[i];if(r.isFinal)accum+=r[0].transcript+' ';else interim+=r[0].transcript;}
+    $('textInput').value=(accum+interim).replace(/\s+/g,' ').trim();
+    resetSilence();
+  };
+  recog.onerror=ev=>{
+    if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){wantListen=false;shouldSend=false;$('micBtn').classList.remove('live');$('micBtn').style.display='none';$('dockHint').textContent='マイクが許可されていません。ブラウザの設定で許可するか、入力欄に打ってください。';}
+    // no-speech / aborted などは onend 側で継続・送信を判断
+  };
+  recog.onend=()=>{
+    clearTimeout(silenceTimer);
+    if(shouldSend){finishUtterance();}
+    else if(wantListen){try{recog.start();}catch(e){setTimeout(()=>{try{recog.start();}catch(_){}}, 180);}}
+    else {$('micBtn').classList.remove('live');$('dockHint').textContent=baseHint();}
+  };
+  try{recog.start();}catch(e){setTimeout(()=>{try{recog.start();}catch(_){}}, 180);}
+}
+function resetSilence(){
+  clearTimeout(silenceTimer);
+  silenceTimer=setTimeout(()=>{
+    if(($('textInput').value||'').trim()){shouldSend=true;wantListen=false;try{recog.stop();}catch(e){}}
+  },pauseMs);
+}
+function finishUtterance(){
+  wantListen=false;shouldSend=false;$('micBtn').classList.remove('live');
+  const text=($('textInput').value||'').trim();$('textInput').value='';$('dockHint').textContent=baseHint();
+  if(text)userSays(text);
+}
+$('pauseBtn').onclick=()=>{pauseIdx=(pauseIdx+1)%PAUSES.length;pauseMs=PAUSES[pauseIdx][1];$('pauseBtn').textContent='⏱ 間：'+PAUSES[pauseIdx][0];if(!wantListen)$('dockHint').textContent=baseHint();};
+$('fixBtn').onclick=()=>{correctOn=!correctOn;$('fixBtn').textContent='✍ 指摘：'+(correctOn?'ON':'OFF');$('fixBtn').classList.toggle('on',correctOn);toast(correctOn?'指摘モードON：不自然な英語に提案します':'指摘モードOFF');};
+$('sendBtn').onclick=()=>{const t=$('textInput').value.trim();if(!t)return;if(wantListen){wantListen=false;clearTimeout(silenceTimer);try{recog&&recog.stop();}catch(e){}}$('textInput').value='';userSays(t);};
 $('textInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('sendBtn').click();}});
 
 /* ---- ヒント ---- */
