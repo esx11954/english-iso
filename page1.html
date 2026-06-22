@@ -219,9 +219,11 @@
   .step b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
   .step span{color:var(--ink-soft);font-size:14.5px}
 
+  a.nextup-link{display:block;text-decoration:none;color:inherit}
+  a.nextup-link:hover .nextup{opacity:.85}
   .nextup{
     margin:28px 0 0;background:linear-gradient(135deg,#17284C,#0F1C3A);color:#f1ebdd;
-    border-radius:var(--radius);padding:26px 24px;
+    border-radius:var(--radius);padding:26px 24px;transition:opacity .2s;cursor:pointer;
   }
   .nextup .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8FA8E6;font-weight:700;margin-bottom:8px}
   .nextup h3{font-family:"Fraunces",serif;font-weight:600;font-size:23px;margin:0 0 8px;color:#fff}
@@ -529,11 +531,13 @@
       </div>
     </div>
 
+    <a href="page2.html" class="nextup-link">
     <div class="nextup">
       <div class="k">Next</div>
       <h3 class="jp">第2部 ― 英語の骨組み</h3>
       <p class="jp">音と文字の土台ができたら、いよいよ文を組み立てます。「だれが→どうする→なにを」の語順を、言いたいこと（自己紹介・好きなもの・今していること）ごとに、声に出しながら身につけていきます。</p>
     </div>
+    </a>
   </section>
 
 </main>
