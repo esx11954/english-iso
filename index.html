@@ -65,6 +65,7 @@
   /* index list */
   .toc{padding:8px 0 60px}
   .toc-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  .toc-list > li{list-style:none}
   .toc-list a{
     display:flex;align-items:center;gap:16px;
     background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
@@ -80,6 +81,35 @@
   }
   .toc-title{font-weight:600;font-size:16px;color:var(--ink)}
   .toc-arrow{margin-left:auto;color:var(--muted);font-size:18px;flex-shrink:0}
+
+  /* 第6部 グループ (details) */
+  .toc-group > details > summary{
+    display:flex;align-items:center;gap:16px;
+    background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
+    padding:16px 20px;cursor:pointer;list-style:none;
+    box-shadow:var(--shadow);
+    transition:transform .12s ease, box-shadow .12s ease, border-radius .15s ease;
+  }
+  .toc-group > details > summary::-webkit-details-marker{display:none}
+  .toc-group > details > summary:hover{transform:translateY(-2px);box-shadow:0 4px 20px -8px rgba(21,35,63,.2)}
+  .toc-group > details[open] > summary{border-radius:14px 14px 0 0;transform:none;box-shadow:none}
+  .toc-chevron{margin-left:auto;color:var(--muted);font-size:16px;flex-shrink:0;transition:transform .2s ease}
+  details[open] .toc-chevron{transform:rotate(90deg)}
+  .toc-sub{
+    list-style:none;margin:0;padding:6px 10px 10px 10px;
+    display:flex;flex-direction:column;gap:4px;
+    background:var(--paper-2);border:1px solid var(--line);border-top:none;
+    border-radius:0 0 14px 14px;box-shadow:var(--shadow);
+  }
+  .toc-sub a{
+    display:flex;align-items:center;gap:12px;
+    padding:10px 14px;border-radius:10px;
+    text-decoration:none;color:inherit;
+    transition:background .12s ease;
+    box-shadow:none;
+  }
+  .toc-sub a:hover{background:var(--accent-soft);transform:none;box-shadow:none}
+  .toc-sub .toc-num{font-size:12px;padding:3px 8px}
 
   footer{padding:34px 0 60px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 </style>
@@ -134,71 +164,80 @@
         <span class="toc-title jp">自然に話す</span>
         <span class="toc-arrow">›</span>
       </a></li>
-      <li><a href="page6-1.html">
-        <span class="toc-num jp">第6部①</span>
-        <span class="toc-title jp">日常・家のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-2.html">
-        <span class="toc-num jp">第6部②</span>
-        <span class="toc-title jp">食べ物・飲み物のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-3.html">
-        <span class="toc-num jp">第6部③</span>
-        <span class="toc-title jp">体・健康のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-4.html">
-        <span class="toc-num jp">第6部④</span>
-        <span class="toc-title jp">気持ち・性格のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-5.html">
-        <span class="toc-num jp">第6部⑤</span>
-        <span class="toc-title jp">時間・天気・自然のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-6.html">
-        <span class="toc-num jp">第6部⑥</span>
-        <span class="toc-title jp">街・移動・乗り物のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-7.html">
-        <span class="toc-num jp">第6部⑦</span>
-        <span class="toc-title jp">仕事・お金のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-8.html">
-        <span class="toc-num jp">第6部⑧</span>
-        <span class="toc-title jp">買い物・服のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-9.html">
-        <span class="toc-num jp">第6部⑨</span>
-        <span class="toc-title jp">学び・IT・趣味のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-10.html">
-        <span class="toc-num jp">第6部⑩</span>
-        <span class="toc-title jp">動物・植物のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-11.html">
-        <span class="toc-num jp">第6部⑪</span>
-        <span class="toc-title jp">行事・場所のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-12.html">
-        <span class="toc-num jp">第6部⑫</span>
-        <span class="toc-title jp">動作・形・色のことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
-      <li><a href="page6-13.html">
-        <span class="toc-num jp">第6部⑬</span>
-        <span class="toc-title jp">数・量・つなぎのことば</span>
-        <span class="toc-arrow">›</span>
-      </a></li>
+      <li class="toc-group"><details>
+        <summary>
+          <span class="toc-num jp">第6部</span>
+          <span class="toc-title jp">語彙（ことば）― 全13章</span>
+          <span class="toc-chevron">›</span>
+        </summary>
+        <ul class="toc-sub">
+        <li><a href="page6-1.html">
+          <span class="toc-num jp">第6部①</span>
+          <span class="toc-title jp">日常・家のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-2.html">
+          <span class="toc-num jp">第6部②</span>
+          <span class="toc-title jp">食べ物・飲み物のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-3.html">
+          <span class="toc-num jp">第6部③</span>
+          <span class="toc-title jp">体・健康のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-4.html">
+          <span class="toc-num jp">第6部④</span>
+          <span class="toc-title jp">気持ち・性格のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-5.html">
+          <span class="toc-num jp">第6部⑤</span>
+          <span class="toc-title jp">時間・天気・自然のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-6.html">
+          <span class="toc-num jp">第6部⑥</span>
+          <span class="toc-title jp">街・移動・乗り物のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-7.html">
+          <span class="toc-num jp">第6部⑦</span>
+          <span class="toc-title jp">仕事・お金のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-8.html">
+          <span class="toc-num jp">第6部⑧</span>
+          <span class="toc-title jp">買い物・服のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-9.html">
+          <span class="toc-num jp">第6部⑨</span>
+          <span class="toc-title jp">学び・IT・趣味のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-10.html">
+          <span class="toc-num jp">第6部⑩</span>
+          <span class="toc-title jp">動物・植物のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-11.html">
+          <span class="toc-num jp">第6部⑪</span>
+          <span class="toc-title jp">行事・場所のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-12.html">
+          <span class="toc-num jp">第6部⑫</span>
+          <span class="toc-title jp">動作・形・色のことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        <li><a href="page6-13.html">
+          <span class="toc-num jp">第6部⑬</span>
+          <span class="toc-title jp">数・量・つなぎのことば</span>
+          <span class="toc-arrow">›</span>
+        </a></li>
+        </ul>
+      </details></li>
 <!-- INDEX_END -->
     </ul>
   </div>
