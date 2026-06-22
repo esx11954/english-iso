@@ -14,6 +14,7 @@
 | `page4.html` | 第4部 ― つなぐ |
 | `page5.html` | 第5部 ― 自然に話す |
 | `page6-1.html` 〜 `page6-13.html` | 第6部 ― 語彙（全13章） |
+| `lesson.html` | AI英会話レッスン（Practice セクション） |
 
 ## 新しいページを追加するには
 
@@ -60,6 +61,29 @@ python scripts/wire_links.py
 
 - 各ページの `.nextup` セクションに次ページへのリンクが付与される
 - `index.html` の目次が再生成される（複数ページ構成の章は自動でグループ化）
+
+## `page*.html` 以外のページを index に追加するには
+
+`lesson.html` のように命名規則外のページは、スクリプトの管理対象外のため手動で追加する。
+
+`index.html` の `<!-- INDEX_END -->` より下にある **Practice セクション**に直接追記する。
+
+```html
+<div class="toc">
+  <div class="wrap">
+    <div class="eyebrow">Practice</div>
+    <ul class="toc-list">
+      <li><a href="lesson.html">
+        <span class="toc-num jp" style="background:var(--jade-soft);color:var(--jade)">AI会話</span>
+        <span class="toc-title jp">AI英会話レッスン</span>
+        <span class="toc-arrow">›</span>
+      </a></li>
+    </ul>
+  </div>
+</div>
+```
+
+このセクションはスクリプトを実行しても上書きされない。
 
 ### 5. pushする
 
