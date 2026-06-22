@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>第3部 ― 広げる | 話せる・読める英語</title>
+<title>第4部 ― つなぐ | 話せる・読める英語</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -337,7 +337,7 @@
   .tr-res-big{font-family:"Fraunces",serif;font-weight:700;font-size:46px;color:var(--accent-deep);line-height:1}
   .tr-res-msg{color:var(--ink-soft);font-weight:600;margin:10px 0 20px}
 
-  /* ===== 第3部 専用 ===== */
+  /* ===== 第4部 専用 ===== */
   .ptn{background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;transition:.15s}
   .ptn.learned{background:var(--jade-soft);border-color:#bfded9}
   .ptn-head{display:flex;align-items:flex-start;gap:12px}
@@ -346,9 +346,8 @@
   .ptn-exp{color:var(--ink-soft);font-size:14.5px;line-height:1.7;margin-bottom:14px}
   .ex-list{display:flex;flex-direction:column;gap:8px}
   .exrow{display:flex;align-items:center;gap:11px;background:var(--paper);border-radius:11px;padding:9px 12px}
-  .ex-en{font-weight:700;font-size:16.5px;color:var(--ink);flex:none}
+  .ex-en{font-weight:700;font-size:16px;color:var(--ink);flex:none}
   .exjp{color:var(--muted);font-size:13.5px;margin-left:auto;text-align:right}
-  .ptn.irr .ex-en{color:var(--accent-deep)}
   .tip{margin-top:14px;background:var(--warn-soft);border-radius:11px;padding:11px 14px;font-size:13.5px;color:#7a5208;line-height:1.65}
   .tip b{color:var(--warn)}
 
@@ -365,9 +364,10 @@
   .dl-en{font-weight:700;color:var(--ink);font-size:15px;flex:none}
   .dl-jp{color:var(--muted);font-size:12.5px;margin-left:auto;text-align:right;flex:none}
 
-  .tt-base{text-align:center;font-size:clamp(20px,4vw,26px);font-weight:800;color:var(--ink);margin:4px 0 2px}
-  .tt-cue-wrap{text-align:center}
-  .tt-cue{display:inline-block;font-size:15px;font-weight:700;color:var(--accent-deep);background:var(--accent-soft);padding:5px 14px;border-radius:999px;margin:6px auto 2px}
+  /* 文つなぎトレ */
+  .jn-a,.jn-b{text-align:center;font-size:clamp(17px,3.6vw,21px);font-weight:800;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:4px auto;max-width:90%}
+  .jn-cue-wrap{text-align:center;margin:8px 0}
+  .jn-cue{display:inline-block;font-size:14.5px;font-weight:800;color:var(--accent-deep);background:var(--accent-soft);padding:5px 14px;border-radius:999px}
 </style>
 </head>
 <body>
@@ -388,19 +388,19 @@
 
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">第3部 ・ 広げる</span>
-    <h1>いつ・どこ・<br>どんなふうに。</h1>
-    <p class="lead">骨組みに肉付けします。「その〜」「どこ」「いつ」「今してる」「昨日した」「これからする」——言える時間と場面を一気に広げます。</p>
+    <span class="eyebrow">第4部 ・ つなぐ</span>
+    <h1>文と文を、<br>つなげる。</h1>
+    <p class="lead">単語の入れ替えを卒業。「だから」「でも」「〜のとき」「〜な人」でつなぎ、ひとつづきの話ができるようにします。</p>
     <div class="demo">
-      <div class="demo-tag">同じことを、時間ちがいで</div>
-      <p class="en">I play → I played → I'll play</p>
-      <p class="jp-mean jp">「する」「した」「するつもり」。動詞のかたちを少し変えるだけで、今・昨日・これからを言い分けられます。</p>
+      <div class="demo-tag">2つの文を、1つに</div>
+      <p class="en">I was tired, so I went to bed.</p>
+      <p class="jp-mean jp">「疲れた」＋「寝た」を <b>so（だから）</b> でつなぐと、理由のある一文に。会話がぐっと自然になります。</p>
       <div class="wchips" style="margin-top:14px">
-        <button class="wchip speak" data-say="I play tennis."><span class="wave"><i></i><i></i><i></i></span><span class="wt">I play tennis.</span></button>
-        <button class="wchip speak" data-say="I played tennis."><span class="wave"><i></i><i></i><i></i></span><span class="wt">I played tennis.</span></button>
-        <button class="wchip speak" data-say="I'll play tennis."><span class="wave"><i></i><i></i><i></i></span><span class="wt">I'll play tennis.</span></button>
+        <button class="wchip speak" data-say="I was tired."><span class="wave"><i></i><i></i><i></i></span><span class="wt">I was tired.</span></button>
+        <button class="wchip speak" data-say="I went to bed."><span class="wave"><i></i><i></i><i></i></span><span class="wt">I went to bed.</span></button>
+        <button class="wchip speak" data-say="I was tired, so I went to bed."><span class="wave"><i></i><i></i><i></i></span><span class="wt">… so I went to bed.</span></button>
       </div>
-      <div class="hint jp"><b>🔊</b> この章で、この「時間の言い分け」を自分の口でできるようにします。</div>
+      <div class="hint jp"><b>🔊</b> この章で、2文をつなげて長く話す力をつけます。</div>
     </div>
   </div>
 </section>
@@ -408,59 +408,60 @@
 <main class="wrap">
 
   <section class="lesson" id="intro">
-    <div class="lesson-no">3-0</div>
+    <div class="lesson-no">4-0</div>
     <h2 class="jp">この章のやり方</h2>
-    <p class="jp">第2部の「型」に、<strong>数・場所・時間</strong>を足していきます。やり方は同じ：<strong>🔊を聞いて、声に出して、中の語を入れ替える</strong>。会話は「通して聞く」でシャドーイングに。覚えたら「できた ✓」で進みましょう。</p>
+    <p class="jp">第3部までで作れる短い文を、<strong>つなぎ言葉</strong>で1つにしていきます。やり方は同じ：<strong>🔊を聞いて、声に出して、入れ替える</strong>。会話は「通して聞く」でシャドーイングに。覚えたら「できた ✓」で進みましょう。</p>
   </section>
 
   <section class="lesson" id="secMain">
-    <div class="lesson-no">3-A</div>
-    <h2 class="jp">言いたいこと別・広げる型</h2>
+    <div class="lesson-no">4-A</div>
+    <h2 class="jp">言いたいこと別・つなぐ型</h2>
     <div id="root"></div>
   </section>
 
-  <!-- 時間タイムマシン -->
-  <section class="lesson" id="tt-sec">
-    <div class="lesson-no">3-A ✦</div>
-    <h2 class="jp">時間タイムマシン（今 ↔ 昨日 ↔ これから）</h2>
-    <p class="jp">この章の肝。基本の文を、<strong>昨日のこと・今していること・これからのこと</strong>に言い換えて声に出します。</p>
-    <div class="trainer" id="tt">
-      <div class="tr-setup" id="ttSetup">
-        <p class="tr-q jp">基本の文を、指示どおりの時間に言い換えよう。14問。</p>
-        <button class="tr-start" id="ttStart">▶ スタート</button>
-        <p class="tr-mic jp" id="ttMicNote"></p>
+  <!-- 文つなぎトレ -->
+  <section class="lesson" id="jn-sec">
+    <div class="lesson-no">4-A ✦</div>
+    <h2 class="jp">文つなぎトレ（2文を1つに）</h2>
+    <p class="jp">この章の肝。2つの文を、指示のつなぎ言葉で<strong>1文にして声に出します</strong>。長く話す練習です。</p>
+    <div class="trainer" id="jn">
+      <div class="tr-setup" id="jnSetup">
+        <p class="tr-q jp">2つの文を、指示どおりにつなげて言おう。12問。</p>
+        <button class="tr-start" id="jnStart">▶ スタート</button>
+        <p class="tr-mic jp" id="jnMicNote"></p>
       </div>
-      <div class="tr-drill" id="ttDrill" hidden>
-        <div class="tr-top"><span id="ttProg">1 / 14</span><span id="ttScore">0 言えた</span><button id="ttQuit" class="tr-quit">やめる</button></div>
+      <div class="tr-drill" id="jnDrill" hidden>
+        <div class="tr-top"><span id="jnProg">1 / 12</span><span id="jnScore">0 言えた</span><button id="jnQuit" class="tr-quit">やめる</button></div>
         <div class="tr-prompt">
-          <div class="tt-base" id="ttBase"></div>
-          <div class="tt-cue-wrap"><span class="tt-cue jp" id="ttCue"></span></div>
-          <div class="tr-answer" id="ttAnswer" hidden><div class="tr-en" id="ttEn"></div></div>
+          <div class="jn-a" id="jnA"></div>
+          <div class="jn-cue-wrap"><span class="jn-cue jp" id="jnCue"></span></div>
+          <div class="jn-b" id="jnB"></div>
+          <div class="tr-answer" id="jnAnswer" hidden><div class="tr-en" id="jnEn"></div></div>
         </div>
-        <div class="tr-feedback" id="ttFb"></div>
+        <div class="tr-feedback" id="jnFb"></div>
         <div class="tr-actions">
-          <button class="tr-mic-btn" id="ttMic">🎤 言う</button>
-          <button class="tr-ghost" id="ttHear">🔊 答えを聞く</button>
-          <button class="tr-ghost" id="ttShow">👁 答えを見る</button>
+          <button class="tr-mic-btn" id="jnMic">🎤 言う</button>
+          <button class="tr-ghost" id="jnHear">🔊 答えを聞く</button>
+          <button class="tr-ghost" id="jnShow">👁 答えを見る</button>
         </div>
-        <div class="tr-rate" id="ttRate" hidden>
+        <div class="tr-rate" id="jnRate" hidden>
           <span class="jp">自分で判定：</span>
-          <button class="tr-yes" id="ttYes">✅ 言えた</button>
-          <button class="tr-no" id="ttNo">🔁 もう一回</button>
-          <button class="tr-next" id="ttNext">次へ →</button>
+          <button class="tr-yes" id="jnYes">✅ 言えた</button>
+          <button class="tr-no" id="jnNo">🔁 もう一回</button>
+          <button class="tr-next" id="jnNext">次へ →</button>
         </div>
       </div>
-      <div class="tr-result" id="ttResult" hidden>
-        <div class="tr-res-big" id="ttResBig">12 / 14</div>
-        <div class="tr-res-msg jp" id="ttResMsg"></div>
-        <button class="tr-again" id="ttAgain">もう一度</button>
+      <div class="tr-result" id="jnResult" hidden>
+        <div class="tr-res-big" id="jnResBig">10 / 12</div>
+        <div class="tr-res-msg jp" id="jnResMsg"></div>
+        <button class="tr-again" id="jnAgain">もう一度</button>
       </div>
     </div>
   </section>
 
   <!-- 口頭作文トレ -->
   <section class="lesson" id="pr-sec">
-    <div class="lesson-no">3-A ✦✦</div>
+    <div class="lesson-no">4-A ✦✦</div>
     <h2 class="jp">口頭作文トレ（日本語 → 英語で言う）</h2>
     <p class="jp">仕上げ。日本語を見て、<strong>英語を声に出して言います</strong>。マイクが使えれば判定、使えなければ 🔊 で答え合わせ。</p>
     <div class="trainer" id="pr">
@@ -497,18 +498,18 @@
       </div>
     </div>
 
-    <a href="page4.html" class="nextup-link">
+    <a href="page5.html" class="nextup-link">
     <div class="nextup">
       <div class="k">Next</div>
-      <h3 class="jp">第4部 ― つなぐ</h3>
-      <p class="jp">文と文をつなげて、もっと長く・自然に。「〜だから」「〜したことがある」「〜な人」など、ひとつづきの話ができるようにします。</p>
+      <h3 class="jp">第5部 ― 自然に話す</h3>
+      <p class="jp">ネイティブが毎日使う「かたまり言葉」（句動詞・決まり文句）を数百。短く言えて、ぐっと自然に聞こえる表現を増やします。</p>
     </div>
     </a>
   </section>
 
 </main>
 
-<footer class="jp">話せる・読める英語 ／ 第3部 広げる</footer>
+<footer class="jp">話せる・読める英語 ／ 第4部 つなぐ</footer>
 
 <canvas id="confetti"></canvas>
 <div class="fxlayer" id="fxlayer"></div>
@@ -518,7 +519,6 @@
 
 <script>
 
-/* ============ 音声合成 ============ */
 const synth=('speechSynthesis' in window)?window.speechSynthesis:null;
 let enVoice=null;
 function pickVoice(){if(!synth)return;const vs=synth.getVoices();enVoice=vs.find(v=>v.lang==='en-US'&&/Google|Samantha|Natural/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
@@ -530,14 +530,14 @@ let toastTimer=null;
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),1600);}
 
 const Store=(()=>{let mem={},ok=true;try{localStorage.setItem('__t','1');localStorage.removeItem('__t');}catch(e){ok=false;}return{get(k){try{return ok?localStorage.getItem(k):mem[k];}catch(e){return mem[k];}},set(k,v){try{if(ok)localStorage.setItem(k,v);else mem[k]=v;}catch(e){mem[k]=v;}}};})();
-const SK='eigo_part3_state_v2';
+const SK='eigo_part4_state_v1';
 let G=Object.assign({xp:0,streak:0,lastDate:null,today:null,todayCount:0,goal:10,learned:[],soundOn:true,goalDoneDate:null},(()=>{try{return JSON.parse(Store.get(SK))||{};}catch(e){return{};}})());
 function saveState(){Store.set(SK,JSON.stringify(G));}
 function dstr(d){return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();}
 const TODAY=dstr(new Date()),YEST=dstr(new Date(Date.now()-864e5));
 if(G.today!==TODAY){G.today=TODAY;G.todayCount=0;}
 
-const TITLES=['ひろげる見習い','数と a/the 使い','どんな?の人','場所マスター','時間マスター','ある・いる名人','今うごく人','過去トラベラー','was/were 使い','未来トラベラー','できる人','広げる達人'];
+const TITLES=['つなぐ見習い','and/but 使い','理由マスター','時つなぎ名人','もし〜の人','経験を語る人','後ろから説明屋','比べる達人','〜される使い','つなぐ達人'];
 function levelInfo(xp){let lvl=1,need=70,acc=0;while(xp>=acc+need){acc+=need;lvl++;need=70+(lvl-1)*45;}return{lvl,into:xp-acc,span:need,title:TITLES[Math.min(lvl-1,TITLES.length-1)]+(lvl>TITLES.length?(' Lv.'+lvl):'')};}
 const PRAISE=['いいね！','その調子！','ナイス！','言えてる！','どんどんいこう！','ネイティブみ、出てきた','スラスラだね','完璧！'];
 const BONUS=['ラッキーボーナス！','ごほうびタイム🎁','神引き！','うれしい誤算！'];
@@ -580,98 +580,87 @@ function norm(s){return(s||'').toLowerCase().replace(/[’'`]/g,'').replace(/[^a
 function sim(a,b){a=norm(a);b=norm(b);if(!a||!b)return 0;if(a===b)return 1;const ta=a.split(' '),tb=new Set(b.split(' '));let h=0;ta.forEach(w=>{if(tb.has(w))h++;});return h/Math.max(ta.length,tb.size);}
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
-/* ============ 第3部コンテンツ（フル密度） ============ */
+/* ============ 第4部コンテンツ ============ */
 const SEC=[
- {t:'1. 「ひとつ・いくつか」を言う', short:'①数', cards:[{pat:'a / an / some / 数 ___', patjp:'数を言う', exp:'1つは a（母音の前は an）。2つ以上は s。数えないものは some。', ex:[
-   {en:'a dog',jp:'1匹の犬'},{en:'an apple',jp:'1個のりんご'},{en:'two dogs',jp:'2匹の犬'},{en:'three cats',jp:'3匹の猫'},{en:'a question',jp:'1つの質問'},{en:'a problem',jp:'問題'},{en:'some water',jp:'いくらかの水'},{en:'some money',jp:'いくらかのお金'},{en:'some coffee',jp:'コーヒー少し'},{en:'a few friends',jp:'数人の友達'},{en:'a lot of people',jp:'たくさんの人'},{en:'many books',jp:'たくさんの本'},{en:'I have a car.',jp:'車を持っている'},{en:'I want a coffee.',jp:'コーヒーがほしい'},{en:"There's a cat.",jp:'猫がいる'},{en:'I need some help.',jp:'助けが要る'},{en:'a cup of tea',jp:'お茶1杯'},{en:'an hour',jp:'1時間'},{en:'a piece of cake',jp:'ケーキ1切れ'},{en:'an idea',jp:'考え'},
- ], tip:'母音で始まる語の前は an。数えないもの（water, money）に a は付けず some。', dlg:[{who:'A',en:'Do you want a coffee?',jp:'コーヒーいる？'},{who:'B',en:'Yes, and some water too.',jp:'うん、水も'},{who:'A',en:'Sure. Anything else?',jp:'いいよ。他には？'},{who:'B',en:'Just a piece of cake.',jp:'ケーキ1切れだけ'}]}]},
+ {t:'1. 「〜と〜」足してつなぐ', short:'①と(and)', cards:[{pat:'A and B', patjp:'〜と〜・そして', exp:'語と語、文と文をならべてつなぐ一番やさしい言葉。', ex:[
+   {en:'coffee and tea',jp:'コーヒーと紅茶'},{en:'you and me',jp:'あなたと私'},{en:'She is kind and smart.',jp:'親切で賢い'},{en:'I got up and made breakfast.',jp:'起きて朝食を作った'},{en:'It was cheap and good.',jp:'安くて良かった'},{en:'We talked and laughed.',jp:'話して笑った'},{en:'bread and butter',jp:'パンとバター'},{en:'He sings and dances.',jp:'歌って踊る'},{en:'I bought apples and oranges.',jp:'りんごとみかんを買った'},{en:"It's small and light.",jp:'小さくて軽い'},{en:'Come and see.',jp:'来て見て'},{en:'morning and night',jp:'朝と夜'},{en:'She is tall and slim.',jp:'背が高くて細い'},{en:'I cooked and cleaned.',jp:'料理して掃除した'},{en:'rice and miso soup',jp:'ごはんと味噌汁'},{en:'He is young and strong.',jp:'若くて強い'},{en:'I read and relax at night.',jp:'夜は読書してくつろぐ'},{en:'now and then',jp:'ときどき'},
+ ], dlg:[{who:'A',en:'What do you want?',jp:'何にする？'},{who:'B',en:'Coffee and a sandwich.',jp:'コーヒーとサンドイッチ'},{who:'A',en:'For here or to go?',jp:'店内？持ち帰り？'},{who:'B',en:'For here, thanks.',jp:'店内で'}]}]},
 
- {t:'2. 「その〜」と特定する', short:'②その', cards:[{pat:'the ___', patjp:'その（特定のもの）', exp:'初めて出すものは a。すでに分かっている・1つしかないものは the。', ex:[
-   {en:'the sun',jp:'太陽'},{en:'the moon',jp:'月'},{en:'the door',jp:'そのドア'},{en:'the window',jp:'その窓'},{en:'Close the door.',jp:'ドアを閉めて'},{en:'Open the window.',jp:'窓を開けて'},{en:'the book on the table',jp:'テーブルの上のその本'},{en:'the red one',jp:'その赤いの'},{en:'the best restaurant',jp:'一番いいお店'},{en:'the first time',jp:'初めて'},{en:'the same thing',jp:'同じこと'},{en:'the man over there',jp:'あそこの男の人'},{en:'Where is the bathroom?',jp:'トイレはどこ？'},{en:'Pass me the salt.',jp:'塩取って'},{en:"What's the time?",jp:'今何時？'},{en:'the people next door',jp:'隣の人たち'},
- ], tip:'はじめて → a、おたがい分かっている → the。', dlg:[{who:'A',en:'Can you close the window?',jp:'窓閉めてくれる？'},{who:'B',en:'Sure.',jp:'いいよ'},{who:'A',en:'Thanks. And the door too, please.',jp:'ありがとう。ドアもお願い'},{who:'B',en:'No problem.',jp:'了解'}]}]},
+ {t:'2. 「でも・けど」反対をつなぐ', short:'②でも(but)', cards:[{pat:'A, but B', patjp:'〜だけど〜', exp:'前と逆のことを続けるとき。会話でとても多い。', ex:[
+   {en:"I like coffee, but I don't like tea.",jp:'コーヒーは好きだけど紅茶は嫌い'},{en:"It's cheap, but good.",jp:'安いけど良い'},{en:'I tried, but I failed.',jp:'やったけど失敗した'},{en:"I'm tired, but happy.",jp:'疲れたけど幸せ'},{en:'I called, but no answer.',jp:'電話したけど出ない'},{en:"It's small, but comfortable.",jp:'狭いけど快適'},{en:'I wanted to go, but I was busy.',jp:'行きたかったけど忙しかった'},{en:"Sorry, but I can't.",jp:'悪いけど無理'},{en:"It looks easy, but it's hard.",jp:'簡単そうだけど難しい'},{en:'She is strict, but kind.',jp:'厳しいけど優しい'},{en:'I know him, but not well.',jp:'知ってるけどよくは知らない'},{en:"It's old, but it works.",jp:'古いけど動く'},{en:'I agree, but I have a question.',jp:'賛成だけど質問がある'},{en:"He's rich, but unhappy.",jp:'お金持ちだけど不幸せ'},{en:"I like it, but it's expensive.",jp:'気に入ったけど高い'},{en:'We lost, but we tried hard.',jp:'負けたけど頑張った'},{en:'It rained, but we had fun.',jp:'雨だったけど楽しかった'},{en:"I'm new, but I learn fast.",jp:'新人だけど覚えが早い'},
+ ], dlg:[{who:'A',en:'Do you like your new job?',jp:'新しい仕事好き？'},{who:'B',en:"I like it, but it's busy.",jp:'好きだけど忙しい'},{who:'A',en:'Busy is good sometimes.',jp:'忙しいのもいいよ'},{who:'B',en:'True, but I need rest.',jp:'だけど休みもいる'}]}]},
 
- {t:'3. どんなもの・どんな人か', short:'③どんな', cards:[{pat:'[ようす] + 名詞 / It\u2019s ___ .', patjp:'ようすを足す', exp:'ようすを表す語は名詞の前に。It\u2019s 〜. でも言えます。', ex:[
-   {en:'a big house',jp:'大きな家'},{en:'a small room',jp:'小さな部屋'},{en:'a new car',jp:'新しい車'},{en:'an old book',jp:'古い本'},{en:'a beautiful flower',jp:'きれいな花'},{en:'a long day',jp:'長い一日'},{en:'a good idea',jp:'いい考え'},{en:'a bad day',jp:'ついてない日'},{en:"It's hot today.",jp:'今日は暑い'},{en:"It's cold.",jp:'寒い'},{en:"It's expensive.",jp:'高い'},{en:"It's cheap.",jp:'安い'},{en:"She's tall.",jp:'背が高い'},{en:"He's kind.",jp:'親切'},{en:'a nice red car',jp:'すてきな赤い車'},{en:'a cute little dog',jp:'かわいい小さな犬'},{en:"It's really delicious.",jp:'すごくおいしい'},{en:"This is too small.",jp:'小さすぎる'},
- ], tip:'並べる順は「意見 → 大きさ → 色」：a nice big red car。', dlg:[{who:'A',en:'I like your new bag.',jp:'その新しいカバンいいね'},{who:'B',en:'Thanks! It was cheap.',jp:'ありがとう！安かったの'},{who:'A',en:'Really? It looks expensive.',jp:'ほんと？高そうに見える'},{who:'B',en:'I know, right?',jp:'でしょ？'}]}]},
+ {t:'3. 「だから」結果をつなぐ', short:'③だから(so)', cards:[{pat:'A, so B', patjp:'〜だから〜', exp:'前が理由、後ろが結果。「それで」のイメージ。', ex:[
+   {en:'I was tired, so I went to bed.',jp:'疲れたので寝た'},{en:'I was hungry, so I ate.',jp:'お腹がすいたので食べた'},{en:'It rained, so we stayed home.',jp:'雨なので家にいた'},{en:'I was late, so I took a taxi.',jp:'遅れたのでタクシーに乗った'},{en:"It's cold, so wear a coat.",jp:'寒いのでコートを着て'},{en:"He's sick, so he's resting.",jp:'病気なので休んでいる'},{en:'I was busy, so I forgot.',jp:'忙しくて忘れた'},{en:'It was cheap, so I bought two.',jp:'安かったので2つ買った'},{en:'The store was closed, so we left.',jp:'店が閉まってたので帰った'},{en:'I missed the bus, so I walked.',jp:'バスを逃したので歩いた'},{en:"It's late, so let's go.",jp:'遅いから行こう'},{en:"I didn't sleep, so I'm tired.",jp:'寝てないので疲れてる'},{en:"It looks good, so I'll try it.",jp:'良さそうだから試す'},{en:'She helped me, so I thanked her.',jp:'手伝ってくれたのでお礼を言った'},{en:'It was fun, so we did it again.',jp:'楽しかったのでまたやった'},{en:"I'm full, so no dessert.",jp:'お腹いっぱいなのでデザートはいい'},
+ ], dlg:[{who:'A',en:'Why are you walking?',jp:'なんで歩いてるの？'},{who:'B',en:"I missed the bus, so I'm walking.",jp:'バス逃したから歩いてる'},{who:'A',en:'I can give you a ride.',jp:'乗せてくよ'},{who:'B',en:'Really? Thanks so much!',jp:'ほんと？ありがとう！'}]}]},
 
- {t:'4. だれのものか', short:'④だれの', cards:[{pat:"my / your / Tom's / mine ...", patjp:'〜の／〜のもの', exp:'「〜の」は my/your/his…と \u2019s（Tom\u2019s）。「〜のもの」は mine/yours…。', ex:[
-   {en:'my bag',jp:'私のカバン'},{en:'your phone',jp:'あなたのスマホ'},{en:'his car',jp:'彼の車'},{en:'her name',jp:'彼女の名前'},{en:'our house',jp:'私たちの家'},{en:'their dog',jp:'彼らの犬'},{en:"It's mine.",jp:'私のだよ'},{en:"It's yours.",jp:'あなたのだよ'},{en:"This is Tom's book.",jp:'トムの本'},{en:"my mother's car",jp:'母の車'},{en:'Whose is this?',jp:'これだれの？'},{en:"It's my sister's.",jp:'姉のだよ'},{en:'a friend of mine',jp:'私の友達の一人'},{en:'This is ours.',jp:'これは私たちの'},{en:"That's not mine.",jp:'それは私のじゃない'},{en:'Is this yours?',jp:'これあなたの？'},
- ], dlg:[{who:'A',en:'Is this your phone?',jp:'これあなたのスマホ？'},{who:'B',en:"No, it's not mine.",jp:'いや、私のじゃない'},{who:'A',en:'Whose is it?',jp:'だれの？'},{who:'B',en:"Maybe it's Tom's.",jp:'たぶんトムの'}]}]},
+ {t:'4. 「なぜなら・〜から」理由をつなぐ', short:'④だから(because)', cards:[{pat:'A because B', patjp:'なぜなら〜', exp:'理由を後ろに置く。Why? の答えにもなる。', ex:[
+   {en:'I stayed home because it was raining.',jp:'雨だったので家にいた'},{en:'I study hard because I want a good job.',jp:'いい仕事のため頑張る'},{en:"I'm happy because it's Friday.",jp:'金曜だからうれしい'},{en:"I like her because she's kind.",jp:'親切だから好き'},{en:'We left because it was late.',jp:'遅いので帰った'},{en:"I can't come because I'm busy.",jp:'忙しいので行けない'},{en:'Why? Because I said so.',jp:'なんで？そう言ったから'},{en:"I'm tired because I worked late.",jp:'遅くまで働いて疲れた'},{en:"I drink coffee because I'm sleepy.",jp:'眠いのでコーヒーを飲む'},{en:"He's popular because he's funny.",jp:'面白いので人気'},{en:'I bought it because it was cheap.',jp:'安かったので買った'},{en:'We won because we practiced.',jp:'練習したので勝った'},{en:"I'm worried because she's late.",jp:'遅いので心配'},{en:'I love summer because I can swim.',jp:'泳げるから夏が好き'},{en:"I'm here because you called me.",jp:'呼ばれたので来た'},{en:"I'm cold because the window is open.",jp:'窓が開いてて寒い'},
+ ], dlg:[{who:'A',en:'Why are you so happy?',jp:'なんでそんなにうれしいの？'},{who:'B',en:"Because it's my birthday!",jp:'誕生日だから！'},{who:'A',en:'Oh! Happy birthday!',jp:'おめでとう！'},{who:'B',en:'Thank you so much.',jp:'ありがとう！'}]}]},
 
- {t:'5. どこにあるか ①', short:'⑤どこ1', cards:[{pat:'in / on / at ___', patjp:'場所を言う（基本）', exp:'in＝中、on＝くっついた面、at＝地点。', ex:[
-   {en:'in the box',jp:'箱の中'},{en:'in my bag',jp:'カバンの中'},{en:'in the kitchen',jp:'台所に'},{en:'on the table',jp:'テーブルの上'},{en:'on the wall',jp:'壁に'},{en:'on the floor',jp:'床に'},{en:'at home',jp:'家に'},{en:'at work',jp:'職場に'},{en:'at school',jp:'学校に'},{en:'at the station',jp:'駅で'},{en:'in Tokyo',jp:'東京に'},{en:'in Japan',jp:'日本に'},{en:"It's in my pocket.",jp:'ポケットの中'},{en:'The keys are on the desk.',jp:'鍵は机の上'},{en:"I'm at the office.",jp:'オフィスにいる'},{en:"She's in the car.",jp:'彼女は車の中'},{en:'on the second floor',jp:'2階に'},{en:'at the corner',jp:'角に'},
- ], tip:'in＝囲まれた中、on＝面に接触、at＝ピンポイントの地点。', dlg:[{who:'A',en:'Where are my keys?',jp:'鍵どこ？'},{who:'B',en:"They're on the table.",jp:'テーブルの上'},{who:'A',en:"No, they're not.",jp:'ないよ'},{who:'B',en:'Then check in your bag.',jp:'じゃカバンの中見て'}]}]},
+ {t:'5. 「〜のとき・前に・後に」時でつなぐ', short:'⑤とき(when)', cards:[{pat:'when / before / after ___', patjp:'〜のとき・前に・後に', exp:'2つの出来事を時間でつなぐ。', ex:[
+   {en:'Call me when you arrive.',jp:'着いたら電話して'},{en:'I was happy when I saw you.',jp:'会えてうれしかった'},{en:"When I'm tired, I rest.",jp:'疲れたら休む'},{en:'Wash your hands before you eat.',jp:'食べる前に手を洗って'},{en:'before breakfast',jp:'朝食の前に'},{en:'after work',jp:'仕事のあとで'},{en:"I'll call you after lunch.",jp:'昼食後に電話する'},{en:'Turn off the light before you leave.',jp:'出る前に電気を消して'},{en:'When it rains, I stay home.',jp:'雨のときは家にいる'},{en:'I brush my teeth after I eat.',jp:'食後に歯をみがく'},{en:"Let's talk when you're free.",jp:'ひまなとき話そう'},{en:'before the meeting',jp:'会議の前に'},{en:'I felt better after I slept.',jp:'寝たら良くなった'},{en:"When you're ready, tell me.",jp:'準備できたら教えて'},{en:'Think before you speak.',jp:'話す前に考えて'},{en:"I'll text you when I get home.",jp:'帰ったら連絡する'},
+ ], dlg:[{who:'A',en:'Call me when you get there.',jp:'着いたら電話して'},{who:'B',en:'Okay, I will.',jp:'うん、するね'},{who:'A',en:'And text me before you leave.',jp:'出る前にも連絡して'},{who:'B',en:'Sure, no problem.',jp:'了解'}]}]},
 
- {t:'6. どこにあるか ②', short:'⑥どこ2', cards:[{pat:'under / next to / behind ___', patjp:'位置をくわしく', exp:'前後・上下・となり、もっと細かい位置を表します。', ex:[
-   {en:'under the chair',jp:'いすの下'},{en:'under the bed',jp:'ベッドの下'},{en:'next to the bank',jp:'銀行のとなり'},{en:'next to me',jp:'私のとなり'},{en:'behind the door',jp:'ドアの後ろ'},{en:'behind you',jp:'あなたの後ろ'},{en:'in front of the store',jp:'店の前'},{en:'between the two',jp:'2つの間'},{en:'near the station',jp:'駅の近く'},{en:'across the street',jp:'通りの向かい'},{en:'above the sink',jp:'流しの上'},{en:'over there',jp:'あそこ'},{en:'on the left',jp:'左側'},{en:'on the right',jp:'右側'},{en:'around here',jp:'この辺'},{en:'at the top',jp:'てっぺんに'},
- ], dlg:[{who:'A',en:"Where's the bathroom?",jp:'トイレどこ？'},{who:'B',en:"It's behind you, next to the kitchen.",jp:'後ろ、台所のとなり'},{who:'A',en:'Oh, thanks!',jp:'あ、ありがとう！'},{who:'B',en:'No problem.',jp:'どういたしまして'}]}]},
+ {t:'6. 「もし〜なら」条件でつなぐ', short:'⑥もし(if)', cards:[{pat:'If A, B', patjp:'もし〜なら', exp:'条件をつける言葉。', ex:[
+   {en:"I'll help you if you need it.",jp:'必要なら手伝う'},{en:'We can go if it stops raining.',jp:'雨がやんだら行ける'},{en:"If you're tired, rest.",jp:'疲れたら休んで'},{en:'Call me if you have time.',jp:'時間があれば電話して'},{en:"If it's cheap, I'll buy it.",jp:'安ければ買う'},{en:"I'll come if I can.",jp:'行けたら行く'},{en:'If you want, we can share.',jp:'よければ分けよう'},{en:'Tell me if you need anything.',jp:'何か要るなら言って'},{en:'If it rains, take an umbrella.',jp:'雨なら傘を持って'},{en:"I'll wait if you're late.",jp:'遅れるなら待つよ'},{en:"If you ask, he'll help.",jp:'頼めば彼は手伝う'},{en:"We'll be late if we don't hurry.",jp:'急がないと遅れる'},{en:'If you like it, take it.',jp:'気に入ったら持っていって'},{en:"I can drive if you're tired.",jp:'疲れてるなら運転するよ'},{en:"If you're hungry, let's eat.",jp:'お腹すいたなら食べよう'},{en:'Let me know if it works.',jp:'うまくいったら教えて'},
+ ], dlg:[{who:'A',en:"I'll go if you go.",jp:'君が行くなら行く'},{who:'B',en:"Okay, then let's both go.",jp:'じゃ一緒に行こう'},{who:'A',en:"If it rains, we'll take the train.",jp:'雨なら電車にしよう'},{who:'B',en:'Sounds good.',jp:'いいね'}]}]},
 
- {t:'7. どっちへ・どこから', short:'⑦どこへ', cards:[{pat:'to / from / into / out of ___', patjp:'向き・移動を言う', exp:'到達点は to、出発点は from。中へ into、外へ out of。', ex:[
-   {en:'go to school',jp:'学校へ行く'},{en:'go to work',jp:'仕事へ行く'},{en:'come from Japan',jp:'日本から来る'},{en:'come from Osaka',jp:'大阪から来る'},{en:'into the room',jp:'部屋の中へ'},{en:'out of the house',jp:'家の外へ'},{en:'through the door',jp:'ドアを通って'},{en:'across the street',jp:'通りを渡って'},{en:'to the station',jp:'駅へ'},{en:'back home',jp:'家へ戻る'},{en:'up the stairs',jp:'階段を上って'},{en:'down the street',jp:'通りを下って'},{en:'How do I get to the station?',jp:'駅へどう行く？'},{en:"I'm going to the store.",jp:'店に行く'},{en:'on my way home',jp:'帰る途中'},{en:'far from here',jp:'ここから遠い'},
- ], dlg:[{who:'A',en:'Where are you going?',jp:'どこ行くの？'},{who:'B',en:'To the station.',jp:'駅まで'},{who:'A',en:"I'm going that way too.",jp:'私もそっち'},{who:'B',en:"Great, let's walk together.",jp:'じゃ一緒に歩こう'}]}]},
+ {t:'7. 「〜したことがある」経験を言う', short:'⑦経験', cards:[{pat:'I have ___ . / Have you ever ___ ?', patjp:'〜したことがある', exp:'今までの経験や「もう・まだ」を言う形。have ＋ 形が変わった動詞。', ex:[
+   {en:'I have been to Tokyo.',jp:'東京に行ったことがある'},{en:'Have you ever eaten sushi?',jp:'寿司を食べたことある？'},{en:"I've never seen it.",jp:'見たことがない'},{en:"I've been here before.",jp:'前に来たことがある'},{en:'She has read this book.',jp:'この本を読んだことがある'},{en:'Have you finished?',jp:'もう終わった？'},{en:"I've already eaten.",jp:'もう食べた'},{en:'I have met him once.',jp:'一度会ったことがある'},{en:'Have you been to Kyoto?',jp:'京都に行ったことある？'},{en:"I've done it before.",jp:'前にやったことがある'},{en:"I've never tried it.",jp:'試したことがない'},{en:'Have you heard the news?',jp:'ニュース聞いた？'},{en:"I've lost my keys.",jp:'鍵をなくした'},{en:"I've just finished.",jp:'今ちょうど終わった'},{en:'He has lived here for ten years.',jp:'10年ここに住んでいる'},{en:'Have you ever been abroad?',jp:'海外に行ったことある？'},{en:"We've known each other for years.",jp:'長年の知り合い'},{en:'She has gone home.',jp:'もう帰った'},
+ ], tip:'「したことがある／もう・まだ」は have ＋ 形が変わった動詞（been / eaten / done）。', dlg:[{who:'A',en:'Have you ever been to Japan?',jp:'日本に行ったことある？'},{who:'B',en:"Yes, I've been to Tokyo.",jp:'うん、東京に'},{who:'A',en:'Have you eaten sushi?',jp:'寿司は食べた？'},{who:'B',en:'Of course! I love it.',jp:'もちろん！大好き'}]}]},
 
- {t:'8. いつのことか ①', short:'⑧いつ1', cards:[{pat:'at / on / in ___', patjp:'時を言う（基本）', exp:'時刻は at、曜日・日付は on、月・年・季節は in。', ex:[
-   {en:'at seven',jp:'7時に'},{en:'at noon',jp:'正午に'},{en:'at night',jp:'夜に'},{en:'on Monday',jp:'月曜に'},{en:'on Friday',jp:'金曜に'},{en:'on my birthday',jp:'誕生日に'},{en:'in July',jp:'7月に'},{en:'in summer',jp:'夏に'},{en:'in 2025',jp:'2025年に'},{en:'in the morning',jp:'朝に'},{en:'in the evening',jp:'夕方に'},{en:'on the weekend',jp:'週末に'},{en:'on May fifth',jp:'5月5日に'},{en:'at three thirty',jp:'3時半に'},{en:'See you on Monday.',jp:'月曜に会おう'},{en:'I work in the morning.',jp:'朝に働く'},
- ], tip:'小さい時間ほど at、大きいほど in（at 7 → on Monday → in July）。', dlg:[{who:'A',en:'When is the meeting?',jp:'会議いつ？'},{who:'B',en:'On Tuesday, at ten.',jp:'火曜の10時'},{who:'A',en:'In the morning?',jp:'午前中？'},{who:'B',en:'Yes, at ten a.m.',jp:'うん、午前10時'}]}]},
+ {t:'8. 「まだ・もう・ずっと」', short:'⑧まだ/もう', cards:[{pat:'yet / already / still / since ___', patjp:'まだ・もう・ずっと', exp:'経験や状態が「まだか・もう済んだか・ずっと続くか」を足す。', ex:[
+   {en:"I haven't finished yet.",jp:'まだ終わってない'},{en:'Have you eaten yet?',jp:'もう食べた？'},{en:"I've already done it.",jp:'もうやった'},{en:"She's not here yet.",jp:'彼女はまだ来てない'},{en:'I still live here.',jp:'まだここに住んでいる'},{en:"It's still raining.",jp:'まだ雨が降ってる'},{en:'Are you still there?',jp:'まだいる？'},{en:"I've been busy since Monday.",jp:'月曜からずっと忙しい'},{en:"We've lived here since 2020.",jp:'2020年からここに住んでる'},{en:'Has it started yet?',jp:'もう始まった？'},{en:"I haven't decided yet.",jp:'まだ決めてない'},{en:"He's already gone.",jp:'もう行った'},{en:"I still don't understand.",jp:'まだわからない'},{en:"It hasn't arrived yet.",jp:'まだ届いてない'},{en:"I've been waiting for an hour.",jp:'1時間待ってる'},{en:"I've known him for years.",jp:'何年も前から知ってる'},
+ ], dlg:[{who:'A',en:'Have you finished yet?',jp:'もう終わった？'},{who:'B',en:'Not yet, almost.',jp:'まだ、もう少し'},{who:'A',en:'Take your time.',jp:'ゆっくりでいいよ'},{who:'B',en:"Thanks, I'm still working on it.",jp:'ありがとう、まだやってる'}]}]},
 
- {t:'9. どのくらい・いつから', short:'⑨いつ2', cards:[{pat:'for / since / ago ___', patjp:'期間・起点・〜前', exp:'続いた長さは for、起点は since、過去の一点は 〜 ago。', ex:[
-   {en:'for two hours',jp:'2時間'},{en:'for a week',jp:'1週間'},{en:'for a long time',jp:'長い間'},{en:'since yesterday',jp:'昨日から'},{en:'since Monday',jp:'月曜から'},{en:'since 2020',jp:'2020年から'},{en:'two days ago',jp:'2日前'},{en:'a week ago',jp:'1週間前'},{en:'a long time ago',jp:'ずっと前'},{en:'all day',jp:'一日中'},{en:'every day',jp:'毎日'},{en:'every morning',jp:'毎朝'},{en:'once a week',jp:'週に1回'},{en:'twice a month',jp:'月に2回'},{en:'I waited for an hour.',jp:'1時間待った'},{en:'It started ten minutes ago.',jp:'10分前に始まった'},
- ], dlg:[{who:'A',en:'How long are you staying?',jp:'どのくらい滞在？'},{who:'B',en:'For a week.',jp:'1週間'},{who:'A',en:'When did you arrive?',jp:'いつ着いた？'},{who:'B',en:'Two days ago.',jp:'2日前'}]}]},
+ {t:'9. 「〜な人・〜なもの」後ろから説明', short:'⑨説明', cards:[{pat:'名詞 + who / that ___', patjp:'〜する人・〜なもの', exp:'名詞のうしろに who / that を付けて、説明をくっつける。', ex:[
+   {en:'the man who lives here',jp:'ここに住む男の人'},{en:'a person who speaks English',jp:'英語を話す人'},{en:'the book that I read',jp:'私が読んだ本'},{en:'the key that opens this door',jp:'このドアを開ける鍵'},{en:'a friend who helps me',jp:'助けてくれる友達'},{en:'the house that we bought',jp:'私たちが買った家'},{en:'the woman who called you',jp:'あなたに電話した女性'},{en:'something that I like',jp:'私が好きなもの'},{en:'the train that goes to Tokyo',jp:'東京行きの電車'},{en:'a movie that I love',jp:'私が大好きな映画'},{en:'the people who work here',jp:'ここで働く人たち'},{en:'a place that is quiet',jp:'静かな場所'},{en:'the food that you made',jp:'あなたが作った料理'},{en:'a job that pays well',jp:'給料のいい仕事'},{en:'a teacher who is kind',jp:'親切な先生'},{en:'the bag that I lost',jp:'なくしたカバン'},{en:'someone who can help',jp:'手伝える人'},{en:'the song that we heard',jp:'私たちが聞いた曲'},
+ ], tip:'「〜する人」は who、「〜なもの」は that。名詞の直後にくっつける。', dlg:[{who:'A',en:'Who is the man who called?',jp:'電話した男の人だれ？'},{who:'B',en:'A friend who works with me.',jp:'一緒に働く友達'},{who:'A',en:'The one that lives nearby?',jp:'近くに住んでる人？'},{who:'B',en:"Yes, that's him.",jp:'うん、その人'}]}]},
 
- {t:'10. 「〜がある・いる」と言う', short:'⑩ある', cards:[{pat:'There is / There are ___ .', patjp:'〜がある・いる', exp:'存在を伝える形。1つなら is、2つ以上なら are。', ex:[
-   {en:'There is a cat.',jp:'猫がいる'},{en:'There are two cats.',jp:'猫が2匹'},{en:"There's a problem.",jp:'問題がある'},{en:"There's a station near here.",jp:'近くに駅がある'},{en:'Is there a bank near here?',jp:'近くに銀行ある？'},{en:'There are many people.',jp:'人が多い'},{en:"There's no time.",jp:'時間がない'},{en:"There aren't any seats.",jp:'席がない'},{en:"There's something on the table.",jp:'机に何かある'},{en:'Are there any questions?',jp:'質問ある？'},{en:"There's a lot to do.",jp:'やることが多い'},{en:'There were many people.',jp:'人が多かった'},{en:'How many are there?',jp:'いくつある？'},{en:"There's nothing here.",jp:'ここに何もない'},{en:"There's a good restaurant.",jp:'いい店がある'},{en:'There are some apples.',jp:'りんごがいくつかある'},
- ], tip:'1つ → There is、2つ以上 → There are。', dlg:[{who:'A',en:'Is there a café near here?',jp:'近くにカフェある？'},{who:'B',en:"Yes, there's one across the street.",jp:'うん、向かいに1つ'},{who:'A',en:'Is it good?',jp:'いいお店？'},{who:'B',en:'Yeah, there are great cakes there.',jp:'うん、ケーキが最高'}]}]},
+ {t:'10. 「〜すること」を言う', short:'⑩すること', cards:[{pat:'to ___ / ___ing', patjp:'〜すること・〜したい', exp:'「〜すること」「〜したい」を文に入れる形。to ＋ 動詞、または 動詞ing。', ex:[
+   {en:'I want to go.',jp:'行きたい'},{en:'I need to leave.',jp:'帰らなきゃ'},{en:'I like swimming.',jp:'泳ぐのが好き'},{en:'I enjoy reading.',jp:'読書を楽しむ'},{en:"It's hard to say.",jp:'言いにくい'},{en:'I forgot to call.',jp:'電話し忘れた'},{en:'I want to learn English.',jp:'英語を学びたい'},{en:'Stop talking.',jp:'話すのをやめて'},{en:'I hope to see you.',jp:'会えるといいな'},{en:"It's nice to meet you.",jp:'はじめまして'},{en:"I'm trying to help.",jp:'手伝おうとしてる'},{en:'I love cooking.',jp:'料理が大好き'},{en:'I decided to stay.',jp:'残ることにした'},{en:"It's time to go.",jp:'行く時間だ'},{en:"I'd like to order.",jp:'注文したい'},{en:'Thanks for coming.',jp:'来てくれてありがとう'},{en:"I'm thinking of moving.",jp:'引っ越そうか考え中'},{en:'I need to rest.',jp:'休む必要がある'},
+ ], dlg:[{who:'A',en:'What do you want to do today?',jp:'今日何したい？'},{who:'B',en:"I'd like to go shopping.",jp:'買い物に行きたい'},{who:'A',en:'I prefer staying home.',jp:'私は家にいたい'},{who:'B',en:"Okay, let's relax then.",jp:'じゃのんびりしよ'}]}]},
 
- {t:'11. 「今、〜している」と言う', short:'⑪今', cards:[{pat:"I'm ___ing .", patjp:'今まさに〜している', exp:'be動詞＋動詞ing で「今ちょうどしている」。', ex:[
-   {en:"I'm reading a book.",jp:'本を読んでいる'},{en:"I'm working.",jp:'働いている'},{en:"I'm cooking dinner.",jp:'夕飯を作っている'},{en:"She's sleeping.",jp:'彼女は寝ている'},{en:"He's driving.",jp:'運転している'},{en:"They're playing.",jp:'遊んでいる'},{en:"We're waiting.",jp:'待っている'},{en:'What are you doing?',jp:'何してるの？'},{en:"I'm not working today.",jp:'今日は働いてない'},{en:"It's raining.",jp:'雨が降っている'},{en:'The baby is crying.',jp:'赤ちゃんが泣いてる'},{en:"I'm getting ready.",jp:'準備している'},{en:"I'm looking for my keys.",jp:'鍵を探している'},{en:'Are you listening?',jp:'聞いてる？'},{en:"I'm having lunch.",jp:'昼を食べている'},{en:"He's on the phone.",jp:'彼は電話中'},{en:"We're watching a movie.",jp:'映画を見ている'},{en:"I'm coming.",jp:'今行く'},
- ], tip:'「いつもする」は I work、「今している」は I\u2019m working。', dlg:[{who:'A',en:'What are you doing?',jp:'何してる？'},{who:'B',en:"I'm cooking dinner.",jp:'夕飯作ってる'},{who:'A',en:'Smells good!',jp:'いいにおい！'},{who:'B',en:"Yeah, it's almost ready.",jp:'うん、もうすぐできる'}]}]},
+ {t:'11. 「もっと〜・〜より」比べる', short:'⑪もっと', cards:[{pat:'___er / more ___ than', patjp:'もっと〜・〜より', exp:'2つを比べる。短い語は -er、長い語は more 〜。「〜より」は than。', ex:[
+   {en:'bigger',jp:'もっと大きい'},{en:'smaller',jp:'もっと小さい'},{en:'better',jp:'もっと良い'},{en:'cheaper',jp:'もっと安い'},{en:'This is bigger than that.',jp:'これはあれより大きい'},{en:"It's cheaper here.",jp:'ここの方が安い'},{en:"I'm taller than you.",jp:'私はあなたより背が高い'},{en:'Today is hotter than yesterday.',jp:'今日は昨日より暑い'},{en:'This one is better.',jp:'こっちの方がいい'},{en:'more expensive',jp:'もっと高い'},{en:'more interesting',jp:'もっと面白い'},{en:"It's more difficult than I thought.",jp:'思ったより難しい'},{en:"She's older than me.",jp:'彼女は私より年上'},{en:'Can you speak slower?',jp:'もっとゆっくり話せる？'},{en:'I want something cheaper.',jp:'もっと安いのがほしい'},{en:'This is easier.',jp:'こっちの方が簡単'},{en:'He runs faster than me.',jp:'彼は私より速く走る'},{en:"It's getting colder.",jp:'寒くなってきた'},
+ ], tip:'「もっと〜」は -er（big→bigger）、長い語は more 〜。「〜より」は than。', dlg:[{who:'A',en:'Which is better?',jp:'どっちがいい？'},{who:'B',en:'This one is cheaper and bigger.',jp:'こっちが安くて大きい'},{who:'A',en:'But that one is nicer.',jp:'でもあっちの方がすてき'},{who:'B',en:"True, but it's more expensive.",jp:'だけど高いよ'}]}]},
 
- {t:'12. 「昨日、〜した」と言う', short:'⑫した', cards:[{pat:'I ___ed . / Did you ___ ?', patjp:'過去のことを言う', exp:'ふつうは語尾に ed。質問・打ち消しは did（動詞はもとの形）。', ex:[
-   {en:'I played tennis.',jp:'テニスをした'},{en:'I watched TV.',jp:'テレビを見た'},{en:'I worked late.',jp:'遅くまで働いた'},{en:'I studied English.',jp:'英語を勉強した'},{en:'I cooked dinner.',jp:'夕飯を作った'},{en:'I called my mom.',jp:'母に電話した'},{en:'I walked home.',jp:'歩いて帰った'},{en:'I cleaned my room.',jp:'部屋を掃除した'},{en:'I visited my friend.',jp:'友達を訪ねた'},{en:'I listened to music.',jp:'音楽を聴いた'},{en:'Did you sleep well?',jp:'よく眠れた？'},{en:'Did you have fun?',jp:'楽しかった？'},{en:"I didn't go.",jp:'行かなかった'},{en:"I didn't see it.",jp:'見なかった'},{en:'She arrived late.',jp:'彼女は遅れて着いた'},{en:'We talked for hours.',jp:'何時間も話した'},{en:'It rained yesterday.',jp:'昨日雨だった'},{en:'I finished my work.',jp:'仕事を終えた'},
- ], tip:'ふつうは -ed。形が変わる動詞は次のカードで覚える。', dlg:[{who:'A',en:'How was your weekend?',jp:'週末どうだった？'},{who:'B',en:'Great! I visited my family.',jp:'最高！家族に会った'},{who:'A',en:'Nice. Did you have fun?',jp:'いいね。楽しかった？'},{who:'B',en:'Yes, we talked all day.',jp:'うん、一日中話した'}]}]},
+ {t:'12. 「一番〜」を言う', short:'⑫一番', cards:[{pat:'the ___est / the most ___', patjp:'一番〜', exp:'3つ以上で一番のとき。短い語は the -est、長い語は the most 〜。', ex:[
+   {en:'the best',jp:'一番良い'},{en:'the biggest',jp:'一番大きい'},{en:'the cheapest',jp:'一番安い'},{en:'This is the best restaurant.',jp:'一番いいお店'},{en:"It's the tallest building.",jp:'一番高いビル'},{en:'the most beautiful',jp:'一番美しい'},{en:'the most important thing',jp:'一番大事なこと'},{en:"You're my best friend.",jp:'一番の親友'},{en:"It's the hottest day.",jp:'一番暑い日'},{en:'the easiest way',jp:'一番簡単な方法'},{en:'the most popular',jp:'一番人気'},{en:'This is the smallest one.',jp:'一番小さいの'},{en:'my favorite',jp:'一番のお気に入り'},{en:'the fastest train',jp:'一番速い電車'},{en:"It's the best I can do.",jp:'これが精一杯'},{en:'the worst day',jp:'最悪の日'},
+ ], tip:'「一番〜」は the ＋ -est（big→the biggest）、長い語は the most 〜。', dlg:[{who:'A',en:"What's the best dish here?",jp:'ここの一番のおすすめは？'},{who:'B',en:'The ramen is the most popular.',jp:'ラーメンが一番人気'},{who:'A',en:"I'll have that.",jp:'それにする'},{who:'B',en:"Good choice — it's the best!",jp:'いい選択、最高だよ！'}]}]},
 
- {t:'13. 形が変わる動詞（昨日の言い方）', short:'', prod:false, cards:[{pat:'形が変わる過去（そのまま覚える）', patjp:'不規則な「した」', exp:'ed が付かず形が変わる、超頻出の16個。🔊 は「した」のかたちを読み上げます。', irr:true, ex:[
-   {en:'go → went',say:'went',jp:'行った'},{en:'eat → ate',say:'ate',jp:'食べた'},{en:'have → had',say:'had',jp:'持っていた'},{en:'see → saw',say:'saw',jp:'見た'},{en:'make → made',say:'made',jp:'作った'},{en:'get → got',say:'got',jp:'手に入れた'},{en:'take → took',say:'took',jp:'取った'},{en:'come → came',say:'came',jp:'来た'},{en:'do → did',say:'did',jp:'した'},{en:'say → said',say:'said',jp:'言った'},{en:'know → knew',say:'knew',jp:'知っていた'},{en:'give → gave',say:'gave',jp:'あげた'},{en:'find → found',say:'found',jp:'見つけた'},{en:'think → thought',say:'thought',jp:'思った'},{en:'buy → bought',say:'bought',jp:'買った'},{en:'write → wrote',say:'wrote',jp:'書いた'},
- ], dlg:[{who:'A',en:'Where did you go?',jp:'どこ行った？'},{who:'B',en:'I went to the beach.',jp:'ビーチに行った'},{who:'A',en:'Did you have fun?',jp:'楽しかった？'},{who:'B',en:'Yes, I had a great time.',jp:'うん、最高だった'}]}]},
+ {t:'13. 「〜と同じくらい」を言う', short:'⑬同じ', cards:[{pat:'as ___ as', patjp:'〜と同じくらい', exp:'2つが同じくらいのとき。as ◯ as の形。', ex:[
+   {en:'as big as this',jp:'これと同じくらい大きい'},{en:'as soon as possible',jp:'できるだけ早く'},{en:"She's as tall as me.",jp:'彼女は私と同じ背丈'},{en:"It's as good as new.",jp:'新品同然'},{en:'Come as soon as you can.',jp:'できるだけ早く来て'},{en:"It's not as hard as it looks.",jp:'見た目ほど難しくない'},{en:'as much as you want',jp:'好きなだけ'},{en:"He's as busy as me.",jp:'彼も私と同じくらい忙しい'},{en:"It's as cold as yesterday.",jp:'昨日と同じくらい寒い'},{en:'Eat as much as you like.',jp:'好きなだけ食べて'},{en:'as fast as you can',jp:'できるだけ速く'},{en:"It's twice as big.",jp:'2倍の大きさ'},{en:'as often as possible',jp:'できるだけ頻繁に'},{en:"It's as easy as that.",jp:'それくらい簡単'},
+ ], dlg:[{who:'A',en:'Is it far?',jp:'遠い？'},{who:'B',en:"It's not as far as you think.",jp:'思ってるほど遠くない'},{who:'A',en:"Good. Let's walk.",jp:'じゃ歩こう'},{who:'B',en:"Sure, as long as it's not raining.",jp:'雨じゃなければね'}]}]},
 
- {t:'14. 「〜だった・〜にいた」と言う', short:'⑬だった', cards:[{pat:'I was ___ . / Were you ___ ?', patjp:'過去の「です」', exp:'「です」の過去。I/he/she/it→was、you/we/they→were。', ex:[
-   {en:'I was tired.',jp:'疲れていた'},{en:'I was happy.',jp:'うれしかった'},{en:'I was at home.',jp:'家にいた'},{en:'It was great.',jp:'最高だった'},{en:'It was delicious.',jp:'おいしかった'},{en:'It was cold yesterday.',jp:'昨日は寒かった'},{en:'She was late.',jp:'彼女は遅れた'},{en:'They were here.',jp:'彼らはhere'},{en:'We were busy.',jp:'忙しかった'},{en:'Were you there?',jp:'いた？'},{en:'Was it good?',jp:'よかった？'},{en:"I wasn't ready.",jp:'準備できてなかった'},{en:"It wasn't easy.",jp:'簡単じゃなかった'},{en:"They weren't home.",jp:'家にいなかった'},{en:'How was your day?',jp:'今日どうだった？'},{en:'The food was amazing.',jp:'料理が最高だった'},
- ], tip:'I/he/she/it→was、you/we/they→were。打ち消しは wasn\u2019t / weren\u2019t。', dlg:[{who:'A',en:'How was the movie?',jp:'映画どうだった？'},{who:'B',en:'It was amazing!',jp:'最高だった！'},{who:'A',en:'Were you late?',jp:'遅れた？'},{who:'B',en:'No, I was right on time.',jp:'いや、ちょうどだった'}]}]},
+ {t:'14. 「〜される」される側で言う', short:'⑭される', cards:[{pat:'be ___ (done)', patjp:'〜される・〜されている', exp:'する人ではなく、される側を主語にして言う形。be動詞 ＋ 形が変わった動詞。', ex:[
+   {en:'This is made in Japan.',jp:'日本製です'},{en:'It was built in 1990.',jp:'1990年に建てられた'},{en:'English is spoken here.',jp:'ここでは英語が話される'},{en:'I was invited.',jp:'招待された'},{en:'The store is closed.',jp:'店は閉まっている'},{en:"It's written in English.",jp:'英語で書かれている'},{en:'The room was cleaned.',jp:'部屋は掃除された'},{en:'I was born in Osaka.',jp:'大阪で生まれた'},{en:"It's used a lot.",jp:'よく使われる'},{en:'These are sold here.',jp:'これらはここで売られている'},{en:'My car was stolen.',jp:'車を盗まれた'},{en:"It's called sushi.",jp:'寿司と呼ばれる'},{en:'Dinner is served at seven.',jp:'夕食は7時に出る'},{en:'You are welcome here.',jp:'ここでは歓迎されます'},{en:'The cake was eaten.',jp:'ケーキは食べられた'},{en:'It can be fixed.',jp:'直せます'},
+ ], tip:'「〜される」側で言うときは be動詞 ＋ 形が変わった動詞（made / built / spoken）。', dlg:[{who:'A',en:'Is this made here?',jp:'これここで作られてるの？'},{who:'B',en:"No, it's made in Italy.",jp:'いや、イタリア製'},{who:'A',en:"It's beautiful.",jp:'きれいだね'},{who:'B',en:"Yes, it's sold all over the world.",jp:'うん、世界中で売られてる'}]}]},
 
- {t:'15. 「これから〜する」と言う', short:'⑭する予定', cards:[{pat:"I'll ___ . / I'm going to ___ .", patjp:'未来のことを言う', exp:'その場で決めたら will、前から予定していたら be going to。', ex:[
-   {en:"I'll call you.",jp:'電話するね'},{en:"I'll help you.",jp:'手伝うよ'},{en:"I'll be there.",jp:'行くよ'},{en:"I'll take it.",jp:'これにする'},{en:"I'll see you tomorrow.",jp:'また明日'},{en:"I'm going to study.",jp:'勉強する予定'},{en:"I'm going to travel.",jp:'旅行する予定'},{en:"It's going to rain.",jp:'雨が降りそう'},{en:'What are you going to do?',jp:'何する予定？'},{en:"I'm going to call her.",jp:'彼女に電話する'},{en:"We're going to be late.",jp:'遅れそう'},{en:"I won't tell anyone.",jp:'誰にも言わない'},{en:"I'll think about it.",jp:'考えておく'},{en:"She's going to love it.",jp:'彼女気に入るよ'},{en:"I'll get it.",jp:'私が出るよ'},{en:"I'm going to bed.",jp:'もう寝る'},{en:"Don't worry, I'll do it.",jp:'大丈夫、やるよ'},{en:"I'm going to be a teacher.",jp:'先生になる予定'},
- ], tip:'いま決めた → will、前から予定 → going to。', dlg:[{who:'A',en:"It's going to rain.",jp:'雨が降りそう'},{who:'B',en:"I'll take an umbrella.",jp:'傘持ってく'},{who:'A',en:'Good idea.',jp:'いいね'},{who:'B',en:"I'll see you later.",jp:'またあとで'}]}]},
-
- {t:'16. 「できる・しなきゃ・した方がいい」', short:'⑮気持ち', cards:[{pat:'can / have to / should ___', patjp:'できる・必要・おすすめ', exp:'can＝できる/してもいい、have to＝しなきゃ、should＝した方がいい。', ex:[
-   {en:'I can swim.',jp:'泳げる'},{en:'I can drive.',jp:'運転できる'},{en:'I can speak a little English.',jp:'英語が少し話せる'},{en:'Can you help me?',jp:'手伝ってくれる？'},{en:'Can I sit here?',jp:'ここ座っていい？'},{en:"I can't come.",jp:'行けない'},{en:'I have to go.',jp:'行かなきゃ'},{en:'I have to work tomorrow.',jp:'明日働かなきゃ'},{en:'You have to try this.',jp:'これ試すべき'},{en:'You should rest.',jp:'休んだ方がいい'},{en:'You should see a doctor.',jp:'医者に行った方がいい'},{en:"You shouldn't worry.",jp:'心配しないで'},{en:'We should go now.',jp:'もう行こう'},{en:"You don't have to come.",jp:'来なくていいよ'},{en:'Can I ask you something?',jp:'聞いていい？'},{en:'I should call her.',jp:'彼女に電話しなきゃ'},{en:'You can do it.',jp:'君ならできる'},{en:'Can I have the bill?',jp:'お会計いい？'},
- ], tip:'can / have to / should のうしろの動詞は、いつも形を変えない。', dlg:[{who:'A',en:'I have to go now.',jp:'もう行かなきゃ'},{who:'B',en:'Already? You should stay.',jp:'もう？いればいいのに'},{who:'A',en:"I can't, sorry.",jp:'無理、ごめん'},{who:'B',en:'Okay, take care!',jp:'了解、気をつけて！'}]}]},
- {t:'17. 「とても・〜すぎ・たくさん」程度を言う', short:'⑯程度', cards:[{pat:'very / too / a lot / a little ___', patjp:'どのくらいか足す', exp:'ようすの強さを足す言葉。too は「〜すぎ（マイナス）」、very/really/so は「とても」。', ex:[
-   {en:'very good',jp:'とても良い'},{en:'really nice',jp:'本当にすてき'},{en:'too expensive',jp:'高すぎる'},{en:'too small',jp:'小さすぎる'},{en:'a lot',jp:'たくさん'},{en:'a little',jp:'少し'},{en:"I'm so happy.",jp:'すごくうれしい'},{en:"I'm so tired.",jp:'すごく疲れた'},{en:'much better',jp:'ずっと良い'},{en:"I'm a little tired.",jp:'少し疲れた'},{en:"It's very important.",jp:'とても大事'},{en:"I'm really busy.",jp:'本当に忙しい'},{en:"It's too late.",jp:'もう遅すぎる'},{en:"It's not very good.",jp:'あまり良くない'},{en:'Thank you so much.',jp:'本当にありがとう'},{en:'I like it a lot.',jp:'すごく気に入ってる'},
- ], tip:'too＝「〜すぎる（困る）」、very / really / so＝「とても」。', dlg:[{who:'A',en:'How are you?',jp:'調子どう？'},{who:'B',en:"I'm a little tired, but good.",jp:'少し疲れたけど元気'},{who:'A',en:'You work too much.',jp:'働きすぎだよ'},{who:'B',en:'I know. I need a break.',jp:'だね。休憩いる'}]}]},
-
- {t:'18. 「いつも・ときどき」頻度を言う', short:'⑰頻度', cards:[{pat:'always / usually / sometimes / never ___', patjp:'どのくらいの回数か', exp:'回数の多さ。always＞usually＞often＞sometimes＞never。ふつう動詞の前に置きます。', ex:[
-   {en:'always',jp:'いつも'},{en:'usually',jp:'たいてい'},{en:'often',jp:'よく'},{en:'sometimes',jp:'ときどき'},{en:'never',jp:'一度もない'},{en:'I always drink coffee.',jp:'いつもコーヒーを飲む'},{en:'I usually get up early.',jp:'たいてい早起き'},{en:'I often go there.',jp:'よくそこへ行く'},{en:'I sometimes cook.',jp:'ときどき料理する'},{en:'I never eat late.',jp:'遅くは食べない'},{en:'How often do you exercise?',jp:'どのくらい運動する？'},{en:'I work out twice a week.',jp:'週2回運動する'},{en:"She's always late.",jp:'彼女はいつも遅い'},{en:'I rarely watch TV.',jp:'めったにテレビを見ない'},{en:'every weekend',jp:'毎週末'},{en:'most of the time',jp:'たいてい'},
- ], tip:'多い いつも always ＞ usually ＞ often ＞ sometimes ＞ never 一度もない。位置は動詞の前。', dlg:[{who:'A',en:'Do you cook a lot?',jp:'よく料理する？'},{who:'B',en:'Sometimes. I usually eat out.',jp:'ときどき。たいてい外食'},{who:'A',en:'I always cook at home.',jp:'私はいつも家で作る'},{who:'B',en:"That's healthy!",jp:'健康的だね！'}]}]}
+ {t:'15. 「〜と思う・〜と言った」考え・伝える', short:'⑮思う', cards:[{pat:'I think (that) ___ / He said ___', patjp:'〜だと思う・〜と言った', exp:'自分の考えや、人が言ったことをそのまま続ける。', ex:[
+   {en:'I think so.',jp:'そう思う'},{en:"I think it's good.",jp:'いいと思う'},{en:"I don't think so.",jp:'そうは思わない'},{en:"I hope it's true.",jp:'本当だといいな'},{en:"I know that you're busy.",jp:'忙しいのは分かってる'},{en:"He said he's tired.",jp:'彼は疲れたと言った'},{en:'She said yes.',jp:'彼女はいいと言った'},{en:"I think you're right.",jp:'君は正しいと思う'},{en:'I believe you.',jp:'信じるよ'},{en:'He told me the truth.',jp:'本当のことを話してくれた'},{en:'I guess so.',jp:'たぶんそう'},{en:"They said it's closed.",jp:'閉まっていると言われた'},{en:"I heard that it's good.",jp:'いいらしいと聞いた'},{en:'I think we should go.',jp:'行くべきだと思う'},{en:"She thinks it's a good idea.",jp:'いい考えだと思っている'},{en:"I'm sure it's fine.",jp:'きっと大丈夫'},
+ ], dlg:[{who:'A',en:"Do you think it'll rain?",jp:'雨降ると思う？'},{who:'B',en:'I think so. Take an umbrella.',jp:'そう思う。傘を持って'},{who:'A',en:"He said it'll be sunny.",jp:'晴れるって言ってたよ'},{who:'B',en:"Well, I'm not so sure.",jp:'うーん、どうかな'}]}]},
 ];
 
-/* 時間タイムマシン */
-const TENSE=[
- {base:'I play tennis.',cue:'昨日のことにすると？',answer:'I played tennis.',jp:'昨日テニスをした'},
- {base:'I watch TV.',cue:'昨日のことにすると？',answer:'I watched TV.',jp:'昨日テレビを見た'},
- {base:'I study English.',cue:'昨日のことにすると？',answer:'I studied English.',jp:'昨日英語を勉強した'},
- {base:'I clean my room.',cue:'昨日のことにすると？',answer:'I cleaned my room.',jp:'昨日部屋を掃除した'},
- {base:'I cook dinner.',cue:'昨日のことにすると？',answer:'I cooked dinner.',jp:'昨日夕飯を作った'},
- {base:'I go home.',cue:'昨日のことにすると？',answer:'I went home.',jp:'昨日家に帰った'},
- {base:'I eat lunch.',cue:'昨日のことにすると？',answer:'I ate lunch.',jp:'昨日昼を食べた'},
- {base:'I see a movie.',cue:'昨日のことにすると？',answer:'I saw a movie.',jp:'昨日映画を見た'},
- {base:'I take a bath.',cue:'昨日のことにすると？',answer:'I took a bath.',jp:'昨日お風呂に入った'},
- {base:'I read a book.',cue:'今まさにしている、にすると？',answer:"I'm reading a book.",jp:'今、本を読んでいる'},
- {base:'I cook dinner.',cue:'今まさにしている、にすると？',answer:"I'm cooking dinner.",jp:'今、夕飯を作っている'},
- {base:'I watch TV.',cue:'今まさにしている、にすると？',answer:"I'm watching TV.",jp:'今、テレビを見ている'},
- {base:'I call you.',cue:'これからする（will）にすると？',answer:"I'll call you.",jp:'電話するね'},
- {base:'I help you.',cue:'これからする（will）にすると？',answer:"I'll help you.",jp:'手伝うよ'},
- {base:'I study tonight.',cue:'予定（going to）にすると？',answer:"I'm going to study tonight.",jp:'今夜勉強する予定'},
- {base:'It rains.',cue:'これから（going to）にすると？',answer:"It's going to rain.",jp:'雨が降りそう'},
+/* 文つなぎトレ */
+const JOIN=[
+ {a:'I was tired.',b:'I went to bed.',cue:'だから(so) でつなぐ',answer:'I was tired, so I went to bed.',jp:'疲れたので寝た'},
+ {a:'I like coffee.',b:"I don't like tea.",cue:'でも(but) でつなぐ',answer:"I like coffee, but I don't like tea.",jp:'コーヒーは好きだけど紅茶は嫌い'},
+ {a:'I was hungry.',b:'I ate lunch.',cue:'だから(so) でつなぐ',answer:'I was hungry, so I ate lunch.',jp:'お腹がすいたので昼を食べた'},
+ {a:'I stayed home.',b:'It was raining.',cue:'なぜなら(because) でつなぐ',answer:'I stayed home because it was raining.',jp:'雨だったので家にいた'},
+ {a:'She is kind.',b:'She is smart.',cue:'〜と〜(and) でつなぐ',answer:'She is kind and smart.',jp:'彼女は親切で賢い'},
+ {a:'I called him.',b:"He didn't answer.",cue:'でも(but) でつなぐ',answer:"I called him, but he didn't answer.",jp:'電話したけど出なかった'},
+ {a:'I will help you.',b:'You need it.',cue:'もし〜なら(if) でつなぐ',answer:'I will help you if you need it.',jp:'必要なら手伝うよ'},
+ {a:'Wash your hands.',b:'You eat.',cue:'〜する前に(before) でつなぐ',answer:'Wash your hands before you eat.',jp:'食べる前に手を洗って'},
+ {a:'I was happy.',b:'I saw you.',cue:'〜のとき(when) でつなぐ',answer:'I was happy when I saw you.',jp:'あなたに会えてうれしかった'},
+ {a:'I study hard.',b:'I want a good job.',cue:'なぜなら(because) でつなぐ',answer:'I study hard because I want a good job.',jp:'いい仕事がほしいから頑張る'},
+ {a:'Call me.',b:'You arrive.',cue:'〜したら(when) でつなぐ',answer:'Call me when you arrive.',jp:'着いたら電話して'},
+ {a:'I was busy.',b:'I helped her.',cue:'でも(but) でつなぐ',answer:'I was busy, but I helped her.',jp:'忙しかったけど手伝った'},
+ {a:'We can go.',b:'It stops raining.',cue:'もし〜なら(if) でつなぐ',answer:'We can go if it stops raining.',jp:'雨がやんだら行ける'},
+ {a:'I like it.',b:'It is expensive.',cue:'でも(but) でつなぐ',answer:'I like it, but it is expensive.',jp:'気に入ってるけど高い'},
+ {a:'Turn off the light.',b:'You leave.',cue:'〜する前に(before) でつなぐ',answer:'Turn off the light before you leave.',jp:'出る前に電気を消して'},
+ {a:'It rained.',b:'We had fun.',cue:'でも(but) でつなぐ',answer:'It rained, but we had fun.',jp:'雨だったけど楽しかった'},
 ];
 
 /* ============ レンダリング ============ */
@@ -686,8 +675,7 @@ function renderCard(c,gi){const id='c'+(LID++);learnIds.push(id);const allow=c.p
  const rows=c.ex.map(e=>{if(allow)ALL.push({en:e.en,jp:e.jp,g:gi});const say=e.say||e.en;return '<div class="exrow"><div class="ex-en">'+e.en+'</div>'+mini(say)+'<div class="exjp jp">'+e.jp+'</div></div>';}).join('');
  const tip=c.tip?'<div class="tip jp"><b>？</b> '+c.tip+'</div>':'';
  const dlg=c.dlg?renderDlg(c.dlg):'';
- const cls='ptn'+(c.irr?' irr':'');
- return '<div class="'+cls+'" data-id="'+id+'"><div class="ptn-head"><div class="ptn-form">'+c.pat+'</div>'+learnBtn(id)+'</div><div class="ptn-jp jp">'+c.patjp+'</div><div class="ptn-exp jp">'+c.exp+'</div><div class="ex-list">'+rows+'</div>'+tip+dlg+'</div>';}
+ return '<div class="ptn" data-id="'+id+'"><div class="ptn-head"><div class="ptn-form">'+c.pat+'</div>'+learnBtn(id)+'</div><div class="ptn-jp jp">'+c.patjp+'</div><div class="ptn-exp jp">'+c.exp+'</div><div class="ex-list">'+rows+'</div>'+tip+dlg+'</div>';}
 
 const root=$('root');
 SEC.forEach((s,gi)=>{root.insertAdjacentHTML('beforeend','<div class="group">'+secHead(s.t)+s.cards.map(c=>renderCard(c,gi)).join('')+'</div>');});
@@ -704,30 +692,30 @@ document.addEventListener('click',(e)=>{
    updateCount();renderProg();saveState();return;}
 });
 
-/* ============ 時間タイムマシン ============ */
-let tQ=[],tcur=0,tscore=0;const _tDone={};
-$('ttMicNote').textContent=SR?'※ 🎤 を押すと言い換えた文を聞き取って判定します（Chrome / Edge 推奨）。':'※ マイク判定に未対応。自分で言って 🔊 で確認 → 言えたら ✅。';
-function tStart(){tQ=shuffle(TENSE).slice(0,14);tcur=0;tscore=0;for(const k in _tDone)delete _tDone[k];registerStudyDay();$('ttSetup').hidden=true;$('ttResult').hidden=true;$('ttDrill').hidden=false;tCard();}
-function tCard(){const c=tQ[tcur];$('ttProg').textContent=(tcur+1)+' / '+tQ.length;$('ttScore').textContent=tscore+' 言えた';$('ttBase').textContent=c.base;$('ttCue').textContent=c.cue;$('ttAnswer').hidden=true;$('ttEn').textContent=c.answer+'（'+c.jp+'）';$('ttFb').textContent='';$('ttFb').className='tr-feedback';$('ttRate').hidden=true;$('ttMic').classList.remove('live');$('ttMic').style.display=SR?'':'none';}
-function tPass(v){if(_tDone[tcur])return;_tDone[tcur]=true;tscore++;$('ttScore').textContent=tscore+' 言えた';const r=$('ttMic').getBoundingClientRect();awardXP(v?15:12,r.left+r.width/2-20,r.top-6);sPop();}
-function tMic(){if(!SR)return;const c=tQ[tcur];let rec;try{rec=new SR();}catch(e){return;}rec.lang='en-US';rec.interimResults=false;rec.maxAlternatives=4;$('ttMic').classList.add('live');const f=$('ttFb');f.textContent='🎙 聞いてるよ… 言い換えて言ってみて';f.className='tr-feedback listening';
- rec.onresult=e=>{const alts=[...e.results[0]].map(a=>a.transcript);let best=0;const heard=alts[0]||'';alts.forEach(a=>{const s=sim(a,c.answer);if(s>best)best=s;});$('ttMic').classList.remove('live');$('ttAnswer').hidden=false;$('ttRate').hidden=false;
-   if(best>=0.78){f.textContent='✅ ばっちり！ 「'+heard+'」';f.className='tr-feedback ok';tPass(true);confetti(40);setTimeout(tNext,1100);}
+/* ============ 文つなぎトレ ============ */
+let jQ=[],jcur=0,jscore=0;const _jDone={};
+$('jnMicNote').textContent=SR?'※ 🎤 を押すとつなげた文を聞き取って判定します（Chrome / Edge 推奨）。':'※ マイク判定に未対応。自分で言って 🔊 で確認 → 言えたら ✅。';
+function jStart(){jQ=shuffle(JOIN).slice(0,12);jcur=0;jscore=0;for(const k in _jDone)delete _jDone[k];registerStudyDay();$('jnSetup').hidden=true;$('jnResult').hidden=true;$('jnDrill').hidden=false;jCard();}
+function jCard(){const c=jQ[jcur];$('jnProg').textContent=(jcur+1)+' / '+jQ.length;$('jnScore').textContent=jscore+' 言えた';$('jnA').textContent=c.a;$('jnB').textContent=c.b;$('jnCue').textContent=c.cue;$('jnAnswer').hidden=true;$('jnEn').textContent=c.answer+'（'+c.jp+'）';$('jnFb').textContent='';$('jnFb').className='tr-feedback';$('jnRate').hidden=true;$('jnMic').classList.remove('live');$('jnMic').style.display=SR?'':'none';}
+function jPass(v){if(_jDone[jcur])return;_jDone[jcur]=true;jscore++;$('jnScore').textContent=jscore+' 言えた';const r=$('jnMic').getBoundingClientRect();awardXP(v?15:12,r.left+r.width/2-20,r.top-6);sPop();}
+function jMic(){if(!SR)return;const c=jQ[jcur];let rec;try{rec=new SR();}catch(e){return;}rec.lang='en-US';rec.interimResults=false;rec.maxAlternatives=4;$('jnMic').classList.add('live');const f=$('jnFb');f.textContent='🎙 聞いてるよ… つなげて言ってみて';f.className='tr-feedback listening';
+ rec.onresult=e=>{const alts=[...e.results[0]].map(a=>a.transcript);let best=0;const heard=alts[0]||'';alts.forEach(a=>{const s=sim(a,c.answer);if(s>best)best=s;});$('jnMic').classList.remove('live');$('jnAnswer').hidden=false;$('jnRate').hidden=false;
+   if(best>=0.75){f.textContent='✅ ばっちり！ 「'+heard+'」';f.className='tr-feedback ok';jPass(true);confetti(40);setTimeout(jNext,1100);}
    else if(best>=0.45){f.textContent='🟡 おしい！ 聞こえた→「'+heard+'」';f.className='tr-feedback close';}
    else{f.textContent='❌ もう一回！ 聞こえた→「'+heard+'」';f.className='tr-feedback miss';}};
- rec.onerror=ev=>{$('ttMic').classList.remove('live');if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){f.textContent='マイクが使えないみたい。自分で言って ✅ で判定してね';f.className='tr-feedback close';$('ttMic').style.display='none';$('ttAnswer').hidden=false;$('ttRate').hidden=false;}else if(ev.error==='no-speech'){f.textContent='聞き取れなかった。もう一度どうぞ';f.className='tr-feedback close';}else{f.textContent='うまくいかなかった。自己判定でどうぞ';f.className='tr-feedback close';$('ttAnswer').hidden=false;$('ttRate').hidden=false;}};
- rec.onend=()=>{$('ttMic').classList.remove('live');};
- try{rec.start();}catch(e){f.textContent='マイクが使えないので自己判定でどうぞ';f.className='tr-feedback close';$('ttMic').style.display='none';$('ttAnswer').hidden=false;$('ttRate').hidden=false;}}
-function tNext(){tcur++;if(tcur>=tQ.length)tEnd();else tCard();}
-function tEnd(){$('ttDrill').hidden=true;$('ttResult').hidden=false;$('ttResBig').textContent=tscore+' / '+tQ.length;const ra=tscore/tQ.length;$('ttResMsg').textContent=ra>=0.9?'すごい！ 時間の言い分けがバッチリ 🎉':ra>=0.6?'いい感じ！ 不規則をもう一周しよう 💪':'切り替えは慣れ。くり返すほど速くなるよ 👍';const bonus=10+tscore*3;G.xp+=bonus;renderStats();saveState();fx('+'+bonus+' XP',innerWidth/2-24,innerHeight*0.34,'bonus');if(ra>=0.6){confetti(150);sLevel();}}
-$('ttStart').onclick=tStart;$('ttAgain').onclick=()=>{$('ttResult').hidden=true;$('ttSetup').hidden=false;};
-$('ttQuit').onclick=()=>{$('ttDrill').hidden=true;$('ttSetup').hidden=false;};
-$('ttMic').onclick=tMic;
-$('ttHear').onclick=()=>{$('ttAnswer').hidden=false;speak(tQ[tcur].answer,$('ttHear'));$('ttRate').hidden=false;};
-$('ttShow').onclick=()=>{$('ttAnswer').hidden=false;$('ttRate').hidden=false;};
-$('ttYes').onclick=()=>{tPass(false);confetti(30);setTimeout(tNext,500);};
-$('ttNo').onclick=()=>{$('ttFb').textContent='もう一回どうぞ！';$('ttFb').className='tr-feedback close';};
-$('ttNext').onclick=tNext;
+ rec.onerror=ev=>{$('jnMic').classList.remove('live');if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){f.textContent='マイクが使えないみたい。自分で言って ✅ で判定してね';f.className='tr-feedback close';$('jnMic').style.display='none';$('jnAnswer').hidden=false;$('jnRate').hidden=false;}else if(ev.error==='no-speech'){f.textContent='聞き取れなかった。もう一度どうぞ';f.className='tr-feedback close';}else{f.textContent='うまくいかなかった。自己判定でどうぞ';f.className='tr-feedback close';$('jnAnswer').hidden=false;$('jnRate').hidden=false;}};
+ rec.onend=()=>{$('jnMic').classList.remove('live');};
+ try{rec.start();}catch(e){f.textContent='マイクが使えないので自己判定でどうぞ';f.className='tr-feedback close';$('jnMic').style.display='none';$('jnAnswer').hidden=false;$('jnRate').hidden=false;}}
+function jNext(){jcur++;if(jcur>=jQ.length)jEnd();else jCard();}
+function jEnd(){$('jnDrill').hidden=true;$('jnResult').hidden=false;$('jnResBig').textContent=jscore+' / '+jQ.length;const ra=jscore/jQ.length;$('jnResMsg').textContent=ra>=0.9?'すごい！ 長く話せてきてる 🎉':ra>=0.6?'いい感じ！ つなぎ言葉に慣れてきた 💪':'2文つなぎは慣れ。くり返すほどなめらかに 👍';const bonus=10+jscore*3;G.xp+=bonus;renderStats();saveState();fx('+'+bonus+' XP',innerWidth/2-24,innerHeight*0.34,'bonus');if(ra>=0.6){confetti(150);sLevel();}}
+$('jnStart').onclick=jStart;$('jnAgain').onclick=()=>{$('jnResult').hidden=true;$('jnSetup').hidden=false;};
+$('jnQuit').onclick=()=>{$('jnDrill').hidden=true;$('jnSetup').hidden=false;};
+$('jnMic').onclick=jMic;
+$('jnHear').onclick=()=>{$('jnAnswer').hidden=false;speak(jQ[jcur].answer,$('jnHear'));$('jnRate').hidden=false;};
+$('jnShow').onclick=()=>{$('jnAnswer').hidden=false;$('jnRate').hidden=false;};
+$('jnYes').onclick=()=>{jPass(false);confetti(30);setTimeout(jNext,500);};
+$('jnNo').onclick=()=>{$('jnFb').textContent='もう一回どうぞ！';$('jnFb').className='tr-feedback close';};
+$('jnNext').onclick=jNext;
 
 /* ============ 口頭作文トレ ============ */
 let pQ=[],pi=0,pscore=0,ppick='all';const _pDone={};

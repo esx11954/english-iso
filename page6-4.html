@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第6部④ 気持ち・性格のことば | 話せる・読める英語</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --paper:#EDF1F9;
+    --paper-2:#FFFFFF;
+    --ink:#15233F;
+    --ink-soft:#3B4A68;
+    --muted:#727D96;
+    --accent:#2F6BFF;          /* 声・アクション */
+    --accent-deep:#1B4FD6;
+    --accent-soft:#DCE7FF;
+    --jade:#0E9488;            /* できた・構造 */
+    --jade-soft:#D7EBE9;
+    --line:#DCE3F1;
+    --warn:#B9740B;
+    --warn-soft:#FBEEDB;
+    --shadow:0 1px 0 rgba(21,35,63,.04), 0 10px 30px -18px rgba(21,35,63,.35);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Plus Jakarta Sans","Noto Sans JP",system-ui,sans-serif;
+    font-size:17px;line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .jp{font-family:"Noto Sans JP","Plus Jakarta Sans",sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+
+  /* ---------- top bar ---------- */
+  header.bar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,243,234,.82);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar-in{max-width:860px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:18px;letter-spacing:.2px;white-space:nowrap}
+  .brand .dot{color:var(--accent)}
+  .bar-spacer{flex:1}
+  .counter{
+    display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-soft);
+    background:var(--jade-soft);border:1px solid #BFDED9;border-radius:999px;padding:5px 12px;font-weight:600;
+  }
+  .counter b{color:var(--jade);font-variant-numeric:tabular-nums}
+  .counter svg{width:15px;height:15px;display:block}
+
+  /* ---------- hero ---------- */
+  .hero{padding:64px 0 40px;position:relative;overflow:hidden}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent-deep);margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);border-radius:2px}
+  h1{
+    font-family:"Fraunces",serif;font-weight:600;
+    font-size:clamp(36px,7vw,60px);line-height:1.06;letter-spacing:-.5px;
+    margin:0 0 18px;
+  }
+  .hero p.lead{font-size:clamp(16px,2.4vw,19px);color:var(--ink-soft);max-width:38ch;margin:0 0 34px;font-weight:500}
+
+  /* hero demo card */
+  .demo{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:26px 24px;max-width:520px;position:relative;
+  }
+  .demo .demo-tag{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:12px}
+  .demo .en{font-size:clamp(27px,5vw,36px);font-weight:700;line-height:1.15;letter-spacing:-.3px;margin:0 0 6px}
+  .demo .kana{color:var(--muted);font-size:15px;margin:0 0 2px}
+  .demo .jp-mean{color:var(--ink-soft);font-size:15px;margin:0}
+  .demo .speak{margin-top:18px}
+  .demo .hint{margin-top:14px;font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:7px}
+  .demo .hint b{color:var(--accent-deep)}
+
+  /* bubble deco */
+  .bubbles{position:absolute;right:-30px;top:24px;width:230px;opacity:.5;pointer-events:none}
+  @media(max-width:720px){.bubbles{display:none}}
+
+  /* ---------- speak button ---------- */
+  .speak{
+    -webkit-appearance:none;appearance:none;border:none;cursor:pointer;
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--accent);color:#fff;font-weight:700;font-size:15px;
+    font-family:inherit;padding:11px 18px 11px 14px;border-radius:999px;
+    box-shadow:0 6px 16px -8px rgba(27,79,214,.5);
+    transition:transform .12s ease, background .15s ease, box-shadow .15s ease;
+  }
+  .speak:hover{background:var(--accent-deep);transform:translateY(-1px)}
+  .speak:active{transform:translateY(0)}
+  .speak:focus-visible{outline:3px solid var(--accent-soft);outline-offset:2px}
+  .speak .wave{display:flex;align-items:center;gap:2.5px;height:18px}
+  .speak .wave i{width:3px;height:6px;background:#fff;border-radius:2px;display:block;transition:height .15s}
+  .speak.speaking .wave i{animation:wv .8s ease-in-out infinite}
+  .speak.speaking .wave i:nth-child(2){animation-delay:.12s}
+  .speak.speaking .wave i:nth-child(3){animation-delay:.24s}
+  .speak.speaking .wave i:nth-child(4){animation-delay:.06s}
+  @keyframes wv{0%,100%{height:5px}50%{height:16px}}
+  .speak.mini{padding:9px;border-radius:50%;box-shadow:none;background:var(--accent-soft);color:var(--accent-deep)}
+  .speak.mini .wave i{background:var(--accent-deep)}
+  .speak.mini:hover{background:#CBDBFF}
+  .speak.mini .lbl{display:none}
+
+  /* ---------- lesson sections ---------- */
+  main{padding:18px 0 40px}
+  .lesson{padding:46px 0;border-top:1px solid var(--line)}
+  .lesson-no{
+    font-family:"Fraunces",serif;font-weight:600;font-size:14px;color:var(--accent-deep);
+    letter-spacing:.05em;margin-bottom:6px;
+  }
+  .lesson h2{
+    font-family:"Fraunces",serif;font-weight:600;font-size:clamp(25px,4.5vw,34px);
+    line-height:1.2;letter-spacing:-.3px;margin:0 0 18px;
+  }
+  .lesson h3{font-size:18px;font-weight:700;margin:30px 0 10px;letter-spacing:.01em}
+  .lesson p{margin:0 0 14px;color:var(--ink-soft)}
+  .lesson strong{color:var(--ink);font-weight:700}
+  .lesson .en-inline{font-weight:700;color:var(--ink);font-family:"Plus Jakarta Sans",sans-serif}
+
+  .note{
+    background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--jade);
+    border-radius:12px;padding:16px 18px;margin:18px 0;color:var(--ink-soft);font-size:15.5px;
+  }
+  .note b{color:var(--jade)}
+  .note.accent{border-left-color:var(--accent)}
+  .note.accent b{color:var(--accent-deep)}
+
+  /* contrast blocks (0-2) */
+  .contrast{display:grid;gap:14px;margin:20px 0}
+  .pair{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;
+  }
+  .pair .ttl{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.04em;margin-bottom:12px}
+  .row-en{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:7px 0}
+  .chip{
+    display:inline-block;padding:6px 12px;border-radius:10px;font-weight:700;
+    background:var(--jade-soft);color:var(--ink);border:1px solid #BFDED9;
+  }
+  .chip.b{background:var(--accent-soft);border-color:#BFD2FF}
+  .arrow{color:var(--muted);font-weight:700}
+  .verdict{font-size:14px;margin-top:6px}
+  .verdict.ok{color:var(--jade)}
+  .verdict.ng{color:var(--accent-deep)}
+  .verdict::before{font-weight:800;margin-right:6px}
+  .verdict.ok::before{content:"○"}
+  .verdict.ng::before{content:"×"}
+
+  /* phrase groups (0-4) */
+  .group{margin:30px 0 8px}
+  .group-head{display:flex;align-items:center;gap:12px;margin:0 0 14px;flex-wrap:wrap}
+  .group-head .gn{
+    width:30px;height:30px;border-radius:9px;background:var(--ink);color:var(--paper);
+    display:grid;place-items:center;font-weight:800;font-size:14px;flex:none;
+  }
+  .group-head h3{margin:0;font-size:19px}
+  .group-head .sub{font-size:13px;color:var(--muted);font-weight:500;margin-left:2px}
+  .group-head .playall{
+    margin-left:auto;border:1px solid var(--line);background:var(--paper-2);cursor:pointer;
+    font-family:inherit;font-weight:600;font-size:13px;color:var(--ink-soft);
+    padding:7px 13px;border-radius:999px;display:inline-flex;align-items:center;gap:7px;
+  }
+  .group-head .playall:hover{border-color:var(--accent);color:var(--accent-deep)}
+  .group-head .playall svg{width:13px;height:13px}
+
+  .cards{display:grid;gap:10px}
+  .card{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
+    padding:14px 16px;display:flex;align-items:center;gap:14px;
+    transition:border-color .15s, background .15s;
+  }
+  .card.learned{background:var(--jade-soft);border-color:#BFDED9}
+  .card.playing{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .card .body{flex:1;min-width:0}
+  .card .en{font-size:20px;font-weight:700;letter-spacing:-.2px;line-height:1.25}
+  .card.must .en::after{content:"必修";font-family:"Noto Sans JP";font-size:10px;font-weight:700;color:#fff;background:var(--accent);padding:2px 6px;border-radius:6px;margin-left:8px;vertical-align:middle;letter-spacing:.05em}
+  .card .meta{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:3px}
+  .card .kana{color:var(--muted);font-size:14px}
+  .card .mean{color:var(--ink-soft);font-size:14.5px;font-weight:500}
+  .card .warn{
+    display:inline-flex;align-items:flex-start;gap:6px;margin-top:8px;
+    background:var(--warn-soft);border-radius:9px;padding:6px 10px;
+    font-size:12.5px;color:#7a5208;line-height:1.5;
+  }
+  .card .warn svg{width:13px;height:13px;flex:none;margin-top:3px;color:var(--warn)}
+  .card .acts{display:flex;align-items:center;gap:8px;flex:none}
+  .learn-btn{
+    -webkit-appearance:none;appearance:none;cursor:pointer;font-family:inherit;
+    width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:var(--paper-2);
+    display:grid;place-items:center;color:var(--muted);transition:.15s;
+  }
+  .learn-btn svg{width:18px;height:18px}
+  .learn-btn:hover{border-color:var(--jade);color:var(--jade)}
+  .learn-btn:focus-visible{outline:3px solid var(--jade-soft);outline-offset:2px}
+  .card.learned .learn-btn{background:var(--jade);border-color:var(--jade);color:#fff}
+
+  /* day menu (0-5) */
+  .menu{display:grid;gap:12px;margin:20px 0;counter-reset:step}
+  .step{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 56px;position:relative;
+  }
+  .step::before{
+    counter-increment:step;content:counter(step);
+    position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:9px;
+    background:var(--accent);color:#fff;font-weight:800;display:grid;place-items:center;font-size:15px;
+  }
+  .step b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+  .step span{color:var(--ink-soft);font-size:14.5px}
+
+  a.nextup-link{display:block;text-decoration:none;color:inherit}
+  a.nextup-link:hover .nextup{opacity:.85transition:opacity .2s;cursor:pointer;
+  }
+  .nextup{
+    margin:28px 0 0;background:linear-gradient(135deg,#17284C,#0F1C3A);color:#f1ebdd;
+    border-radius:var(--radius);padding:26px 24px;
+  }
+  .nextup .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8FA8E6;font-weight:700;margin-bottom:8px}
+  .nextup h3{font-family:"Fraunces",serif;font-weight:600;font-size:23px;margin:0 0 8px;color:#fff}
+  .nextup p{color:#C5D2EE;margin:0;font-size:15px}
+
+  footer{padding:34px 0 60px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+
+  .toast{
+    position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;font-weight:600;
+    opacity:0;pointer-events:none;transition:.25s;z-index:100;box-shadow:var(--shadow);
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  @media(max-width:560px){
+    body{font-size:16px}
+    .card{align-items:flex-start}
+    .card .en{font-size:18px}
+    .group-head .playall{margin-left:0;width:100%;justify-content:center;order:3}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto}
+  }
+
+  /* ===== 脳ハック / ゲーミフィケーション ===== */
+  .bar-in{flex-wrap:wrap;row-gap:8px}
+  .stats{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-left:auto}
+  .stat{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--ink-soft);
+    background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:5px 11px;line-height:1}
+  .lv-pill{color:var(--accent-deep);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .xpbar{width:74px;height:7px;background:#e2e8f6;border-radius:999px;overflow:hidden}
+  .xpbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#7AA4FF);border-radius:999px;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+  .streak .fire{font-size:15px;filter:grayscale(1) opacity(.55)}
+  .streak.active .fire{filter:none}
+  .streak b{color:var(--accent-deep);font-variant-numeric:tabular-nums}
+  .streak.pulse{animation:statpop .5s}
+  @keyframes statpop{0%{transform:scale(1)}40%{transform:scale(1.22)}100%{transform:scale(1)}}
+  .goalring{position:relative;width:34px;height:34px}
+  .goalring .gc{font-size:11px;font-weight:800;color:var(--jade);position:absolute;inset:0;display:grid;place-items:center}
+  .goalring #goalArc{transition:stroke-dashoffset .6s cubic-bezier(.2,.8,.2,1)}
+  .sound-toggle{cursor:pointer;border:1px solid var(--line);background:var(--paper-2);border-radius:999px;width:32px;height:32px;display:grid;place-items:center;font-size:14px}
+  .sound-toggle:hover{border-color:var(--accent)}
+  .progress-line{height:3px;background:#e2e8f6;width:100%}
+  .progress-line i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--jade),#5BC3B5);transition:width .6s cubic-bezier(.2,.8,.2,1)}
+
+  .fxlayer{position:fixed;inset:0;pointer-events:none;z-index:90}
+  .fx{position:absolute;font-weight:800;font-size:16px;color:var(--accent-deep);text-shadow:0 1px 2px #fff,0 0 1px #fff;animation:fxrise 1s ease-out forwards}
+  .fx.bonus{color:#B26A00;font-size:18px}
+  @keyframes fxrise{0%{opacity:0;transform:translateY(4px) scale(.8)}15%{opacity:1;transform:translateY(-4px) scale(1.05)}100%{opacity:0;transform:translateY(-44px) scale(1)}}
+
+  .combo-badge{position:fixed;left:50%;bottom:84px;transform:translateX(-50%) scale(.6);background:var(--accent);color:#fff;font-weight:800;padding:8px 18px;border-radius:999px;font-size:15px;z-index:95;opacity:0;pointer-events:none;box-shadow:0 8px 22px -8px rgba(27,79,214,.7);transition:.22s cubic-bezier(.2,.9,.2,1)}
+  .combo-badge.show{opacity:1;transform:translateX(-50%) scale(1)}
+
+  #confetti{position:fixed;inset:0;pointer-events:none;z-index:120}
+
+  .lvlup{position:fixed;inset:0;z-index:130;display:none;align-items:center;justify-content:center;background:rgba(21,35,63,.45);backdrop-filter:blur(3px);padding:24px}
+  .lvlup.show{display:flex;animation:fade .3s}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .lvlup-card{background:var(--paper-2);border-radius:22px;padding:34px 30px;text-align:center;max-width:340px;box-shadow:0 30px 60px -20px rgba(21,35,63,.6);animation:rise .45s cubic-bezier(.2,.9,.2,1)}
+  @keyframes rise{from{transform:translateY(24px) scale(.94);opacity:0}to{transform:none;opacity:1}}
+  .lvlup-burst{font-size:46px;display:inline-block;animation:spin 1.1s ease}
+  @keyframes spin{from{transform:rotate(-25deg) scale(.4)}to{transform:none}}
+  .lvlup-k{font-weight:800;color:var(--accent-deep);letter-spacing:.14em;font-size:13px;margin-top:6px}
+  .lvlup-lv{font-family:"Fraunces",serif;font-weight:700;font-size:40px;color:var(--ink);line-height:1.1;margin:4px 0 2px}
+  .lvlup-title{color:var(--ink-soft);font-weight:600;margin-bottom:22px}
+  .lvlup-btn{cursor:pointer;border:none;background:var(--accent);color:#fff;font-family:inherit;font-weight:700;font-size:15px;padding:12px 28px;border-radius:999px;box-shadow:0 8px 18px -8px rgba(27,79,214,.8)}
+  .lvlup-btn:hover{background:var(--accent-deep)}
+
+  @media(max-width:560px){
+    .xpbar{width:52px}
+    .stat{font-size:12px;padding:4px 9px}
+    .brand{font-size:16px}
+  }
+
+  /* ===== 話す練習（アウトプット） ===== */
+  .trainer{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin-top:18px}
+  .tr-q{font-weight:700;color:var(--ink);margin:0 0 12px}
+  .tr-picks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .pick{cursor:pointer;border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:8px 15px;font-family:inherit;font-weight:700;font-size:14px;color:var(--ink-soft);transition:.15s}
+  .pick:hover{border-color:var(--accent)}
+  .pick.sel{background:var(--accent);border-color:var(--accent);color:#fff}
+  .tr-start,.tr-again{cursor:pointer;border:none;background:var(--accent);color:#fff;font-family:inherit;font-weight:700;font-size:16px;padding:13px 26px;border-radius:14px;box-shadow:0 8px 18px -8px rgba(27,79,214,.8)}
+  .tr-start:hover,.tr-again:hover{background:var(--accent-deep)}
+  .tr-mic{font-size:13px;color:var(--muted);margin:14px 0 0;line-height:1.6}
+  .tr-top{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:700;color:var(--ink-soft);margin-bottom:10px}
+  .tr-top #trScore{color:var(--jade)}
+  .tr-quit{margin-left:auto;background:none;border:none;cursor:pointer;color:var(--muted);font-family:inherit;font-weight:600;font-size:13px;text-decoration:underline}
+  .tr-prompt{text-align:center;padding:20px 10px 6px}
+  .tr-label{font-size:13px;color:var(--muted);font-weight:600;margin-bottom:8px}
+  .tr-jp{font-size:clamp(24px,5vw,32px);font-weight:800;color:var(--ink);line-height:1.35}
+  .tr-answer{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+  .tr-en{font-size:clamp(22px,4.5vw,28px);font-weight:700;color:var(--accent-deep)}
+  .tr-kana{color:var(--muted);font-size:14px;margin-top:2px}
+  .tr-feedback{text-align:center;min-height:24px;font-weight:700;margin:8px 0}
+  .tr-feedback.ok{color:var(--jade)}
+  .tr-feedback.close{color:#B26A00}
+  .tr-feedback.miss{color:var(--accent-deep)}
+  .tr-feedback.listening{color:var(--accent)}
+  .tr-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:4px}
+  .tr-mic-btn{cursor:pointer;border:none;background:var(--accent);color:#fff;font-family:inherit;font-weight:800;font-size:16px;padding:13px 26px;border-radius:999px;box-shadow:0 8px 18px -8px rgba(27,79,214,.8)}
+  .tr-mic-btn:hover{background:var(--accent-deep)}
+  .tr-mic-btn.live{animation:micpulse 1s infinite}
+  @keyframes micpulse{0%,100%{box-shadow:0 0 0 0 rgba(47,107,255,.5)}50%{box-shadow:0 0 0 12px rgba(47,107,255,0)}}
+  .tr-ghost{cursor:pointer;border:1.5px solid var(--line);background:var(--paper);color:var(--ink-soft);font-family:inherit;font-weight:700;font-size:14px;padding:11px 16px;border-radius:999px}
+  .tr-ghost:hover{border-color:var(--accent);color:var(--accent-deep)}
+  .tr-rate{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:center;margin-top:16px;font-size:14px;color:var(--muted);font-weight:600}
+  .tr-yes{cursor:pointer;border:none;background:var(--jade);color:#fff;font-family:inherit;font-weight:700;padding:10px 18px;border-radius:999px}
+  .tr-no{cursor:pointer;border:1.5px solid var(--line);background:var(--paper);color:var(--ink-soft);font-family:inherit;font-weight:700;padding:10px 16px;border-radius:999px}
+  .tr-next{cursor:pointer;border:none;background:var(--ink);color:#fff;font-family:inherit;font-weight:700;padding:10px 18px;border-radius:999px}
+  .tr-result{text-align:center;padding:16px}
+  .tr-res-big{font-family:"Fraunces",serif;font-weight:700;font-size:46px;color:var(--accent-deep);line-height:1}
+  .tr-res-msg{color:var(--ink-soft);font-weight:600;margin:10px 0 20px}
+
+  .ptn{background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;transition:.15s}
+  .ptn.learned{background:var(--jade-soft);border-color:#bfded9}
+  .ptn-head{display:flex;align-items:flex-start;gap:12px}
+  .ptn-form{flex:1;font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:clamp(18px,3.4vw,23px);color:var(--accent-deep);letter-spacing:-.3px;line-height:1.3}
+  .ptn-jp{font-weight:700;color:var(--ink);margin:4px 0 12px;font-size:14.5px}
+
+  .vlist{display:flex;flex-direction:column;gap:9px}
+  .vrow{background:var(--paper);border-radius:11px;padding:9px 12px}
+  .v-top{display:flex;align-items:center;gap:10px}
+  .v-w{font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:17px;color:var(--ink)}
+  .v-jp{color:var(--ink-soft);font-size:13.5px;margin-left:auto;text-align:right;font-weight:600}
+  .v-ex{margin-top:6px;display:flex;align-items:center;gap:8px}
+  .v-ex-en{font-size:13px;color:var(--muted);font-weight:600}
+  .v-ex-jp{font-size:11.5px;color:var(--muted);margin-left:auto;text-align:right}
+  .v-ex .speak.mini .wave i{background:var(--muted)}
+
+  .dlg{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .dlg-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .dlg-head .lbl{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.06em}
+  .dlg-play{margin-left:auto;cursor:pointer;border:1px solid var(--line);background:var(--paper-2);font-family:inherit;font-weight:700;font-size:12px;color:var(--ink-soft);padding:5px 12px;border-radius:999px}
+  .dline{display:flex;align-items:center;gap:9px;padding:6px 6px;border-radius:9px}
+  .dline.playing{background:var(--accent-soft)}
+  .who{font-weight:800;font-size:11px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff}
+  .who.A{background:var(--accent)}.who.B{background:var(--jade)}
+  .dl-en{font-weight:700;color:var(--ink);font-size:15px;flex:none}
+  .dl-jp{color:var(--muted);font-size:12.5px;margin-left:auto;text-align:right;flex:none}
+
+  .fl-jp{text-align:center;font-size:clamp(22px,5vw,30px);font-weight:800;color:var(--ink);margin:6px 0 2px}
+  .fl-cue-wrap{text-align:center;margin:6px 0}
+  .fl-cue{display:inline-block;font-size:14px;font-weight:800;color:var(--accent-deep);background:var(--accent-soft);padding:5px 14px;border-radius:999px}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <span class="brand">話せる・読める英語<span class="dot">.</span></span>
+    <div class="stats">
+      <div class="stat level" title="レベルと経験値"><span class="lv-pill" id="lvPill">Lv.1</span><div class="xpbar"><i id="xpFill"></i></div></div>
+      <div class="stat streak" id="streakStat" title="連続学習日数"><span class="fire">🔥</span><b id="streakNum">0</b><span>日</span></div>
+      <div class="stat goal" title="今日の目標"><div class="goalring"><svg width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="14" fill="none" stroke="#e2e8f6" stroke-width="4"/><circle id="goalArc" cx="17" cy="17" r="14" fill="none" stroke="var(--jade)" stroke-width="4" stroke-linecap="round" stroke-dasharray="87.96" stroke-dashoffset="87.96"/></svg><span class="gc" id="goalCount">0</span></div></div>
+      <button class="sound-toggle" id="soundToggle" aria-label="効果音オン・オフ">🔈</button>
+    </div>
+  </div>
+  <div class="progress-line"><i id="progLine"></i></div>
+  <span id="learnedCount" hidden>0</span><span id="totalCount" hidden>0</span>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">第6部 ・ 語彙 ④ 気持ち・性格</span>
+    <h1>気持ちと性格の<br>ことば。</h1>
+    <p class="lead">気持ちを伝えられると、会話がぐっと豊かに。うれしい・かなしい・怒り・不安や、人の性格を表すことばを、例文と音つきで一気に。</p>
+    <div class="demo">
+      <div class="demo-tag">単語 ＋ 例文 ＋ 音</div>
+      <p class="en">happy — I'm so happy today.</p>
+      <p class="jp-mean jp">「うれしい」。単語だけでなく短い例文ごと声に出すと、使える形で身につきます。</p>
+      <div class="wchips" style="margin-top:14px">
+        <button class="wchip speak" data-say="happy"><span class="wave"><i></i><i></i><i></i></span><span class="wt">happy</span></button>
+        <button class="wchip speak" data-say="I'm so happy today."><span class="wave"><i></i><i></i><i></i></span><span class="wt">I'm so happy today.</span></button>
+      </div>
+      <div class="hint jp"><b>🔊</b> 単語と例文、両方タップして声に出していこう。</div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <section class="lesson" id="intro">
+    <div class="lesson-no">6④-0</div>
+    <h2 class="jp">この章のやり方</h2>
+    <p class="jp">覚え方のコツは<strong>テーマでまとめて、例文ごと声に出す</strong>こと。単語の 🔊 と例文の 🔊 を両方タップ。最後の<strong>単語フラッシュ</strong>で「日本語→英語」を瞬間で出せるようにします。グループを覚えたら「できた ✓」。</p>
+  </section>
+
+  <section class="lesson" id="secMain">
+    <div class="lesson-no">6④-A</div>
+    <h2 class="jp">テーマ別・気持ち・性格のことば</h2>
+    <div id="root"></div>
+  </section>
+
+  <!-- 単語フラッシュ -->
+  <section class="lesson" id="fl-sec">
+    <div class="lesson-no">6④-A ✦</div>
+    <h2 class="jp">単語フラッシュ（日本語 → 英語）</h2>
+    <p class="jp">この章の肝。日本語を見て、<strong>英単語を瞬間で言います</strong>。テンポよく、たくさん回しましょう。</p>
+    <div class="trainer" id="fl">
+      <div class="tr-setup" id="flSetup">
+        <p class="tr-q jp">日本語を見て、英語で言おう。20問。</p>
+        <button class="tr-start" id="flStart">▶ スタート</button>
+        <p class="tr-mic jp" id="flMicNote"></p>
+      </div>
+      <div class="tr-drill" id="flDrill" hidden>
+        <div class="tr-top"><span id="flProg">1 / 20</span><span id="flScore">0 言えた</span><button id="flQuit" class="tr-quit">やめる</button></div>
+        <div class="tr-prompt">
+          <div class="fl-jp jp" id="flJp"></div>
+          <div class="fl-cue-wrap"><span class="fl-cue jp" id="flCue">英語で何？</span></div>
+          <div class="tr-answer" id="flAnswer" hidden><div class="tr-en" id="flEn"></div></div>
+        </div>
+        <div class="tr-feedback" id="flFb"></div>
+        <div class="tr-actions">
+          <button class="tr-mic-btn" id="flMic">🎤 言う</button>
+          <button class="tr-ghost" id="flHear">🔊 答えを聞く</button>
+          <button class="tr-ghost" id="flShow">👁 答えを見る</button>
+        </div>
+        <div class="tr-rate" id="flRate" hidden>
+          <span class="jp">自分で判定：</span>
+          <button class="tr-yes" id="flYes">✅ 言えた</button>
+          <button class="tr-no" id="flNo">🔁 もう一回</button>
+          <button class="tr-next" id="flNext">次へ →</button>
+        </div>
+      </div>
+      <div class="tr-result" id="flResult" hidden>
+        <div class="tr-res-big" id="flResBig">16 / 20</div>
+        <div class="tr-res-msg jp" id="flResMsg"></div>
+        <button class="tr-again" id="flAgain">もう一度</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 口頭作文トレ -->
+  <section class="lesson" id="pr-sec">
+    <div class="lesson-no">6④-A ✦✦</div>
+    <h2 class="jp">口頭作文トレ（例文を英語で言う）</h2>
+    <p class="jp">仕上げ。日本語を見て、<strong>例文を声に出して言います</strong>。単語を使える形で定着させます。</p>
+    <div class="trainer" id="pr">
+      <div class="tr-setup" id="prSetup">
+        <p class="tr-q jp">どのテーマから練習する？</p>
+        <div class="tr-picks" id="prPicks"></div>
+        <button class="tr-start" id="prStart">▶ スタート</button>
+        <p class="tr-mic jp" id="prMicNote"></p>
+      </div>
+      <div class="tr-drill" id="prDrill" hidden>
+        <div class="tr-top"><span id="prProg">1 / 15</span><span id="prScore">0 言えた</span><button id="prQuit" class="tr-quit">やめる</button></div>
+        <div class="tr-prompt">
+          <div class="tr-label jp">これを英語で：</div>
+          <div class="tr-jp jp" id="prJp"></div>
+          <div class="tr-answer" id="prAnswer" hidden><div class="tr-en" id="prEn"></div></div>
+        </div>
+        <div class="tr-feedback" id="prFb"></div>
+        <div class="tr-actions">
+          <button class="tr-mic-btn" id="prMic">🎤 話す</button>
+          <button class="tr-ghost" id="prHear">🔊 答えを聞く</button>
+          <button class="tr-ghost" id="prShow">👁 答えを見る</button>
+        </div>
+        <div class="tr-rate" id="prRate" hidden>
+          <span class="jp">自分で判定：</span>
+          <button class="tr-yes" id="prYes">✅ 言えた</button>
+          <button class="tr-no" id="prNo">🔁 もう一回</button>
+          <button class="tr-next" id="prNext">次へ →</button>
+        </div>
+      </div>
+      <div class="tr-result" id="prResult" hidden>
+        <div class="tr-res-big" id="prResBig">12 / 15</div>
+        <div class="tr-res-msg jp" id="prResMsg"></div>
+        <button class="tr-again" id="prAgain">もう一度</button>
+      </div>
+    </div>
+
+    <div class="nextup">
+      <div class="k">Next</div>
+      <h3 class="jp">第6部⑤ 時間・天気・自然のことば</h3>
+      <p class="jp">次のテーマは「時間・天気・自然」。曜日・季節・天気・自然のことばを例文つきで、また200語前後。テーマを重ねて2,000〜3,000語へ。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="jp">話せる・読める英語 ／ 第6部④ 気持ち・性格のことば</footer>
+
+<canvas id="confetti"></canvas>
+<div class="fxlayer" id="fxlayer"></div>
+<div class="combo-badge" id="comboBadge"></div>
+<div class="lvlup" id="lvlup"><div class="lvlup-card"><div class="lvlup-burst">⭐️</div><div class="lvlup-k">レベルアップ！</div><div class="lvlup-lv" id="lvlupLv">Lv.2</div><div class="lvlup-title" id="lvlupTitle"></div><button class="lvlup-btn" id="lvlupClose">つづける</button></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+
+const synth=('speechSynthesis' in window)?window.speechSynthesis:null;
+let enVoice=null;
+function pickVoice(){if(!synth)return;const vs=synth.getVoices();enVoice=vs.find(v=>v.lang==='en-US'&&/Google|Samantha|Natural/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoice();synth.onvoiceschanged=pickVoice;}
+let speakingBtn=null;
+function speak(text,btn,cb){if(!synth){toast('お使いのブラウザは音声に未対応です');if(cb)cb();return;}synth.cancel();if(speakingBtn){speakingBtn.classList.remove('speaking');}const u=new SpeechSynthesisUtterance(text);u.lang='en-US';if(enVoice)u.voice=enVoice;u.rate=0.85;u.onstart=()=>{if(btn){btn.classList.add('speaking');speakingBtn=btn;}};u.onend=()=>{if(btn)btn.classList.remove('speaking');if(cb)cb();};u.onerror=()=>{if(btn)btn.classList.remove('speaking');};synth.speak(u);}
+
+let toastTimer=null;
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),1600);}
+
+const Store=(()=>{let mem={},ok=true;try{localStorage.setItem('__t','1');localStorage.removeItem('__t');}catch(e){ok=false;}return{get(k){try{return ok?localStorage.getItem(k):mem[k];}catch(e){return mem[k];}},set(k,v){try{if(ok)localStorage.setItem(k,v);else mem[k]=v;}catch(e){mem[k]=v;}}};})();
+const SK='eigo_part6t4_state_v1';
+let G=Object.assign({xp:0,streak:0,lastDate:null,today:null,todayCount:0,goal:10,learned:[],soundOn:true,goalDoneDate:null},(()=>{try{return JSON.parse(Store.get(SK))||{};}catch(e){return{};}})());
+function saveState(){Store.set(SK,JSON.stringify(G));}
+function dstr(d){return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();}
+const TODAY=dstr(new Date()),YEST=dstr(new Date(Date.now()-864e5));
+if(G.today!==TODAY){G.today=TODAY;G.todayCount=0;}
+
+const TITLES=['語彙見習い','気持ちことば使い','感情マスター','性格ことば名人','人を表す達人','気持ち上手','語彙コレクター','単語の達人'];
+function levelInfo(xp){let lvl=1,need=70,acc=0;while(xp>=acc+need){acc+=need;lvl++;need=70+(lvl-1)*45;}return{lvl,into:xp-acc,span:need,title:TITLES[Math.min(lvl-1,TITLES.length-1)]+(lvl>TITLES.length?(' Lv.'+lvl):'')};}
+const PRAISE=['いいね！','その調子！','ナイス！','言えてる！','どんどんいこう！','語彙が増えてる','スラスラだね','完璧！'];
+const BONUS=['ラッキーボーナス！','ごほうびタイム🎁','神引き！','うれしい誤算！'];
+const COMBOMSG={2:'2連続！',3:'ノってきた！',4:'絶好調！',5:'ファイヤー！🔥',7:'手が止まらない！',10:'無敵モード！'};
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+
+let actx=null;
+function tone(f,dur,type,vol){if(!G.soundOn)return;try{actx=actx||new(window.AudioContext||window.webkitAudioContext)();const o=actx.createOscillator(),g=actx.createGain();o.type=type||'triangle';o.frequency.value=f;const n=actx.currentTime;g.gain.setValueAtTime(vol||0.05,n);o.connect(g);g.connect(actx.destination);o.start(n);g.gain.exponentialRampToValueAtTime(0.0001,n+dur);o.stop(n+dur);}catch(e){}}
+function sPop(){tone(620,0.1,'triangle',0.06);setTimeout(()=>tone(880,0.12,'triangle',0.05),55);}
+function sBonus(){[660,990,1320].forEach((f,i)=>setTimeout(()=>tone(f,0.12,'square',0.04),i*70));}
+function sLevel(){[523,659,784,1047,1319].forEach((f,i)=>setTimeout(()=>tone(f,0.2,'triangle',0.06),i*95));}
+
+const $=id=>document.getElementById(id);
+function fx(text,x,y,cls){const l=$('fxlayer');const d=document.createElement('div');d.className='fx'+(cls?' '+cls:'');d.textContent=text;d.style.left=Math.max(8,x)+'px';d.style.top=Math.max(60,y)+'px';l.appendChild(d);setTimeout(()=>d.remove(),1000);}
+function renderStats(){const li=levelInfo(G.xp);$('lvPill').textContent='Lv.'+li.lvl;$('xpFill').style.width=Math.round(li.into/li.span*100)+'%';$('streakNum').textContent=G.streak||0;$('streakStat').classList.toggle('active',(G.streak||0)>0&&G.lastDate===TODAY);const g=Math.min(G.todayCount/G.goal,1);$('goalArc').style.strokeDashoffset=(87.96*(1-g)).toFixed(2);$('goalCount').textContent=G.todayCount;$('soundToggle').textContent=G.soundOn?'🔈':'🔇';}
+function updateCount(){$('learnedCount').textContent=learned.size;}
+function renderProg(){const t=+$('totalCount').textContent||0;const pct=t?Math.round(learned.size/t*100):0;$('progLine').style.width=pct+'%';}
+function registerStudyDay(){if(G.lastDate===TODAY)return;if(G.lastDate===YEST)G.streak=(G.streak||0)+1;else G.streak=1;G.lastDate=TODAY;const s=$('streakStat');s.classList.remove('pulse');void s.offsetWidth;s.classList.add('pulse');toast('🔥 '+G.streak+'日連続！');}
+function awardXP(n,x,y,cls){const before=levelInfo(G.xp).lvl;G.xp+=n;fx('+'+n+' XP',x,y,cls);const after=levelInfo(G.xp);renderStats();saveState();if(after.lvl>before)levelUp(after);}
+const practiced=new Set();
+function practiceXP(sp){const key=sp.dataset.say;if(!key||practiced.has(key))return;practiced.add(key);registerStudyDay();const r=sp.getBoundingClientRect();awardXP(1,r.left,r.top-6);}
+let comboN=0,comboTimer=null;
+function bumpCombo(){comboN++;clearTimeout(comboTimer);comboTimer=setTimeout(()=>{comboN=0;hideCombo();},9000);if(comboN>=2){const msg=COMBOMSG[comboN]||(comboN+'連続！');showCombo('×'+comboN+' '+msg);}let cb=0;if(comboN===3)cb=5;else if(comboN===5)cb=12;else if(comboN>=7&&comboN%2===1)cb=8;return cb;}
+function showCombo(t){const b=$('comboBadge');b.textContent=t;b.classList.add('show');}
+function hideCombo(){$('comboBadge').classList.remove('show');}
+function onLearn(btn){registerStudyDay();G.todayCount++;const r=btn.getBoundingClientRect();const cb=bumpCombo();awardXP(10+cb,r.left-10,r.top-6);sPop();toast(pick(PRAISE));if(Math.random()<0.16){const bn=5+Math.floor(Math.random()*16);setTimeout(()=>{const b4=levelInfo(G.xp).lvl;G.xp+=bn;const af=levelInfo(G.xp);fx('🎁 +'+bn+' XP',r.left-10,r.top-30,'bonus');sBonus();confetti(70);toast(pick(BONUS));renderStats();saveState();if(af.lvl>b4)levelUp(af);},260);}if(G.todayCount>=G.goal&&G.goalDoneDate!==TODAY){G.goalDoneDate=TODAY;setTimeout(()=>{confetti(130);sLevel();toast('🎯 今日の目標クリア！');},140);}if(learned.size>0&&learned.size%5===0){setTimeout(()=>confetti(90),100);}renderStats();saveState();}
+function levelUp(li){$('lvlupLv').textContent='Lv.'+li.lvl;$('lvlupTitle').textContent=li.title;$('lvlup').classList.add('show');confetti(170);sLevel();}
+$('lvlupClose').addEventListener('click',()=>$('lvlup').classList.remove('show'));
+$('lvlup').addEventListener('click',e=>{if(e.target.id==='lvlup')e.currentTarget.classList.remove('show');});
+$('soundToggle').addEventListener('click',()=>{G.soundOn=!G.soundOn;renderStats();saveState();if(G.soundOn)sPop();});
+
+const cvs=$('confetti'),cctx=cvs.getContext('2d');let parts=[],raf=null;
+function sizeCvs(){cvs.width=innerWidth;cvs.height=innerHeight;}sizeCvs();addEventListener('resize',sizeCvs);
+const CC=['#2F6BFF','#7AA4FF','#0E9488','#5BC3B5','#FFC24B','#1B4FD6'];
+function confetti(n){const cx=innerWidth/2;for(let i=0;i<n;i++){parts.push({x:cx+(Math.random()-.5)*140,y:innerHeight*0.30,vx:(Math.random()-.5)*9,vy:-(6+Math.random()*8),g:0.28+Math.random()*0.12,s:5+Math.random()*6,c:pick(CC),r:Math.random()*6,vr:(Math.random()-.5)*0.4,life:60+Math.random()*40});}if(!raf)cloop();}
+function cloop(){cctx.clearRect(0,0,cvs.width,cvs.height);parts=parts.filter(p=>p.life>0);for(const p of parts){p.vy+=p.g;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life--;cctx.save();cctx.translate(p.x,p.y);cctx.rotate(p.r);cctx.fillStyle=p.c;cctx.globalAlpha=Math.max(0,Math.min(1,p.life/30));cctx.fillRect(-p.s/2,-p.s/2,p.s,p.s*0.62);cctx.restore();}if(parts.length){raf=requestAnimationFrame(cloop);}else{cctx.clearRect(0,0,cvs.width,cvs.height);raf=null;}}
+
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+function norm(s){return(s||'').toLowerCase().replace(/[’'`]/g,'').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();}
+function sim(a,b){a=norm(a);b=norm(b);if(!a||!b)return 0;if(a===b)return 1;const ta=a.split(' '),tb=new Set(b.split(' '));let h=0;ta.forEach(w=>{if(tb.has(w))h++;});return h/Math.max(ta.length,tb.size);}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* ============ 第6部① 語彙：日常・家 ============ */
+const SEC=[
+ {t:'うれしい・前向き', short:'①うれしい', words:[
+   {w:'happy',jp:'うれしい',ex:"I'm happy today.",exjp:'今日はうれしい'},
+   {w:'glad',jp:'うれしい',ex:"I'm glad to see you.",exjp:'会えてうれしい'},
+   {w:'excited',jp:'わくわくする',ex:"I'm so excited.",exjp:'すごくわくわく'},
+   {w:'cheerful',jp:'明るい',ex:'a cheerful smile',exjp:'明るい笑顔'},
+   {w:'pleased',jp:'うれしい',ex:"I'm pleased with it.",exjp:'気に入ってる'},
+   {w:'satisfied',jp:'満足した',ex:"I'm satisfied.",exjp:'満足してる'},
+   {w:'proud',jp:'誇らしい',ex:"I'm proud of you.",exjp:'誇りに思う'},
+   {w:'grateful',jp:'感謝している',ex:"I'm grateful.",exjp:'感謝してる'},
+   {w:'relaxed',jp:'リラックスした',ex:"I feel relaxed.",exjp:'リラックスしてる'},
+   {w:'lucky',jp:'幸運な',ex:"I'm so lucky.",exjp:'運がいい'},
+   {w:'hopeful',jp:'希望に満ちた',ex:"I'm hopeful.",exjp:'希望を持ってる'},
+   {w:'delighted',jp:'大喜びの',ex:"I'm delighted.",exjp:'とてもうれしい'},
+   {w:'content',jp:'満ち足りた',ex:"I'm content.",exjp:'満ち足りてる'},
+   {w:'thrilled',jp:'とてもうれしい',ex:"I'm thrilled!",exjp:'最高にうれしい'},
+   {w:'positive',jp:'前向きな',ex:'Stay positive.',exjp:'前向きでいて'},
+   {w:'comfortable',jp:'心地よい',ex:'I feel comfortable.',exjp:'居心地がいい'},
+ ], dlg:[{who:'A',en:'You look happy today.',jp:'今日うれしそうだね'},{who:'B',en:"I am! I'm so excited.",jp:'うん！すごくわくわく'},{who:'A',en:'What happened?',jp:'どうしたの？'},{who:'B',en:'I got the job! I am so proud.',jp:'仕事決まった！誇らしい'}]},
+
+ {t:'かなしい・落ち込み', short:'②かなしい', words:[
+   {w:'sad',jp:'かなしい',ex:"I feel sad.",exjp:'かなしい'},
+   {w:'unhappy',jp:'不幸な',ex:"I'm unhappy.",exjp:'不幸せ'},
+   {w:'lonely',jp:'さびしい',ex:"I feel lonely.",exjp:'さびしい'},
+   {w:'disappointed',jp:'がっかりした',ex:"I'm disappointed.",exjp:'がっかりした'},
+   {w:'upset',jp:'動揺した',ex:"I'm a little upset.",exjp:'少し動揺してる'},
+   {w:'hurt',jp:'傷ついた',ex:"I'm hurt.",exjp:'傷ついた'},
+   {w:'down',jp:'落ち込んだ',ex:"I feel down.",exjp:'落ち込んでる'},
+   {w:'depressed',jp:'ゆううつな',ex:"I feel depressed.",exjp:'ゆううつ'},
+   {w:'gloomy',jp:'暗い気分',ex:'a gloomy mood',exjp:'暗い気分'},
+   {w:'heartbroken',jp:'失恋した',ex:"I'm heartbroken.",exjp:'失恋した'},
+   {w:'miserable',jp:'みじめな',ex:"I feel miserable.",exjp:'みじめ'},
+   {w:'homesick',jp:'ホームシックの',ex:"I'm homesick.",exjp:'ホームシック'},
+   {w:'sorry',jp:'残念・申し訳ない',ex:"I'm so sorry.",exjp:'本当にごめん'},
+   {w:'regret',jp:'後悔する',ex:'I regret it.',exjp:'後悔してる'},
+ ]},
+
+ {t:'怒り・いらだち', short:'③怒り', words:[
+   {w:'angry',jp:'怒っている',ex:"I'm angry.",exjp:'怒ってる'},
+   {w:'mad',jp:'怒っている',ex:'Are you mad at me?',exjp:'私に怒ってる？'},
+   {w:'annoyed',jp:'いらいらした',ex:"I'm annoyed.",exjp:'いらいらする'},
+   {w:'irritated',jp:'いらだった',ex:"I'm irritated.",exjp:'いらだってる'},
+   {w:'frustrated',jp:'もどかしい',ex:"I'm frustrated.",exjp:'もどかしい'},
+   {w:'furious',jp:'激怒した',ex:"I'm furious.",exjp:'激怒してる'},
+   {w:'jealous',jp:'しっとした',ex:"I'm jealous.",exjp:'うらやましい'},
+   {w:'bitter',jp:'恨んでいる',ex:'a bitter feeling',exjp:'にがい気持ち'},
+   {w:'fed up',jp:'うんざりした',ex:"I'm fed up.",exjp:'うんざり'},
+   {w:'grumpy',jp:'不機嫌な',ex:"He's grumpy today.",exjp:'今日は不機嫌'},
+   {w:'upset',jp:'腹を立てた',ex:'Why are you upset?',exjp:'なんで怒ってるの？'},
+   {w:'calm down',jp:'落ち着く',ex:'Please calm down.',exjp:'落ち着いて'},
+ ]},
+
+ {t:'不安・こわい・はずかしい', short:'④不安', words:[
+   {w:'scared',jp:'こわい',ex:"I'm scared.",exjp:'こわい'},
+   {w:'afraid',jp:'こわい',ex:"I'm afraid of dogs.",exjp:'犬がこわい'},
+   {w:'nervous',jp:'緊張した',ex:"I'm nervous.",exjp:'緊張する'},
+   {w:'worried',jp:'心配した',ex:"I'm worried about you.",exjp:'あなたが心配'},
+   {w:'anxious',jp:'不安な',ex:"I feel anxious.",exjp:'不安だ'},
+   {w:'frightened',jp:'おびえた',ex:"I'm frightened.",exjp:'おびえてる'},
+   {w:'shy',jp:'内気な',ex:"She's shy.",exjp:'彼女は内気'},
+   {w:'embarrassed',jp:'はずかしい',ex:"I'm embarrassed.",exjp:'はずかしい'},
+   {w:'uneasy',jp:'落ち着かない',ex:"I feel uneasy.",exjp:'落ち着かない'},
+   {w:'panicked',jp:'パニックの',ex:'I panicked.',exjp:'パニックになった'},
+   {w:'tense',jp:'張りつめた',ex:"I'm tense.",exjp:'緊張してる'},
+   {w:'insecure',jp:'自信のない',ex:"I feel insecure.",exjp:'自信がない'},
+   {w:'awkward',jp:'気まずい',ex:'It felt awkward.',exjp:'気まずかった'},
+   {w:'terrified',jp:'ぞっとした',ex:"I'm terrified.",exjp:'ぞっとした'},
+ ], dlg:[{who:'A',en:'Are you okay? You look pale.',jp:'大丈夫？顔色悪いよ'},{who:'B',en:"I'm nervous about the test.",jp:'テストが不安で'},{who:'A',en:"Don't worry. You'll do great.",jp:'心配しないで。大丈夫だよ'},{who:'B',en:'Thanks. I feel a little better.',jp:'ありがとう。少し落ち着いた'}]},
+
+ {t:'おどろき・その他の気分', short:'⑤おどろき', words:[
+   {w:'surprised',jp:'おどろいた',ex:"I'm surprised.",exjp:'おどろいた'},
+   {w:'shocked',jp:'ショックを受けた',ex:"I'm shocked.",exjp:'ショック'},
+   {w:'amazed',jp:'感心した',ex:"I'm amazed.",exjp:'すごいと思った'},
+   {w:'confused',jp:'混乱した',ex:"I'm confused.",exjp:'混乱してる'},
+   {w:'curious',jp:'知りたがる',ex:"I'm curious.",exjp:'気になる'},
+   {w:'bored',jp:'退屈した',ex:"I'm bored.",exjp:'退屈'},
+   {w:'interested',jp:'興味がある',ex:"I'm interested.",exjp:'興味ある'},
+   {w:'calm',jp:'落ち着いた',ex:'Stay calm.',exjp:'落ち着いて'},
+   {w:'uncomfortable',jp:'不快な',ex:'I feel uncomfortable.',exjp:'居心地が悪い'},
+   {w:'tired',jp:'疲れた',ex:"I'm tired.",exjp:'疲れた'},
+   {w:'sleepy',jp:'眠い',ex:"I'm sleepy.",exjp:'眠い'},
+   {w:'energetic',jp:'元気な',ex:'I feel energetic.',exjp:'元気いっぱい'},
+   {w:'moved',jp:'感動した',ex:"I'm moved.",exjp:'感動した'},
+   {w:'relieved',jp:'ほっとした',ex:"I'm relieved.",exjp:'ほっとした'},
+ ]},
+
+ {t:'性格・いい人', short:'⑥いい人', words:[
+   {w:'kind',jp:'親切な',ex:"She's kind.",exjp:'親切'},
+   {w:'nice',jp:'いい人',ex:"He's a nice guy.",exjp:'いい人'},
+   {w:'friendly',jp:'人なつこい',ex:"They're friendly.",exjp:'人なつこい'},
+   {w:'honest',jp:'正直な',ex:"He's honest.",exjp:'正直'},
+   {w:'polite',jp:'ていねいな',ex:"She's polite.",exjp:'ていねい'},
+   {w:'generous',jp:'気前のいい',ex:"He's generous.",exjp:'気前がいい'},
+   {w:'patient',jp:'我慢強い',ex:'Be patient.',exjp:'気長に'},
+   {w:'gentle',jp:'やさしい',ex:'a gentle person',exjp:'やさしい人'},
+   {w:'brave',jp:'勇敢な',ex:"You're brave.",exjp:'勇敢だね'},
+   {w:'smart',jp:'頭がいい',ex:"She's smart.",exjp:'頭がいい'},
+   {w:'clever',jp:'かしこい',ex:'a clever idea',exjp:'かしこい考え'},
+   {w:'hardworking',jp:'よく働く',ex:"He's hardworking.",exjp:'よく働く'},
+   {w:'funny',jp:'面白い',ex:"You're funny.",exjp:'面白いね'},
+   {w:'reliable',jp:'頼れる',ex:"She's reliable.",exjp:'頼れる'},
+   {w:'warm',jp:'あたたかい',ex:'a warm person',exjp:'あたたかい人'},
+   {w:'humble',jp:'けんきょな',ex:"He's humble.",exjp:'けんきょ'},
+   {w:'caring',jp:'思いやりのある',ex:'a caring friend',exjp:'思いやりのある友達'},
+   {w:'cheerful',jp:'明るい',ex:"She's cheerful.",exjp:'明るい'},
+ ], dlg:[{who:'A',en:'What is your friend like?',jp:'友達ってどんな人？'},{who:'B',en:"She's kind and funny.",jp:'親切で面白い'},{who:'A',en:'Sounds nice.',jp:'いい人そう'},{who:'B',en:'Yeah, and very honest too.',jp:'うん、とても正直でもある'}]},
+
+ {t:'性格・気をつけたい人', short:'⑦むずかしい', words:[
+   {w:'rude',jp:'失礼な',ex:"That's rude.",exjp:'失礼だね'},
+   {w:'lazy',jp:'なまけ者の',ex:"He's lazy.",exjp:'なまけ者'},
+   {w:'selfish',jp:'自分勝手な',ex:"That's selfish.",exjp:'自分勝手'},
+   {w:'strict',jp:'きびしい',ex:'a strict teacher',exjp:'きびしい先生'},
+   {w:'stubborn',jp:'がんこな',ex:"He's stubborn.",exjp:'がんこ'},
+   {w:'mean',jp:'いじわるな',ex:"Don't be mean.",exjp:'いじわるしないで'},
+   {w:'arrogant',jp:'高慢な',ex:"He's arrogant.",exjp:'高慢'},
+   {w:'careless',jp:'不注意な',ex:'a careless mistake',exjp:'不注意なミス'},
+   {w:'moody',jp:'気分屋の',ex:"She's moody.",exjp:'気分屋'},
+   {w:'bossy',jp:'えらそうな',ex:"He's bossy.",exjp:'えらそう'},
+   {w:'impatient',jp:'せっかちな',ex:"I'm impatient.",exjp:'せっかち'},
+   {w:'cold',jp:'冷たい',ex:'a cold person',exjp:'冷たい人'},
+   {w:'greedy',jp:'よくばりな',ex:"Don't be greedy.",exjp:'よくばらないで'},
+   {w:'noisy',jp:'うるさい',ex:"They're noisy.",exjp:'うるさい'},
+ ]},
+
+ {t:'様子・タイプ', short:'⑧タイプ', words:[
+   {w:'quiet',jp:'静かな',ex:"He's quiet.",exjp:'静か'},
+   {w:'talkative',jp:'おしゃべりな',ex:"She's talkative.",exjp:'おしゃべり'},
+   {w:'serious',jp:'まじめな',ex:"He's serious.",exjp:'まじめ'},
+   {w:'outgoing',jp:'社交的な',ex:"She's outgoing.",exjp:'社交的'},
+   {w:'confident',jp:'自信のある',ex:"He's confident.",exjp:'自信がある'},
+   {w:'creative',jp:'創造的な',ex:'a creative person',exjp:'創造的な人'},
+   {w:'careful',jp:'慎重な',ex:'Be careful.',exjp:'気をつけて'},
+   {w:'active',jp:'活発な',ex:"She's active.",exjp:'活発'},
+   {w:'easygoing',jp:'おおらかな',ex:"He's easygoing.",exjp:'おおらか'},
+   {w:'sensitive',jp:'繊細な',ex:"She's sensitive.",exjp:'繊細'},
+   {w:'cool',jp:'かっこいい',ex:"That's cool.",exjp:'かっこいい'},
+   {w:'cute',jp:'かわいい',ex:"It's so cute.",exjp:'かわいい'},
+   {w:'mature',jp:'大人びた',ex:"She's mature.",exjp:'大人びてる'},
+   {w:'childish',jp:'子どもっぽい',ex:"That's childish.",exjp:'子どもっぽい'},
+ ]},
+
+ {t:'好き・きらい・関わり', short:'⑨好ききらい', words:[
+   {w:'love',jp:'愛する',ex:'I love you.',exjp:'愛してる'},
+   {w:'like',jp:'好き',ex:'I like her.',exjp:'彼女が好き'},
+   {w:'hate',jp:'きらう',ex:'I hate it.',exjp:'きらい'},
+   {w:'enjoy',jp:'楽しむ',ex:'I enjoy it.',exjp:'楽しんでる'},
+   {w:'prefer',jp:'〜の方が好き',ex:'I prefer tea.',exjp:'紅茶の方が好き'},
+   {w:'miss',jp:'恋しく思う',ex:'I miss you.',exjp:'会いたい'},
+   {w:'trust',jp:'信頼する',ex:'I trust you.',exjp:'信頼してる'},
+   {w:'respect',jp:'尊敬する',ex:'I respect her.',exjp:'尊敬してる'},
+   {w:'care',jp:'気にかける',ex:'I care about you.',exjp:'あなたが大事'},
+   {w:'mind',jp:'気にする',ex:"I don't mind.",exjp:'気にしないよ'},
+   {w:'admire',jp:'あこがれる',ex:'I admire him.',exjp:'あこがれてる'},
+   {w:'get along',jp:'仲よくする',ex:'We get along.',exjp:'仲がいい'},
+   {w:'fall in love',jp:'恋に落ちる',ex:'I fell in love.',exjp:'恋に落ちた'},
+   {w:'have a crush',jp:'ひそかに好き',ex:'I have a crush on him.',exjp:'彼が気になる'},
+   {w:"can't stand",jp:'我慢できない',ex:"I can't stand it.",exjp:'我慢できない'},
+   {w:'be into',jp:'夢中になる',ex:"I'm into music.",exjp:'音楽に夢中'},
+ ]},
+
+ {t:'気持ちを言う', short:'⑩言う', words:[
+   {w:'I feel happy.',jp:'幸せな気分',ex:'I feel happy today.',exjp:'今日は幸せ'},
+   {w:"I'm worried about you.",jp:'あなたが心配',ex:"I'm really worried about you.",exjp:'本当に心配'},
+   {w:"I'm proud of you.",jp:'あなたを誇りに思う',ex:"I'm so proud of you.",exjp:'すごく誇らしい'},
+   {w:"I can't wait.",jp:'待ちきれない',ex:"I can't wait to see you.",exjp:'会うのが待ちきれない'},
+   {w:"I'm in a good mood.",jp:'機嫌がいい',ex:"I'm in a good mood today.",exjp:'今日は機嫌がいい'},
+   {w:"I'm in a bad mood.",jp:'機嫌が悪い',ex:"I'm in a bad mood.",exjp:'機嫌が悪い'},
+   {w:'I feel sorry for him.',jp:'彼が気の毒',ex:'I feel sorry for him.',exjp:'彼が気の毒'},
+   {w:"I'm scared of dogs.",jp:'犬がこわい',ex:"I'm scared of big dogs.",exjp:'大きい犬がこわい'},
+   {w:'It makes me happy.',jp:'うれしくなる',ex:'It makes me so happy.',exjp:'すごくうれしくなる'},
+   {w:"I'm nervous about it.",jp:'それが不安',ex:"I'm a little nervous about it.",exjp:'少し不安'},
+   {w:'I feel much better.',jp:'ずっと気分がいい',ex:'I feel much better now.',exjp:'だいぶ良くなった'},
+   {w:"I'm excited about it.",jp:'楽しみ',ex:"I'm really excited about it.",exjp:'すごく楽しみ'},
+   {w:"I'm afraid of heights.",jp:'高い所がこわい',ex:"I'm afraid of heights.",exjp:'高所がこわい'},
+   {w:"I'm grateful for your help.",jp:'助かったよ',ex:"I'm grateful for your help.",exjp:'手伝ってくれて感謝'},
+   {w:"It's frustrating.",jp:'もどかしい',ex:"It's so frustrating.",exjp:'本当にもどかしい'},
+   {w:'I feel like crying.',jp:'泣きたい気分',ex:'I feel like crying.',exjp:'泣きたい'},
+ ]},
+
+ {t:'気持ち・性格の一言', short:'⑪一言', words:[
+   {w:"I'm so happy!",jp:'うれしい！',ex:"I'm so happy right now!",exjp:'今すごくうれしい！'},
+   {w:"Don't worry.",jp:'心配しないで',ex:"Don't worry about it.",exjp:'気にしないで'},
+   {w:'Cheer up.',jp:'元気出して',ex:'Cheer up, my friend.',exjp:'元気出してね'},
+   {w:"I'm proud of you.",jp:'誇りに思う',ex:"I'm really proud of you.",exjp:'本当に誇らしい'},
+   {w:'Calm down.',jp:'落ち着いて',ex:'Calm down, it is okay.',exjp:'落ち着いて、大丈夫'},
+   {w:"That's too bad.",jp:'残念',ex:"That's too bad.",exjp:'それは残念'},
+   {w:"I can't wait!",jp:'待ちきれない！',ex:"I can't wait!",exjp:'待ちきれない！'},
+   {w:'Take it easy.',jp:'気楽にね',ex:'Take it easy today.',exjp:'今日は気楽に'},
+   {w:'You did great.',jp:'よくやった',ex:'You did great today.',exjp:'よくやったね'},
+   {w:"I'm nervous.",jp:'緊張する',ex:"I'm a bit nervous.",exjp:'ちょっと緊張'},
+   {w:'I feel great.',jp:'最高の気分',ex:'I feel great today.',exjp:'今日は最高'},
+   {w:'Good for you!',jp:'よかったね！',ex:'Good for you!',exjp:'よかったね！'},
+   {w:'Hang in there.',jp:'がんばって',ex:'Hang in there!',exjp:'がんばって！'},
+   {w:'No worries.',jp:'気にしないで',ex:'No worries at all.',exjp:'全然気にしないで'},
+ ]},
+];
+
+/* ============ レンダリング ============ */
+let LID=0,DID=0;const learnIds=[];const learned=new Set();const ALL=[];const WORDS=[];
+function waveSpan(n){let s='<span class="wave">';for(let i=0;i<(n||3);i++)s+='<i></i>';return s+'</span>';}
+function mini(say){return '<button class="speak mini" data-say="'+say+'" aria-label="聞く">'+waveSpan(4)+'<span class="lbl"></span></button>';}
+function learnBtn(id){return '<button class="learn-btn" data-learn="'+id+'" aria-label="できた"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>';}
+function renderDlg(lines){const id='dlg'+(DID++);const rows=lines.map(L=>'<div class="dline" data-en="'+L.en+'"><span class="who '+L.who+'">'+L.who+'</span><span class="dl-en">'+L.en+'</span>'+mini(L.en)+'<span class="dl-jp jp">'+L.jp+'</span></div>').join('');
+ return '<div class="dlg" id="'+id+'"><div class="dlg-head"><span class="lbl jp">会話</span><button class="dlg-play" data-target="'+id+'">▶ 通して聞く</button></div>'+rows+'</div>';}
+function renderWord(e,gi){WORDS.push({w:e.w,jp:e.jp,g:gi});
+ if(e.ex)ALL.push({en:e.ex,jp:e.exjp,g:gi});else ALL.push({en:e.w,jp:e.jp,g:gi});
+ const exLine=e.ex?'<div class="v-ex"><span class="v-ex-en">'+e.ex+'</span>'+mini(e.ex)+'<span class="v-ex-jp jp">'+e.exjp+'</span></div>':'';
+ return '<div class="vrow"><div class="v-top"><span class="v-w">'+e.w+'</span>'+mini(e.w)+'<span class="v-jp jp">'+e.jp+'</span></div>'+exLine+'</div>';}
+function renderSec(s,gi){const id='c'+(LID++);learnIds.push(id);
+ const rows=s.words.map(w=>renderWord(w,gi)).join('');
+ const dlg=s.dlg?renderDlg(s.dlg):'';
+ return '<div class="ptn" data-id="'+id+'"><div class="ptn-head"><div class="ptn-form">'+s.t+'</div>'+learnBtn(id)+'</div><div class="ptn-jp jp">このグループの単語（'+s.words.length+'語）</div><div class="vlist">'+rows+'</div>'+dlg+'</div>';}
+
+const root=$('root');
+SEC.forEach((s,gi)=>{root.insertAdjacentHTML('beforeend',renderSec(s,gi));});
+$('totalCount').textContent=learnIds.length;
+
+function playDlg(tid){const lines=[...document.querySelectorAll('#'+tid+' .dline')];let i=0;const run=()=>{lines.forEach(l=>l.classList.remove('playing'));if(i>=lines.length)return;const l=lines[i];l.classList.add('playing');l.scrollIntoView({behavior:'smooth',block:'center'});const en=l.dataset.en;i++;speak(en,null,()=>setTimeout(run,420));};run();}
+document.addEventListener('click',(e)=>{
+ const dp=e.target.closest('.dlg-play');if(dp){playDlg(dp.dataset.target);return;}
+ const sp=e.target.closest('.speak');if(sp){speak(sp.dataset.say,sp);practiceXP(sp);return;}
+ const lb=e.target.closest('.learn-btn');
+ if(lb){const id=lb.dataset.learn;const card=lb.closest('[data-id]');
+   if(learned.has(id)){learned.delete(id);card.classList.remove('learned');const i=G.learned.indexOf(id);if(i>-1)G.learned.splice(i,1);}
+   else{learned.add(id);card.classList.add('learned');if(!G.learned.includes(id))G.learned.push(id);onLearn(lb);}
+   updateCount();renderProg();saveState();return;}
+});
+
+/* ============ 単語フラッシュ ============ */
+let fQ=[],fcur=0,fscore=0;const _fDone={};
+$('flMicNote').textContent=SR?'※ 🎤 を押すと英単語を聞き取って判定します（Chrome / Edge 推奨）。':'※ マイク判定に未対応。自分で言って 🔊 で確認 → 言えたら ✅。';
+function flStart(){fQ=shuffle(WORDS).slice(0,20);fcur=0;fscore=0;for(const k in _fDone)delete _fDone[k];registerStudyDay();$('flSetup').hidden=true;$('flResult').hidden=true;$('flDrill').hidden=false;flCard();}
+function flCard(){const c=fQ[fcur];$('flProg').textContent=(fcur+1)+' / '+fQ.length;$('flScore').textContent=fscore+' 言えた';$('flJp').textContent=c.jp;$('flAnswer').hidden=true;$('flEn').textContent=c.w;$('flFb').textContent='';$('flFb').className='tr-feedback';$('flRate').hidden=true;$('flMic').classList.remove('live');$('flMic').style.display=SR?'':'none';}
+function flPass(v){if(_fDone[fcur])return;_fDone[fcur]=true;fscore++;$('flScore').textContent=fscore+' 言えた';const r=$('flMic').getBoundingClientRect();awardXP(v?12:10,r.left+r.width/2-20,r.top-6);sPop();}
+function flMic(){if(!SR)return;const c=fQ[fcur];let rec;try{rec=new SR();}catch(e){return;}rec.lang='en-US';rec.interimResults=false;rec.maxAlternatives=5;$('flMic').classList.add('live');const f=$('flFb');f.textContent='🎙 聞いてるよ… 英語で言ってみて';f.className='tr-feedback listening';
+ rec.onresult=e=>{const alts=[...e.results[0]].map(a=>a.transcript);let best=0;const heard=alts[0]||'';alts.forEach(a=>{const s=sim(a,c.w);if(s>best)best=s;});$('flMic').classList.remove('live');$('flAnswer').hidden=false;$('flRate').hidden=false;
+   if(best>=0.7){f.textContent='✅ 正解！ 「'+heard+'」';f.className='tr-feedback ok';flPass(true);confetti(30);setTimeout(flNext,900);}
+   else if(best>=0.4){f.textContent='🟡 おしい！ 聞こえた→「'+heard+'」';f.className='tr-feedback close';}
+   else{f.textContent='❌ もう一回！ 聞こえた→「'+heard+'」';f.className='tr-feedback miss';}};
+ rec.onerror=ev=>{$('flMic').classList.remove('live');if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){f.textContent='マイクが使えないみたい。自分で言って ✅ で判定してね';f.className='tr-feedback close';$('flMic').style.display='none';$('flAnswer').hidden=false;$('flRate').hidden=false;}else if(ev.error==='no-speech'){f.textContent='聞き取れなかった。もう一度どうぞ';f.className='tr-feedback close';}else{f.textContent='うまくいかなかった。自己判定でどうぞ';f.className='tr-feedback close';$('flAnswer').hidden=false;$('flRate').hidden=false;}};
+ rec.onend=()=>{$('flMic').classList.remove('live');};
+ try{rec.start();}catch(e){f.textContent='マイクが使えないので自己判定でどうぞ';f.className='tr-feedback close';$('flMic').style.display='none';$('flAnswer').hidden=false;$('flRate').hidden=false;}}
+function flNext(){fcur++;if(fcur>=fQ.length)flEnd();else flCard();}
+function flEnd(){$('flDrill').hidden=true;$('flResult').hidden=false;$('flResBig').textContent=fscore+' / '+fQ.length;const ra=fscore/fQ.length;$('flResMsg').textContent=ra>=0.9?'すごい！ 単語が瞬間で出てる 🎉':ra>=0.6?'いい感じ！ 出なかった語をもう一周 💪':'語彙は回数。くり返すほど速くなるよ 👍';const bonus=10+fscore*2;G.xp+=bonus;renderStats();saveState();fx('+'+bonus+' XP',innerWidth/2-24,innerHeight*0.34,'bonus');if(ra>=0.6){confetti(150);sLevel();}}
+$('flStart').onclick=flStart;$('flAgain').onclick=()=>{$('flResult').hidden=true;$('flSetup').hidden=false;};
+$('flQuit').onclick=()=>{$('flDrill').hidden=true;$('flSetup').hidden=false;};
+$('flMic').onclick=flMic;
+$('flHear').onclick=()=>{$('flAnswer').hidden=false;speak(fQ[fcur].w,$('flHear'));$('flRate').hidden=false;};
+$('flShow').onclick=()=>{$('flAnswer').hidden=false;$('flRate').hidden=false;};
+$('flYes').onclick=()=>{flPass(false);confetti(20);setTimeout(flNext,400);};
+$('flNo').onclick=()=>{$('flFb').textContent='もう一回どうぞ！';$('flFb').className='tr-feedback close';};
+$('flNext').onclick=flNext;
+
+/* ============ 口頭作文トレ ============ */
+let pQ=[],pi=0,pscore=0,ppick='all';const _pDone={};
+(function(){const p=$('prPicks');const present=new Set(ALL.map(x=>x.g));const opts=[['all','ぜんぶミックス']].concat(SEC.map((s,i)=>[String(i),s.short]).filter(o=>present.has(+o[0])&&o[1]));opts.forEach(([v,l],idx)=>{const b=document.createElement('button');b.className='pick'+(idx===0?' sel':'');b.textContent=l;b.onclick=()=>{ppick=v;p.querySelectorAll('.pick').forEach(x=>x.classList.toggle('sel',x===b));};p.appendChild(b);});})();
+$('prMicNote').textContent=SR?'※ 🎤 を押すと発音を聞き取って判定します（マイク許可が必要・Chrome / Edge 推奨）。':'※ このブラウザはマイク判定に未対応。自分で言って 🔊 で確認 → 言えたら ✅。';
+function pBuild(){let pool=ppick==='all'?ALL:ALL.filter(x=>x.g===+ppick);pQ=shuffle(pool).slice(0,15);for(const k in _pDone)delete _pDone[k];}
+function pStart(){pBuild();if(!pQ.length){toast('このテーマは例文なし');return;}pi=0;pscore=0;registerStudyDay();$('prSetup').hidden=true;$('prResult').hidden=true;$('prDrill').hidden=false;pCard();}
+function pCard(){const c=pQ[pi];$('prProg').textContent=(pi+1)+' / '+pQ.length;$('prScore').textContent=pscore+' 言えた';$('prJp').textContent=c.jp;$('prAnswer').hidden=true;$('prEn').textContent=c.en;$('prFb').textContent='';$('prFb').className='tr-feedback';$('prRate').hidden=true;$('prMic').classList.remove('live');$('prMic').style.display=SR?'':'none';}
+function pPass(v){if(_pDone[pi])return;_pDone[pi]=true;pscore++;$('prScore').textContent=pscore+' 言えた';const r=$('prMic').getBoundingClientRect();awardXP(v?15:12,r.left+r.width/2-20,r.top-6);sPop();}
+function pMic(){if(!SR)return;const c=pQ[pi];let rec;try{rec=new SR();}catch(e){return;}rec.lang='en-US';rec.interimResults=false;rec.maxAlternatives=4;$('prMic').classList.add('live');const f=$('prFb');f.textContent='🎙 聞いてるよ… 英語で言ってみて';f.className='tr-feedback listening';
+ rec.onresult=e=>{const alts=[...e.results[0]].map(a=>a.transcript);let best=0;const heard=alts[0]||'';alts.forEach(a=>{const s=sim(a,c.en);if(s>best)best=s;});$('prMic').classList.remove('live');$('prAnswer').hidden=false;$('prRate').hidden=false;
+   if(best>=0.72){f.textContent='✅ ばっちり！ 「'+heard+'」';f.className='tr-feedback ok';pPass(true);confetti(40);setTimeout(pNext,1100);}
+   else if(best>=0.45){f.textContent='🟡 おしい！ 聞こえた→「'+heard+'」';f.className='tr-feedback close';}
+   else{f.textContent='❌ もう一回！ 聞こえた→「'+heard+'」';f.className='tr-feedback miss';}};
+ rec.onerror=ev=>{$('prMic').classList.remove('live');if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){f.textContent='マイクが使えないみたい。自分で言って ✅ で判定してね';f.className='tr-feedback close';$('prMic').style.display='none';$('prAnswer').hidden=false;$('prRate').hidden=false;}else if(ev.error==='no-speech'){f.textContent='聞き取れなかった。もう一度どうぞ';f.className='tr-feedback close';}else{f.textContent='うまくいかなかった。自己判定でどうぞ';f.className='tr-feedback close';$('prAnswer').hidden=false;$('prRate').hidden=false;}};
+ rec.onend=()=>{$('prMic').classList.remove('live');};
+ try{rec.start();}catch(e){f.textContent='マイクが使えないので自己判定でどうぞ';f.className='tr-feedback close';$('prMic').style.display='none';$('prAnswer').hidden=false;$('prRate').hidden=false;}}
+function pNext(){pi++;if(pi>=pQ.length)pEnd();else pCard();}
+function pEnd(){$('prDrill').hidden=true;$('prResult').hidden=false;$('prResBig').textContent=pscore+' / '+pQ.length;const ra=pscore/pQ.length;$('prResMsg').textContent=ra>=0.9?'すごい！ 例文がスラスラ 🎉':ra>=0.6?'いい感じ！ 言えなかったのをもう一周 💪':'声に出した分だけ定着するよ 👍';const bonus=10+pscore*3;G.xp+=bonus;renderStats();saveState();fx('+'+bonus+' XP',innerWidth/2-24,innerHeight*0.34,'bonus');if(ra>=0.6){confetti(150);sLevel();}}
+$('prStart').onclick=pStart;$('prAgain').onclick=()=>{$('prResult').hidden=true;$('prSetup').hidden=false;};
+$('prQuit').onclick=()=>{$('prDrill').hidden=true;$('prSetup').hidden=false;};
+$('prMic').onclick=pMic;
+$('prHear').onclick=()=>{$('prAnswer').hidden=false;speak(pQ[pi].en,$('prHear'));$('prRate').hidden=false;};
+$('prShow').onclick=()=>{$('prAnswer').hidden=false;$('prRate').hidden=false;};
+$('prYes').onclick=()=>{pPass(false);confetti(30);setTimeout(pNext,500);};
+$('prNo').onclick=()=>{$('prFb').textContent='もう一回どうぞ！';$('prFb').className='tr-feedback close';};
+$('prNext').onclick=pNext;
+
+(function GAME_init(){(G.learned||[]).forEach(id=>{const card=document.querySelector('.ptn[data-id="'+id+'"]');if(card){card.classList.add('learned');learned.add(id);}});updateCount();renderProg();renderStats();})();
+
+</script>
+</body>
+</html>
