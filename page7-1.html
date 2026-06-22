@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>第6部⑬ 数・量・つなぎのことば | 話せる・読める英語</title>
+<title>第7部① 場面別ダイアログ集1 | 話せる・読める英語</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -338,36 +338,25 @@
   .tr-res-big{font-family:"Fraunces",serif;font-weight:700;font-size:46px;color:var(--accent-deep);line-height:1}
   .tr-res-msg{color:var(--ink-soft);font-weight:600;margin:10px 0 20px}
 
-  .ptn{background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;transition:.15s}
-  .ptn.learned{background:var(--jade-soft);border-color:#bfded9}
-  .ptn-head{display:flex;align-items:flex-start;gap:12px}
-  .ptn-form{flex:1;font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:clamp(18px,3.4vw,23px);color:var(--accent-deep);letter-spacing:-.3px;line-height:1.3}
-  .ptn-jp{font-weight:700;color:var(--ink);margin:4px 0 12px;font-size:14.5px}
+  .scene-head{margin:26px 0 6px;display:flex;align-items:center;gap:10px}
+  .scene-head .n{font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:13px;color:#fff;background:var(--accent);padding:3px 10px;border-radius:999px}
+  .scene-head h3{font-family:"Fraunces",serif;font-weight:700;font-size:clamp(18px,3.6vw,22px);color:var(--accent-deep);margin:0}
 
-  .vlist{display:flex;flex-direction:column;gap:9px}
-  .vrow{background:var(--paper);border-radius:11px;padding:9px 12px}
-  .v-top{display:flex;align-items:center;gap:10px}
-  .v-w{font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:17px;color:var(--ink)}
-  .v-jp{color:var(--ink-soft);font-size:13.5px;margin-left:auto;text-align:right;font-weight:600}
-  .v-ex{margin-top:6px;display:flex;align-items:center;gap:8px}
-  .v-ex-en{font-size:13px;color:var(--muted);font-weight:600}
-  .v-ex-jp{font-size:11.5px;color:var(--muted);margin-left:auto;text-align:right}
-  .v-ex .speak.mini .wave i{background:var(--muted)}
-
-  .dlg{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-  .dlg-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
-  .dlg-head .lbl{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.06em}
-  .dlg-play{margin-left:auto;cursor:pointer;border:1px solid var(--line);background:var(--paper-2);font-family:inherit;font-weight:700;font-size:12px;color:var(--ink-soft);padding:5px 12px;border-radius:999px}
-  .dline{display:flex;align-items:center;gap:9px;padding:6px 6px;border-radius:9px}
+  .dlg{background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0;transition:.15s}
+  .dlg.learned{background:var(--jade-soft);border-color:#bfded9}
+  .dlg-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .dlg-head .lbl{font-weight:800;color:var(--ink);font-size:15px;flex:1}
+  .dlg-play{cursor:pointer;border:1px solid var(--line);background:var(--paper);font-family:inherit;font-weight:700;font-size:12.5px;color:var(--ink-soft);padding:6px 13px;border-radius:999px}
+  .dlg-play:hover{border-color:var(--accent);color:var(--accent-deep)}
+  .dlines{display:flex;flex-direction:column;gap:7px}
+  .dline{display:flex;align-items:flex-start;gap:9px;padding:7px 8px;border-radius:9px}
   .dline.playing{background:var(--accent-soft)}
-  .who{font-weight:800;font-size:11px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff}
+  .who{font-weight:800;font-size:11px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff;margin-top:1px}
   .who.A{background:var(--accent)}.who.B{background:var(--jade)}
-  .dl-en{font-weight:700;color:var(--ink);font-size:15px;flex:none}
-  .dl-jp{color:var(--muted);font-size:12.5px;margin-left:auto;text-align:right;flex:none}
-
-  .fl-jp{text-align:center;font-size:clamp(22px,5vw,30px);font-weight:800;color:var(--ink);margin:6px 0 2px}
-  .fl-cue-wrap{text-align:center;margin:6px 0}
-  .fl-cue{display:inline-block;font-size:14px;font-weight:800;color:var(--accent-deep);background:var(--accent-soft);padding:5px 14px;border-radius:999px}
+  .dl-main{flex:1}
+  .dl-en{font-weight:700;color:var(--ink);font-size:15.5px;line-height:1.45}
+  .dl-jp{color:var(--muted);font-size:12.5px;margin-top:1px}
+  .dlg-foot{display:flex;justify-content:flex-end;margin-top:8px}
 </style>
 </head>
 <body>
@@ -388,18 +377,18 @@
 
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">第6部 ・ 語彙 ⑬ 数・量・つなぎ</span>
-    <h1>数・量・<br>つなぎのことば。</h1>
-    <p class="lead">数字・量・順番・つなぎ言葉は、どんな会話にも欠かせない土台。ここを固めると一気に話しやすくなります。第6部（語彙）の総仕上げです。</p>
+    <span class="eyebrow">第7部 ・ 実践 ① ダイアログ集1</span>
+    <h1>会話を、<br>まるごと体験。</h1>
+    <p class="lead">ここからは実践。場面ごとの長めの会話を、通して聞いて、声に出して、相手になりきって返す。ここまで覚えたことばと型を「使える力」に変えます。</p>
     <div class="demo">
-      <div class="demo-tag">単語 ＋ 例文 ＋ 音</div>
-      <p class="en">ten — I have ten books.</p>
-      <p class="jp-mean jp">「10」。単語だけでなく短い例文ごと声に出すと、使える形で身につきます。</p>
+      <div class="demo-tag">通して聞く → まねる → 返す</div>
+      <p class="en">A: How are you? &nbsp; B: I'm good, thanks. And you?</p>
+      <p class="jp-mean jp">短い会話も、A・Bの両方を声に出すと一気に身につきます。各行の 🔊、そして「▶ 通して聞く」でシャドーイング。</p>
       <div class="wchips" style="margin-top:14px">
-        <button class="wchip speak" data-say="ten"><span class="wave"><i></i><i></i><i></i></span><span class="wt">ten</span></button>
-        <button class="wchip speak" data-say="I have ten books."><span class="wave"><i></i><i></i><i></i></span><span class="wt">I have ten books.</span></button>
+        <button class="wchip speak" data-say="How are you?"><span class="wave"><i></i><i></i><i></i></span><span class="wt">How are you?</span></button>
+        <button class="wchip speak" data-say="I'm good, thanks. And you?"><span class="wave"><i></i><i></i><i></i></span><span class="wt">I'm good, thanks.</span></button>
       </div>
-      <div class="hint jp"><b>🔊</b> 単語と例文、両方タップして声に出していこう。</div>
+      <div class="hint jp"><b>🔊</b> まず通して聞いて、次は自分がB役。返し方トレで反射的に。</div>
     </div>
   </div>
 </section>
@@ -407,64 +396,65 @@
 <main class="wrap">
 
   <section class="lesson" id="intro">
-    <div class="lesson-no">6⑬-0</div>
+    <div class="lesson-no">7①-0</div>
     <h2 class="jp">この章のやり方</h2>
-    <p class="jp">覚え方のコツは<strong>テーマでまとめて、例文ごと声に出す</strong>こと。単語の 🔊 と例文の 🔊 を両方タップ。最後の<strong>単語フラッシュ</strong>で「日本語→英語」を瞬間で出せるようにします。グループを覚えたら「できた ✓」。</p>
+    <p class="jp">使い方は3ステップ。①<strong>「▶ 通して聞く」</strong>で会話全体を聞く → ②各行の 🔊 を押して<strong>まねして声に出す</strong>（シャドーイング） → ③下の<strong>ロールプレイ・トレ</strong>で、自分がB役になって返す。会話を覚えたら「できた ✓」。</p>
   </section>
 
   <section class="lesson" id="secMain">
-    <div class="lesson-no">6⑬-A</div>
-    <h2 class="jp">テーマ別・数・量・つなぎのことば</h2>
+    <div class="lesson-no">7①-A</div>
+    <h2 class="jp">場面別ダイアログ集</h2>
     <div id="root"></div>
   </section>
 
-  <!-- 単語フラッシュ -->
-  <section class="lesson" id="fl-sec">
-    <div class="lesson-no">6⑬-A ✦</div>
-    <h2 class="jp">単語フラッシュ（日本語 → 英語）</h2>
-    <p class="jp">この章の肝。日本語を見て、<strong>英単語を瞬間で言います</strong>。テンポよく、たくさん回しましょう。</p>
-    <div class="trainer" id="fl">
-      <div class="tr-setup" id="flSetup">
-        <p class="tr-q jp">日本語を見て、英語で言おう。20問。</p>
-        <button class="tr-start" id="flStart">▶ スタート</button>
-        <p class="tr-mic jp" id="flMicNote"></p>
+  <!-- ロールプレイ・トレ -->
+  <section class="lesson" id="rp-sec">
+    <div class="lesson-no">7①-A ✦</div>
+    <h2 class="jp">ロールプレイ・トレ（あなたがB役）</h2>
+    <p class="jp">相手（A）のセリフに、<strong>自分がB役で返します</strong>。実際の会話の流れで練習できます。</p>
+    <div class="trainer" id="rp">
+      <div class="tr-setup" id="rpSetup">
+        <p class="tr-q jp">Aのセリフに、Bになって返そう。15問。</p>
+        <button class="tr-start" id="rpStart">▶ スタート</button>
+        <p class="tr-mic jp" id="rpMicNote"></p>
       </div>
-      <div class="tr-drill" id="flDrill" hidden>
-        <div class="tr-top"><span id="flProg">1 / 20</span><span id="flScore">0 言えた</span><button id="flQuit" class="tr-quit">やめる</button></div>
+      <div class="tr-drill" id="rpDrill" hidden>
+        <div class="tr-top"><span id="rpProg">1 / 15</span><span id="rpScore">0 言えた</span><button id="rpQuit" class="tr-quit">やめる</button></div>
         <div class="tr-prompt">
-          <div class="fl-jp jp" id="flJp"></div>
-          <div class="fl-cue-wrap"><span class="fl-cue jp" id="flCue">英語で何？</span></div>
-          <div class="tr-answer" id="flAnswer" hidden><div class="tr-en" id="flEn"></div></div>
+          <div class="rp-line" id="rpLine"></div>
+          <div class="rp-linejp jp" id="rpLineJp"></div>
+          <div class="rp-cue-wrap"><span class="rp-cue jp" id="rpCue">あなた（B）はどう返す？</span></div>
+          <div class="tr-answer" id="rpAnswer" hidden><div class="tr-en" id="rpEn"></div></div>
         </div>
-        <div class="tr-feedback" id="flFb"></div>
+        <div class="tr-feedback" id="rpFb"></div>
         <div class="tr-actions">
-          <button class="tr-mic-btn" id="flMic">🎤 言う</button>
-          <button class="tr-ghost" id="flHear">🔊 答えを聞く</button>
-          <button class="tr-ghost" id="flShow">👁 答えを見る</button>
+          <button class="tr-mic-btn" id="rpMic">🎤 返す</button>
+          <button class="tr-ghost" id="rpHear">🔊 返し方を聞く</button>
+          <button class="tr-ghost" id="rpShow">👁 答えを見る</button>
         </div>
-        <div class="tr-rate" id="flRate" hidden>
+        <div class="tr-rate" id="rpRate" hidden>
           <span class="jp">自分で判定：</span>
-          <button class="tr-yes" id="flYes">✅ 言えた</button>
-          <button class="tr-no" id="flNo">🔁 もう一回</button>
-          <button class="tr-next" id="flNext">次へ →</button>
+          <button class="tr-yes" id="rpYes">✅ 言えた</button>
+          <button class="tr-no" id="rpNo">🔁 もう一回</button>
+          <button class="tr-next" id="rpNext">次へ →</button>
         </div>
       </div>
-      <div class="tr-result" id="flResult" hidden>
-        <div class="tr-res-big" id="flResBig">16 / 20</div>
-        <div class="tr-res-msg jp" id="flResMsg"></div>
-        <button class="tr-again" id="flAgain">もう一度</button>
+      <div class="tr-result" id="rpResult" hidden>
+        <div class="tr-res-big" id="rpResBig">12 / 15</div>
+        <div class="tr-res-msg jp" id="rpResMsg"></div>
+        <button class="tr-again" id="rpAgain">もう一度</button>
       </div>
     </div>
   </section>
 
   <!-- 口頭作文トレ -->
   <section class="lesson" id="pr-sec">
-    <div class="lesson-no">6⑬-A ✦✦</div>
-    <h2 class="jp">口頭作文トレ（例文を英語で言う）</h2>
-    <p class="jp">仕上げ。日本語を見て、<strong>例文を声に出して言います</strong>。単語を使える形で定着させます。</p>
+    <div class="lesson-no">7①-A ✦✦</div>
+    <h2 class="jp">口頭作文トレ（日本語 → 英語で言う）</h2>
+    <p class="jp">仕上げ。会話に出てきたセリフを、日本語から<strong>英語で言います</strong>。どの場面の表現も口から出るように。</p>
     <div class="trainer" id="pr">
       <div class="tr-setup" id="prSetup">
-        <p class="tr-q jp">どのテーマから練習する？</p>
+        <p class="tr-q jp">どの場面から練習する？</p>
         <div class="tr-picks" id="prPicks"></div>
         <button class="tr-start" id="prStart">▶ スタート</button>
         <p class="tr-mic jp" id="prMicNote"></p>
@@ -496,18 +486,18 @@
       </div>
     </div>
 
-    <a href="page7-1.html" class="nextup-link">
+    <a href="page7-2.html" class="nextup-link">
     <div class="nextup">
       <div class="k">Next</div>
-      <h3 class="jp">第7部 ― 実践（次の章）</h3>
-      <p class="jp">これで第6部（語彙）は完成です。次の第7部「実践」では、長めのダイアログ・読み物・話すドリルで、ここまでのことばを使う力に変えていきます。</p>
+      <h3 class="jp">第7部② 場面別ダイアログ集 その2</h3>
+      <p class="jp">会話をさらに30本以上。電話・トラブル対応・お祝い・道案内など、場面を広げて「ダイアログ100＋」へ。読み物・話すドリルも続きます。</p>
     </div>
     </a>
   </section>
 
 </main>
 
-<footer class="jp">話せる・読める英語 ／ 第6部⑬ 数・量・つなぎのことば</footer>
+<footer class="jp">話せる・読める英語 ／ 第7部① 場面別ダイアログ集1</footer>
 
 <canvas id="confetti"></canvas>
 <div class="fxlayer" id="fxlayer"></div>
@@ -528,16 +518,16 @@ let toastTimer=null;
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),1600);}
 
 const Store=(()=>{let mem={},ok=true;try{localStorage.setItem('__t','1');localStorage.removeItem('__t');}catch(e){ok=false;}return{get(k){try{return ok?localStorage.getItem(k):mem[k];}catch(e){return mem[k];}},set(k,v){try{if(ok)localStorage.setItem(k,v);else mem[k]=v;}catch(e){mem[k]=v;}}};})();
-const SK='eigo_part6t13_state_v1';
-let G=Object.assign({xp:0,streak:0,lastDate:null,today:null,todayCount:0,goal:10,learned:[],soundOn:true,goalDoneDate:null},(()=>{try{return JSON.parse(Store.get(SK))||{};}catch(e){return{};}})());
+const SK='eigo_part7t1_state_v1';
+let G=Object.assign({xp:0,streak:0,lastDate:null,today:null,todayCount:0,goal:8,learned:[],soundOn:true,goalDoneDate:null},(()=>{try{return JSON.parse(Store.get(SK))||{};}catch(e){return{};}})());
 function saveState(){Store.set(SK,JSON.stringify(G));}
 function dstr(d){return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();}
 const TODAY=dstr(new Date()),YEST=dstr(new Date(Date.now()-864e5));
 if(G.today!==TODAY){G.today=TODAY;G.todayCount=0;}
 
-const TITLES=['語彙見習い','数ことば使い','数字名人','量ことばマスター','つなぎ達人','便利ことば上手','語彙コレクター','単語の達人'];
-function levelInfo(xp){let lvl=1,need=70,acc=0;while(xp>=acc+need){acc+=need;lvl++;need=70+(lvl-1)*45;}return{lvl,into:xp-acc,span:need,title:TITLES[Math.min(lvl-1,TITLES.length-1)]+(lvl>TITLES.length?(' Lv.'+lvl):'')};}
-const PRAISE=['いいね！','その調子！','ナイス！','言えてる！','どんどんいこう！','語彙が増えてる','スラスラだね','完璧！'];
+const TITLES=['会話見習い','あいさつ使い','カフェ会話名人','買い物トーク達人','道案内マスター','旅の会話上手','会話コレクター','実践の達人'];
+function levelInfo(xp){let lvl=1,need=80,acc=0;while(xp>=acc+need){acc+=need;lvl++;need=80+(lvl-1)*50;}return{lvl,into:xp-acc,span:need,title:TITLES[Math.min(lvl-1,TITLES.length-1)]+(lvl>TITLES.length?(' Lv.'+lvl):'')};}
+const PRAISE=['いいね！','その調子！','ナイス会話！','言えてる！','どんどんいこう！','ネイティブみ、出てきた','スラスラだね','完璧！'];
 const BONUS=['ラッキーボーナス！','ごほうびタイム🎁','神引き！','うれしい誤算！'];
 const COMBOMSG={2:'2連続！',3:'ノってきた！',4:'絶好調！',5:'ファイヤー！🔥',7:'手が止まらない！',10:'無敵モード！'};
 function pick(a){return a[Math.floor(Math.random()*a.length)];}
@@ -558,10 +548,10 @@ function awardXP(n,x,y,cls){const before=levelInfo(G.xp).lvl;G.xp+=n;fx('+'+n+' 
 const practiced=new Set();
 function practiceXP(sp){const key=sp.dataset.say;if(!key||practiced.has(key))return;practiced.add(key);registerStudyDay();const r=sp.getBoundingClientRect();awardXP(1,r.left,r.top-6);}
 let comboN=0,comboTimer=null;
-function bumpCombo(){comboN++;clearTimeout(comboTimer);comboTimer=setTimeout(()=>{comboN=0;hideCombo();},9000);if(comboN>=2){const msg=COMBOMSG[comboN]||(comboN+'連続！');showCombo('×'+comboN+' '+msg);}let cb=0;if(comboN===3)cb=5;else if(comboN===5)cb=12;else if(comboN>=7&&comboN%2===1)cb=8;return cb;}
+function bumpCombo(){comboN++;clearTimeout(comboTimer);comboTimer=setTimeout(()=>{comboN=0;hideCombo();},9000);if(comboN>=2){const msg=COMBOMSG[comboN]||(comboN+'連続！');showCombo('×'+comboN+' '+msg);}let cb=0;if(comboN===3)cb=6;else if(comboN===5)cb=14;else if(comboN>=7&&comboN%2===1)cb=10;return cb;}
 function showCombo(t){const b=$('comboBadge');b.textContent=t;b.classList.add('show');}
 function hideCombo(){$('comboBadge').classList.remove('show');}
-function onLearn(btn){registerStudyDay();G.todayCount++;const r=btn.getBoundingClientRect();const cb=bumpCombo();awardXP(10+cb,r.left-10,r.top-6);sPop();toast(pick(PRAISE));if(Math.random()<0.16){const bn=5+Math.floor(Math.random()*16);setTimeout(()=>{const b4=levelInfo(G.xp).lvl;G.xp+=bn;const af=levelInfo(G.xp);fx('🎁 +'+bn+' XP',r.left-10,r.top-30,'bonus');sBonus();confetti(70);toast(pick(BONUS));renderStats();saveState();if(af.lvl>b4)levelUp(af);},260);}if(G.todayCount>=G.goal&&G.goalDoneDate!==TODAY){G.goalDoneDate=TODAY;setTimeout(()=>{confetti(130);sLevel();toast('🎯 今日の目標クリア！');},140);}if(learned.size>0&&learned.size%5===0){setTimeout(()=>confetti(90),100);}renderStats();saveState();}
+function onLearn(btn){registerStudyDay();G.todayCount++;const r=btn.getBoundingClientRect();const cb=bumpCombo();awardXP(14+cb,r.left-10,r.top-6);sPop();toast(pick(PRAISE));if(Math.random()<0.16){const bn=6+Math.floor(Math.random()*18);setTimeout(()=>{const b4=levelInfo(G.xp).lvl;G.xp+=bn;const af=levelInfo(G.xp);fx('🎁 +'+bn+' XP',r.left-10,r.top-30,'bonus');sBonus();confetti(70);toast(pick(BONUS));renderStats();saveState();if(af.lvl>b4)levelUp(af);},260);}if(G.todayCount>=G.goal&&G.goalDoneDate!==TODAY){G.goalDoneDate=TODAY;setTimeout(()=>{confetti(130);sLevel();toast('🎯 今日の目標クリア！');},140);}if(learned.size>0&&learned.size%5===0){setTimeout(()=>confetti(90),100);}renderStats();saveState();}
 function levelUp(li){$('lvlupLv').textContent='Lv.'+li.lvl;$('lvlupTitle').textContent=li.title;$('lvlup').classList.add('show');confetti(170);sLevel();}
 $('lvlupClose').addEventListener('click',()=>$('lvlup').classList.remove('show'));
 $('lvlup').addEventListener('click',e=>{if(e.target.id==='lvlup')e.currentTarget.classList.remove('show');});
@@ -578,235 +568,223 @@ function norm(s){return(s||'').toLowerCase().replace(/[’'`]/g,'').replace(/[^a
 function sim(a,b){a=norm(a);b=norm(b);if(!a||!b)return 0;if(a===b)return 1;const ta=a.split(' '),tb=new Set(b.split(' '));let h=0;ta.forEach(w=>{if(tb.has(w))h++;});return h/Math.max(ta.length,tb.size);}
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
-/* ============ 第6部① 語彙：日常・家 ============ */
-const SEC=[
- {t:'数 1〜20', short:'①数', words:[
-   {w:'one',jp:'1',ex:'one apple',exjp:'りんご1個'},
-   {w:'two',jp:'2',ex:'two cats',exjp:'ねこ2匹'},
-   {w:'three',jp:'3',ex:'three books',exjp:'本3冊'},
-   {w:'four',jp:'4',ex:'four people',exjp:'4人'},
-   {w:'five',jp:'5',ex:'five minutes',exjp:'5分'},
-   {w:'six',jp:'6',ex:'six eggs',exjp:'卵6個'},
-   {w:'seven',jp:'7',ex:'seven days',exjp:'7日'},
-   {w:'eight',jp:'8',ex:'eight hours',exjp:'8時間'},
-   {w:'nine',jp:'9',ex:'nine o\u2019clock',exjp:'9時'},
-   {w:'ten',jp:'10',ex:'ten dollars',exjp:'10ドル'},
-   {w:'eleven',jp:'11',ex:'eleven years',exjp:'11年'},
-   {w:'twelve',jp:'12',ex:'twelve months',exjp:'12か月'},
-   {w:'thirteen',jp:'13',ex:'thirteen people',exjp:'13人'},
-   {w:'fourteen',jp:'14',ex:'fourteen days',exjp:'14日'},
-   {w:'fifteen',jp:'15',ex:'fifteen minutes',exjp:'15分'},
-   {w:'sixteen',jp:'16',ex:'sixteen years',exjp:'16歳'},
-   {w:'seventeen',jp:'17',ex:'seventeen people',exjp:'17人'},
-   {w:'eighteen',jp:'18',ex:'eighteen years',exjp:'18歳'},
-   {w:'nineteen',jp:'19',ex:'nineteen dollars',exjp:'19ドル'},
-   {w:'twenty',jp:'20',ex:'twenty people',exjp:'20人'},
- ], dlg:[{who:'A',en:'How many do you need?',jp:'いくつ必要？'},{who:'B',en:'Ten, please.',jp:'10個ください'},{who:'A',en:'Okay, ten it is.',jp:'了解、10個ね'},{who:'B',en:'Thanks a lot.',jp:'ありがとう'}]},
- {t:'大きい数', short:'②大きい数', words:[
-   {w:'thirty',jp:'30',ex:'thirty minutes',exjp:'30分'},
-   {w:'forty',jp:'40',ex:'forty people',exjp:'40人'},
-   {w:'fifty',jp:'50',ex:'fifty dollars',exjp:'50ドル'},
-   {w:'sixty',jp:'60',ex:'sixty seconds',exjp:'60秒'},
-   {w:'seventy',jp:'70',ex:'seventy years',exjp:'70年'},
-   {w:'eighty',jp:'80',ex:'eighty people',exjp:'80人'},
-   {w:'ninety',jp:'90',ex:'ninety percent',exjp:'90パーセント'},
-   {w:'hundred',jp:'100',ex:'a hundred yen',exjp:'100円'},
-   {w:'thousand',jp:'1000',ex:'a thousand people',exjp:'1000人'},
-   {w:'million',jp:'100万',ex:'a million dollars',exjp:'100万ドル'},
-   {w:'zero',jp:'0',ex:'zero degrees',exjp:'0度'},
-   {w:'dozen',jp:'1ダース',ex:'a dozen eggs',exjp:'卵1ダース'},
-   {w:'number',jp:'数',ex:'a phone number',exjp:'電話番号'},
-   {w:'count',jp:'数える',ex:'count to ten',exjp:'10まで数える'},
+/* ============ 第7部① ダイアログデータ ============ */
+/* 各会話: {sc:場面, t:タイトル, L:[[who,en,jp],...]} */
+const DLG=[
+ {sc:'あいさつ・自己紹介', short:'①あいさつ', items:[
+   {t:'初対面で', L:[
+     ['A','Hi, I\u2019m Ken.','こんにちは、ケンです'],['B','Nice to meet you. I\u2019m Mary.','はじめまして、メアリーです'],
+     ['A','Where are you from?','どちらの出身ですか？'],['B','I\u2019m from Canada. And you?','カナダです。あなたは？'],
+     ['A','I\u2019m from Japan.','日本です'],['B','Cool! What do you do?','いいですね！お仕事は？'],
+     ['A','I\u2019m a student. How about you?','学生です。あなたは？'],['B','I work at a cafe.','カフェで働いています'],
+   ]},
+   {t:'久しぶりに会う', L:[
+     ['A','Long time no see!','久しぶり！'],['B','Hey! How have you been?','やあ！元気だった？'],
+     ['A','Pretty good, thanks. You?','まあまあ元気。そっちは？'],['B','Busy, but good.','忙しいけど元気だよ'],
+     ['A','We should catch up.','今度ゆっくり話そうよ'],['B','Yes! Are you free this weekend?','うん！週末ひま？'],
+     ['A','Saturday works for me.','土曜なら大丈夫'],['B','Great, see you then.','いいね、じゃあそのとき'],
+   ]},
+   {t:'友達を紹介する', L:[
+     ['A','Mary, this is my friend Tom.','メアリー、友達のトムだよ'],['B','Hi Tom, nice to meet you.','こんにちはトム、はじめまして'],
+     ['A','Tom works at a hospital.','トムは病院で働いてるの'],['B','Oh, are you a doctor?','あら、お医者さん？'],
+     ['A','No, he\u2019s a nurse.','ううん、看護師だよ'],['B','That\u2019s a great job.','すてきな仕事ね'],
+     ['A','Let\u2019s all get coffee sometime.','今度みんなでコーヒーでも'],['B','Sounds good!','いいね！'],
+   ]},
  ]},
- {t:'順番', short:'③順番', words:[
-   {w:'first',jp:'1番目',ex:'the first time',exjp:'初めて'},
-   {w:'second',jp:'2番目',ex:'the second day',exjp:'2日目'},
-   {w:'third',jp:'3番目',ex:'the third floor',exjp:'3階'},
-   {w:'fourth',jp:'4番目',ex:'the fourth week',exjp:'4週目'},
-   {w:'fifth',jp:'5番目',ex:'the fifth year',exjp:'5年目'},
-   {w:'sixth',jp:'6番目',ex:'the sixth time',exjp:'6回目'},
-   {w:'seventh',jp:'7番目',ex:'the seventh day',exjp:'7日目'},
-   {w:'eighth',jp:'8番目',ex:'the eighth floor',exjp:'8階'},
-   {w:'ninth',jp:'9番目',ex:'the ninth month',exjp:'9か月目'},
-   {w:'tenth',jp:'10番目',ex:'the tenth year',exjp:'10年目'},
-   {w:'last',jp:'最後の',ex:'the last one',exjp:'最後の1つ'},
-   {w:'next',jp:'次の',ex:'the next day',exjp:'次の日'},
-   {w:'middle',jp:'真ん中',ex:'in the middle',exjp:'真ん中に'},
-   {w:'final',jp:'最終の',ex:'the final result',exjp:'最終結果'},
+ {sc:'カフェ・レストラン', short:'②カフェ', items:[
+   {t:'カフェで注文', L:[
+     ['A','Hi, what can I get you?','いらっしゃいませ、ご注文は？'],['B','Can I get a coffee, please?','コーヒーをください'],
+     ['A','Sure. For here or to go?','はい。店内ですか、お持ち帰り？'],['B','For here, please.','店内で'],
+     ['A','Anything else?','他には？'],['B','A piece of cake, too.','ケーキも1つ'],
+     ['A','That\u2019s six dollars.','6ドルになります'],['B','Here you go. Thanks.','はい、どうぞ。ありがとう'],
+   ]},
+   {t:'レストランで', L:[
+     ['A','Are you ready to order?','ご注文はお決まりですか？'],['B','Yes. What do you recommend?','はい。おすすめは？'],
+     ['A','The pasta is very popular.','パスタが人気です'],['B','Okay, I\u2019ll have that.','じゃあそれにします'],
+     ['A','Anything to drink?','お飲み物は？'],['B','Just water, please.','お水だけで'],
+     ['A','Great. It\u2019ll be ready soon.','かしこまりました。すぐお出しします'],['B','Thank you.','ありがとう'],
+   ]},
+   {t:'会計をする', L:[
+     ['A','Can I get the check, please?','お会計お願いします'],['B','Of course. Here you are.','はい、こちらです'],
+     ['A','Can I pay by card?','カードで払えますか？'],['B','Yes, no problem.','はい、大丈夫です'],
+     ['A','Was everything okay?','お料理はいかがでしたか？'],['B','It was delicious, thanks.','おいしかったです、ありがとう'],
+     ['A','Thank you. Have a good day.','ありがとうございます。よい一日を'],['B','You too!','あなたも！'],
+   ]},
+   {t:'味の感想', L:[
+     ['A','How is your food?','料理どう？'],['B','It\u2019s really good. A bit spicy.','すごくおいしい。少し辛いけど'],
+     ['A','Mine is a little salty.','私のは少ししょっぱい'],['B','Do you want to try mine?','私のも食べてみる？'],
+     ['A','Sure, thanks.','うん、ありがとう'],['B','Take as much as you want.','好きなだけどうぞ'],
+   ]},
  ]},
- {t:'量・程度', short:'④量', words:[
-   {w:'all',jp:'すべて',ex:'all of them',exjp:'全部'},
-   {w:'some',jp:'いくつか',ex:'some water',exjp:'少しの水'},
-   {w:'any',jp:'どれでも・少しも',ex:'any questions?',exjp:'質問ある？'},
-   {w:'many',jp:'たくさん(数)',ex:'many people',exjp:'多くの人'},
-   {w:'much',jp:'たくさん(量)',ex:'too much sugar',exjp:'砂糖が多すぎ'},
-   {w:'few',jp:'少しの(数)',ex:'a few friends',exjp:'数人の友達'},
-   {w:'little',jp:'少しの(量)',ex:'a little milk',exjp:'少しの牛乳'},
-   {w:'more',jp:'もっと',ex:'more time',exjp:'もっと時間'},
-   {w:'less',jp:'より少なく',ex:'less salt',exjp:'塩を少なく'},
-   {w:'most',jp:'ほとんど',ex:'most people',exjp:'ほとんどの人'},
-   {w:'enough',jp:'十分',ex:"That's enough.",exjp:'もう十分'},
-   {w:'several',jp:'いくつかの',ex:'several days',exjp:'数日'},
-   {w:'both',jp:'両方',ex:'both of us',exjp:'私たち2人とも'},
-   {w:'none',jp:'1つもない',ex:'none of them',exjp:'どれも〜ない'},
-   {w:'half',jp:'半分',ex:'half an hour',exjp:'30分'},
-   {w:'whole',jp:'全部の',ex:'the whole day',exjp:'一日中'},
-   {w:'plenty',jp:'たっぷり',ex:'plenty of time',exjp:'たっぷり時間'},
-   {w:'a lot',jp:'たくさん',ex:'a lot of fun',exjp:'すごく楽しい'},
-   {w:'double',jp:'2倍',ex:'double the size',exjp:'2倍の大きさ'},
-   {w:'extra',jp:'余分の',ex:'extra cheese',exjp:'チーズ多め'},
+ {sc:'買い物', short:'③買い物', items:[
+   {t:'服を試着する', L:[
+     ['A','Can I try this on?','これ試着できますか？'],['B','Sure, the fitting room is over there.','はい、試着室はあちらです'],
+     ['A','Do you have a bigger size?','大きいサイズはありますか？'],['B','Let me check for you.','お調べします'],
+     ['A','Thanks. I like this color.','ありがとう。この色いいですね'],['B','It looks great on you.','よくお似合いです'],
+     ['A','Okay, I\u2019ll take it.','じゃあ、これにします'],['B','Great choice!','いい選択です！'],
+   ]},
+   {t:'値段を聞く', L:[
+     ['A','Excuse me, how much is this?','すみません、これいくらですか？'],['B','It\u2019s twenty dollars.','20ドルです'],
+     ['A','Is it on sale?','セール中ですか？'],['B','Yes, ten percent off today.','はい、今日は10%引きです'],
+     ['A','Nice. Can I get a bag?','いいですね。袋もらえますか？'],['B','Of course. Here you go.','もちろん。どうぞ'],
+   ]},
+   {t:'返品する', L:[
+     ['A','I\u2019d like to return this.','これを返品したいのですが'],['B','Sure. Is there a problem?','はい。何か問題が？'],
+     ['A','It\u2019s too small for me.','私には小さすぎて'],['B','No problem. Do you have the receipt?','大丈夫です。レシートはありますか？'],
+     ['A','Yes, here it is.','はい、これです'],['B','I\u2019ll give you a refund.','返金いたします'],
+     ['A','Thank you so much.','本当にありがとう'],['B','You\u2019re welcome.','どういたしまして'],
+   ]},
  ]},
- {t:'つなぎことば', short:'⑤つなぎ', words:[
-   {w:'and',jp:'〜と',ex:'you and me',exjp:'あなたと私'},
-   {w:'but',jp:'でも',ex:'cheap but good',exjp:'安いけどいい'},
-   {w:'or',jp:'または',ex:'tea or coffee',exjp:'お茶かコーヒー'},
-   {w:'so',jp:'だから',ex:'I was tired, so I slept.',exjp:'疲れたので寝た'},
-   {w:'because',jp:'なぜなら',ex:'because of the rain',exjp:'雨のせいで'},
-   {w:'if',jp:'もし',ex:'if you want',exjp:'よければ'},
-   {w:'also',jp:'〜も',ex:'me also',exjp:'私も'},
-   {w:'too',jp:'〜も・〜すぎ',ex:'me too',exjp:'私も'},
-   {w:'only',jp:'〜だけ',ex:'only one',exjp:'1つだけ'},
-   {w:'still',jp:'まだ',ex:'still here',exjp:'まだいる'},
-   {w:'even',jp:'〜さえ',ex:'even me',exjp:'私でさえ'},
-   {w:'just',jp:'ちょうど・ただ',ex:'just a little',exjp:'ほんの少し'},
-   {w:'again',jp:'もう一度',ex:'try again',exjp:'もう一度'},
-   {w:'maybe',jp:'たぶん',ex:'maybe later',exjp:'たぶん後で'},
-   {w:'of course',jp:'もちろん',ex:'Of course!',exjp:'もちろん！'},
-   {w:'however',jp:'しかし',ex:'However, it works.',exjp:'でも、動く'},
-   {w:'then',jp:'それから',ex:'and then',exjp:'それから'},
-   {w:'instead',jp:'代わりに',ex:'tea instead',exjp:'代わりにお茶'},
+ {sc:'道案内', short:'④道案内', items:[
+   {t:'駅への行き方', L:[
+     ['A','Excuse me, where is the station?','すみません、駅はどこですか？'],['B','Go straight and turn left.','まっすぐ行って左に曲がって'],
+     ['A','Is it far?','遠いですか？'],['B','No, about five minutes.','いいえ、5分ほどです'],
+     ['A','Thank you so much.','ありがとうございます'],['B','No problem. Have a good day.','どういたしまして。よい一日を'],
+   ]},
+   {t:'道に迷う', L:[
+     ['A','I think I\u2019m lost.','道に迷ったみたいです'],['B','Where do you want to go?','どこへ行きたいですか？'],
+     ['A','To the museum.','博物館へ'],['B','It\u2019s near here. Follow this road.','この近くです。この道を進んで'],
+     ['A','Turn left or right?','左ですか、右ですか？'],['B','Turn right at the corner.','角を右に曲がって'],
+     ['A','Got it. Thanks a lot.','わかりました。ありがとう'],['B','You\u2019re welcome.','どういたしまして'],
+   ]},
+   {t:'バスを聞く', L:[
+     ['A','Does this bus go downtown?','このバスは中心街に行きますか？'],['B','Yes, it does.','はい、行きます'],
+     ['A','How long does it take?','どのくらいかかりますか？'],['B','About twenty minutes.','20分ほどです'],
+     ['A','Where do I get off?','どこで降りればいいですか？'],['B','At the third stop.','3つ目の停留所です'],
+     ['A','Thank you for your help.','助かりました、ありがとう'],['B','Any time.','いつでもどうぞ'],
+   ]},
  ]},
- {t:'これ・あれ・疑問', short:'⑥これあれ', words:[
-   {w:'this',jp:'これ',ex:'this one',exjp:'これ'},
-   {w:'that',jp:'あれ',ex:'that one',exjp:'あれ'},
-   {w:'these',jp:'これら',ex:'these books',exjp:'これらの本'},
-   {w:'those',jp:'あれら',ex:'those people',exjp:'あの人たち'},
-   {w:'here',jp:'ここ',ex:'over here',exjp:'こっち'},
-   {w:'there',jp:'そこ',ex:'over there',exjp:'あっち'},
-   {w:'who',jp:'だれ',ex:'Who is it?',exjp:'だれ？'},
-   {w:'what',jp:'何',ex:'What is this?',exjp:'これ何？'},
-   {w:'where',jp:'どこ',ex:'Where is it?',exjp:'どこ？'},
-   {w:'when',jp:'いつ',ex:'When is it?',exjp:'いつ？'},
-   {w:'why',jp:'なぜ',ex:'Why not?',exjp:'なんで？'},
-   {w:'how',jp:'どう・どのくらい',ex:'How are you?',exjp:'元気？'},
-   {w:'which',jp:'どれ',ex:'Which one?',exjp:'どれ？'},
-   {w:'someone',jp:'だれか',ex:'someone is here',exjp:'だれかいる'},
-   {w:'something',jp:'何か',ex:'something good',exjp:'何かいいもの'},
-   {w:'anything',jp:'何でも',ex:'anything else?',exjp:'他に何か？'},
-   {w:'everyone',jp:'みんな',ex:'everyone is here',exjp:'みんないる'},
-   {w:'nothing',jp:'何もない',ex:'nothing much',exjp:'別に何も'},
+ {sc:'電話', short:'⑤電話', items:[
+   {t:'予約の電話', L:[
+     ['A','Hello, can I make a reservation?','もしもし、予約できますか？'],['B','Sure. For how many people?','はい。何名様ですか？'],
+     ['A','Two people, at seven tonight.','2人で、今夜7時に'],['B','Okay. What\u2019s your name?','かしこまりました。お名前は？'],
+     ['A','It\u2019s Ken Tanaka.','田中ケンです'],['B','Great. See you at seven.','では7時にお待ちしています'],
+     ['A','Thank you. Bye.','ありがとう。失礼します'],['B','Goodbye.','失礼します'],
+   ]},
+   {t:'伝言を残す', L:[
+     ['A','Hello, is Tom there?','もしもし、トムさんはいますか？'],['B','Sorry, he\u2019s out right now.','すみません、今出ています'],
+     ['A','Can I leave a message?','伝言をお願いできますか？'],['B','Of course. Go ahead.','もちろん。どうぞ'],
+     ['A','Please tell him Ken called.','ケンから電話があったと伝えてください'],['B','I\u2019ll let him know.','伝えておきます'],
+     ['A','Thank you. Bye.','ありがとう。失礼します'],['B','Bye.','失礼します'],
+   ]},
+   {t:'聞き取れないとき', L:[
+     ['A','Sorry, I can\u2019t hear you well.','すみません、よく聞こえません'],['B','Can you hear me now?','今は聞こえますか？'],
+     ['A','A little better. Please speak slowly.','少しは。ゆっくり話してください'],['B','Sure. Is this better?','はい。これでどうですか？'],
+     ['A','Yes, much better. Thanks.','うん、ずっといい。ありがとう'],['B','No problem.','大丈夫です'],
+   ]},
  ]},
- {t:'よく使うものの名前', short:'⑦名前', words:[
-   {w:'thing',jp:'もの・こと',ex:'a good thing',exjp:'いいこと'},
-   {w:'way',jp:'方法・道',ex:'the best way',exjp:'一番いい方法'},
-   {w:'time',jp:'時間',ex:'a good time',exjp:'いい時間'},
-   {w:'place',jp:'場所',ex:'a nice place',exjp:'いい場所'},
-   {w:'people',jp:'人々',ex:'many people',exjp:'多くの人'},
-   {w:'person',jp:'人',ex:'a kind person',exjp:'親切な人'},
-   {w:'day',jp:'日',ex:'a busy day',exjp:'忙しい日'},
-   {w:'life',jp:'人生・生活',ex:'a happy life',exjp:'幸せな人生'},
-   {w:'world',jp:'世界',ex:'around the world',exjp:'世界中'},
-   {w:'part',jp:'部分',ex:'a part of it',exjp:'その一部'},
-   {w:'kind',jp:'種類',ex:'a kind of fruit',exjp:'果物の一種'},
-   {w:'idea',jp:'考え',ex:'a good idea',exjp:'いい考え'},
-   {w:'problem',jp:'問題',ex:'a big problem',exjp:'大きな問題'},
-   {w:'question',jp:'質問',ex:'a good question',exjp:'いい質問'},
-   {w:'answer',jp:'答え',ex:'the right answer',exjp:'正しい答え'},
-   {w:'name',jp:'名前',ex:'your name',exjp:'あなたの名前'},
-   {w:'word',jp:'ことば',ex:'a new word',exjp:'新しいことば'},
-   {w:'reason',jp:'理由',ex:'a good reason',exjp:'いい理由'},
+ {sc:'体調・病院', short:'⑥体調', items:[
+   {t:'具合が悪い', L:[
+     ['A','You don\u2019t look well. Are you okay?','顔色悪いよ。大丈夫？'],['B','I have a headache and a fever.','頭痛と熱があるの'],
+     ['A','You should see a doctor.','病院に行った方がいいよ'],['B','Yeah, I think so.','うん、そうだね'],
+     ['A','Take care of yourself.','お大事にね'],['B','Thanks. I will.','ありがとう。そうする'],
+   ]},
+   {t:'病院の受付', L:[
+     ['A','How can I help you?','どうされましたか？'],['B','I have a sore throat and a cough.','のどの痛みとせきがあります'],
+     ['A','Since when?','いつからですか？'],['B','Since yesterday.','昨日からです'],
+     ['A','Okay, please wait here.','では、こちらでお待ちください'],['B','Thank you.','ありがとう'],
+   ]},
+   {t:'薬局で', L:[
+     ['A','Do you have something for a cold?','風邪の薬はありますか？'],['B','Yes, try this medicine.','はい、これを試してください'],
+     ['A','How many should I take?','何錠飲めばいいですか？'],['B','Two pills, twice a day.','1日2回、2錠ずつです'],
+     ['A','Okay, thank you.','わかりました、ありがとう'],['B','Get well soon.','早く良くなってね'],
+   ]},
  ]},
- {t:'よく使う様子', short:'⑧様子', words:[
-   {w:'good',jp:'よい',ex:'a good idea',exjp:'いい考え'},
-   {w:'bad',jp:'悪い',ex:'a bad day',exjp:'悪い日'},
-   {w:'nice',jp:'すてきな',ex:'a nice place',exjp:'すてきな場所'},
-   {w:'great',jp:'すばらしい',ex:'a great job',exjp:'すばらしい仕事'},
-   {w:'fine',jp:'元気な・結構な',ex:"I'm fine.",exjp:'元気だよ'},
-   {w:'okay',jp:'大丈夫',ex:"It's okay.",exjp:'大丈夫'},
-   {w:'right',jp:'正しい',ex:"That's right.",exjp:'その通り'},
-   {w:'wrong',jp:'まちがった',ex:"It's wrong.",exjp:'まちがってる'},
-   {w:'true',jp:'本当の',ex:'Is it true?',exjp:'本当？'},
-   {w:'real',jp:'本物の',ex:'a real diamond',exjp:'本物のダイヤ'},
-   {w:'important',jp:'大事な',ex:'an important thing',exjp:'大事なこと'},
-   {w:'same',jp:'同じ',ex:'the same one',exjp:'同じもの'},
-   {w:'different',jp:'ちがう',ex:'a different way',exjp:'ちがう方法'},
-   {w:'special',jp:'特別な',ex:'a special day',exjp:'特別な日'},
-   {w:'busy',jp:'忙しい',ex:"I'm busy.",exjp:'忙しい'},
-   {w:'sure',jp:'確かな',ex:'Are you sure?',exjp:'確か？'},
-   {w:'possible',jp:'可能な',ex:'Is it possible?',exjp:'できる？'},
-   {w:'simple',jp:'簡単な',ex:'a simple plan',exjp:'簡単な計画'},
+ {sc:'旅行・ホテル', short:'⑦旅行', items:[
+   {t:'チェックイン', L:[
+     ['A','Hi, I have a reservation.','こんにちは、予約しています'],['B','May I have your name?','お名前を伺えますか？'],
+     ['A','It\u2019s Ken Tanaka.','田中ケンです'],['B','Yes, a room for two nights.','はい、2泊のお部屋ですね'],
+     ['A','That\u2019s right.','その通りです'],['B','Here\u2019s your key. Room 305.','こちらが鍵です。305号室'],
+     ['A','Thank you. What time is breakfast?','ありがとう。朝食は何時ですか？'],['B','From seven to nine.','7時から9時です'],
+   ]},
+   {t:'観光案内所で', L:[
+     ['A','What can we see around here?','この辺りで何が見られますか？'],['B','There\u2019s a famous temple nearby.','近くに有名な寺があります'],
+     ['A','How do we get there?','どうやって行きますか？'],['B','Take the bus from the station.','駅からバスに乗ってください'],
+     ['A','Is there an entrance fee?','入場料はかかりますか？'],['B','Yes, but it\u2019s cheap.','はい、でも安いですよ'],
+     ['A','Great. Thank you!','いいですね。ありがとう！'],['B','Enjoy your trip!','よい旅を！'],
+   ]},
+   {t:'空港で', L:[
+     ['A','May I see your passport?','パスポートを見せていただけますか？'],['B','Sure, here you are.','はい、どうぞ'],
+     ['A','What\u2019s the purpose of your trip?','旅行の目的は？'],['B','Sightseeing.','観光です'],
+     ['A','How long will you stay?','どのくらい滞在しますか？'],['B','About a week.','1週間ほどです'],
+     ['A','Okay. Enjoy your stay.','けっこうです。よいご滞在を'],['B','Thank you.','ありがとう'],
+   ]},
  ]},
- {t:'よく使う便利な動き', short:'⑨便利な動き', words:[
-   {w:'know',jp:'知っている',ex:'I know.',exjp:'知ってる'},
-   {w:'think',jp:'思う',ex:'I think so.',exjp:'そう思う'},
-   {w:'say',jp:'言う',ex:'What did you say?',exjp:'何て言った？'},
-   {w:'tell',jp:'伝える',ex:'Tell me.',exjp:'教えて'},
-   {w:'mean',jp:'意味する',ex:'What do you mean?',exjp:'どういう意味？'},
-   {w:'feel',jp:'感じる',ex:'I feel good.',exjp:'気分がいい'},
-   {w:'seem',jp:'〜のようだ',ex:'It seems okay.',exjp:'大丈夫そう'},
-   {w:'believe',jp:'信じる',ex:'I believe you.',exjp:'信じるよ'},
-   {w:'hope',jp:'願う',ex:'I hope so.',exjp:'そうだといいな'},
-   {w:'guess',jp:'たぶん〜と思う',ex:'I guess so.',exjp:'たぶんそう'},
-   {w:'agree',jp:'賛成する',ex:'I agree.',exjp:'賛成'},
-   {w:'decide',jp:'決める',ex:'You decide.',exjp:'君が決めて'},
-   {w:'remember',jp:'覚えている',ex:'I remember.',exjp:'覚えてる'},
-   {w:'understand',jp:'わかる',ex:'I understand.',exjp:'わかった'},
+ {sc:'仕事・職場', short:'⑧仕事', items:[
+   {t:'朝のあいさつ', L:[
+     ['A','Good morning! How was your weekend?','おはよう！週末どうだった？'],['B','It was great, thanks. And yours?','よかったよ、ありがとう。そっちは？'],
+     ['A','Relaxing. Ready for the meeting?','のんびりしたよ。会議の準備は？'],['B','Almost. Give me five minutes.','もう少し。5分ちょうだい'],
+     ['A','Sure, no rush.','うん、急がなくていいよ'],['B','Thanks.','ありがとう'],
+   ]},
+   {t:'お願いする', L:[
+     ['A','Could you do me a favor?','お願いしてもいい？'],['B','Sure, what do you need?','いいよ、何？'],
+     ['A','Can you check this report?','この報告書を見てくれる？'],['B','No problem. When do you need it?','大丈夫。いつまで？'],
+     ['A','By the end of the day.','今日中に'],['B','Okay, I\u2019ll get to it.','了解、やっておくよ'],
+     ['A','Thanks, I owe you one.','ありがとう、恩に着るよ'],['B','Any time.','いつでも'],
+   ]},
+   {t:'休みを取る', L:[
+     ['A','Can I take Friday off?','金曜日休んでもいいですか？'],['B','Sure. Is everything okay?','いいですよ。何かありましたか？'],
+     ['A','Yes, just a family thing.','ええ、ちょっと家の用事で'],['B','No problem. Enjoy your day.','大丈夫です。ゆっくりどうぞ'],
+     ['A','Thank you so much.','ありがとうございます'],['B','You\u2019re welcome.','どういたしまして'],
+   ]},
  ]},
- {t:'数えかた・単位', short:'⑩単位', words:[
-   {w:'pair',jp:'1組',ex:'a pair of shoes',exjp:'くつ1足'},
-   {w:'group',jp:'グループ',ex:'a group of people',exjp:'人の集まり'},
-   {w:'piece',jp:'1切れ・1個',ex:'a piece of cake',exjp:'ケーキ1切れ'},
-   {w:'slice',jp:'1枚（薄切り）',ex:'a slice of bread',exjp:'パン1枚'},
-   {w:'cup',jp:'1杯（カップ）',ex:'a cup of tea',exjp:'お茶1杯'},
-   {w:'glass',jp:'1杯（コップ）',ex:'a glass of water',exjp:'水1杯'},
-   {w:'bottle',jp:'1本（ボトル）',ex:'a bottle of milk',exjp:'牛乳1本'},
-   {w:'bag',jp:'1袋',ex:'a bag of rice',exjp:'米1袋'},
-   {w:'box',jp:'1箱',ex:'a box of candy',exjp:'お菓子1箱'},
-   {w:'bunch',jp:'1束',ex:'a bunch of grapes',exjp:'ぶどう一房'},
-   {w:'couple',jp:'2〜3個',ex:'a couple of days',exjp:'2〜3日'},
-   {w:'percent',jp:'パーセント',ex:'ten percent',exjp:'10パーセント'},
-   {w:'meter',jp:'メートル',ex:'two meters',exjp:'2メートル'},
-   {w:'kilo',jp:'キロ',ex:'a kilo of meat',exjp:'肉1キロ'},
-   {w:'liter',jp:'リットル',ex:'a liter of milk',exjp:'牛乳1リットル'},
-   {w:'set',jp:'1セット',ex:'a set of cups',exjp:'カップ1セット'},
+ {sc:'友達・雑談', short:'⑨雑談', items:[
+   {t:'週末の予定', L:[
+     ['A','Any plans for the weekend?','週末の予定ある？'],['B','Not really. Maybe a movie.','特には。映画でも見ようかな'],
+     ['A','Want to go together?','一緒に行く？'],['B','Sure! What time?','いいね！何時？'],
+     ['A','How about seven?','7時はどう？'],['B','Works for me. See you then.','大丈夫。じゃあそのとき'],
+   ]},
+   {t:'天気の話', L:[
+     ['A','It\u2019s so hot today.','今日すごく暑いね'],['B','I know. I can\u2019t stand it.','ほんと。耐えられない'],
+     ['A','They say it\u2019ll rain tomorrow.','明日は雨らしいよ'],['B','Really? I hope not.','ほんと？降らないといいな'],
+     ['A','Take an umbrella, just in case.','念のため傘を持っていきな'],['B','Good idea. Thanks.','そうだね。ありがとう'],
+   ]},
+   {t:'おすすめを聞く', L:[
+     ['A','Do you know a good restaurant?','いいレストラン知ってる？'],['B','Yeah, there\u2019s a nice one downtown.','うん、中心街にいい店があるよ'],
+     ['A','What kind of food?','どんな料理？'],['B','Italian. The pasta is amazing.','イタリアン。パスタが最高'],
+     ['A','Sounds great. Let\u2019s go!','いいね。行こう！'],['B','I\u2019ll make a reservation.','予約しておくよ'],
+   ]},
+   {t:'お祝いを言う', L:[
+     ['A','Guess what? I got the job!','聞いて、仕事決まったの！'],['B','That\u2019s wonderful! Congratulations!','すごい！おめでとう！'],
+     ['A','Thanks! I\u2019m so happy.','ありがとう！すごくうれしい'],['B','You deserve it.','あなたなら当然だよ'],
+     ['A','Let\u2019s celebrate this weekend.','週末お祝いしよう'],['B','Definitely!','もちろん！'],
+   ]},
  ]},
- {t:'数・量・つなぎの一言', short:'⑪一言', words:[
-   {w:'How many?',jp:'いくつ？',ex:'How many do you want?',exjp:'いくつほしい？'},
-   {w:'How much?',jp:'いくら？・どのくらい？',ex:'How much is it?',exjp:'いくら？'},
-   {w:"That's all.",jp:'それで全部',ex:"That's all, thanks.",exjp:'それで全部、ありがとう'},
-   {w:'Me too.',jp:'私も',ex:'Me too!',exjp:'私も！'},
-   {w:'Not yet.',jp:'まだ',ex:'Not yet, sorry.',exjp:'まだ、ごめん'},
-   {w:'One more, please.',jp:'もう1つください',ex:'One more, please.',exjp:'もう1つお願い'},
-   {w:'A little more.',jp:'もう少し',ex:'A little more, please.',exjp:'もう少しお願い'},
-   {w:"That's right.",jp:'その通り',ex:"Yes, that's right.",exjp:'うん、その通り'},
-   {w:'Of course.',jp:'もちろん',ex:'Of course!',exjp:'もちろん！'},
-   {w:'I think so.',jp:'そう思う',ex:'I think so too.',exjp:'私もそう思う'},
-   {w:'No problem.',jp:'問題ない',ex:'No problem at all.',exjp:'全然問題ない'},
-   {w:'Maybe.',jp:'たぶん',ex:'Maybe later.',exjp:'たぶん後で'},
+ {sc:'お願い・トラブル', short:'⑩お願い', items:[
+   {t:'助けを求める', L:[
+     ['A','Excuse me, can you help me?','すみません、手伝ってもらえますか？'],['B','Sure, what\u2019s wrong?','はい、どうしました？'],
+     ['A','I can\u2019t find my phone.','スマホが見つからなくて'],['B','Did you check your bag?','カバンは見ましたか？'],
+     ['A','Oh, here it is! Thank you.','あ、ありました！ありがとう'],['B','No worries.','どういたしまして'],
+   ]},
+   {t:'あやまる', L:[
+     ['A','I\u2019m really sorry I\u2019m late.','遅れて本当にごめん'],['B','It\u2019s okay. What happened?','大丈夫。どうしたの？'],
+     ['A','I missed the train.','電車に乗り遅れて'],['B','No worries. Let\u2019s start.','気にしないで。始めよう'],
+     ['A','Thanks for understanding.','わかってくれてありがとう'],['B','No problem at all.','全然問題ないよ'],
+   ]},
+   {t:'落とし物', L:[
+     ['A','Excuse me, is this your wallet?','すみません、これあなたの財布ですか？'],['B','Oh, yes! Thank you so much!','あ、はい！本当にありがとう！'],
+     ['A','You dropped it back there.','そこで落としましたよ'],['B','I didn\u2019t even notice.','全然気づきませんでした'],
+     ['A','No problem. Have a good day.','どういたしまして。よい一日を'],['B','You too!','あなたも！'],
+   ]},
  ]},
 ];
 
 /* ============ レンダリング ============ */
-let LID=0,DID=0;const learnIds=[];const learned=new Set();const ALL=[];const WORDS=[];
+let DID=0;const learnIds=[];const learned=new Set();const ALL=[];const PAIRS=[];
 function waveSpan(n){let s='<span class="wave">';for(let i=0;i<(n||3);i++)s+='<i></i>';return s+'</span>';}
 function mini(say){return '<button class="speak mini" data-say="'+say+'" aria-label="聞く">'+waveSpan(4)+'<span class="lbl"></span></button>';}
 function learnBtn(id){return '<button class="learn-btn" data-learn="'+id+'" aria-label="できた"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></button>';}
-function renderDlg(lines){const id='dlg'+(DID++);const rows=lines.map(L=>'<div class="dline" data-en="'+L.en+'"><span class="who '+L.who+'">'+L.who+'</span><span class="dl-en">'+L.en+'</span>'+mini(L.en)+'<span class="dl-jp jp">'+L.jp+'</span></div>').join('');
- return '<div class="dlg" id="'+id+'"><div class="dlg-head"><span class="lbl jp">会話</span><button class="dlg-play" data-target="'+id+'">▶ 通して聞く</button></div>'+rows+'</div>';}
-function renderWord(e,gi){WORDS.push({w:e.w,jp:e.jp,g:gi});
- if(e.ex)ALL.push({en:e.ex,jp:e.exjp,g:gi});else ALL.push({en:e.w,jp:e.jp,g:gi});
- const exLine=e.ex?'<div class="v-ex"><span class="v-ex-en">'+e.ex+'</span>'+mini(e.ex)+'<span class="v-ex-jp jp">'+e.exjp+'</span></div>':'';
- return '<div class="vrow"><div class="v-top"><span class="v-w">'+e.w+'</span>'+mini(e.w)+'<span class="v-jp jp">'+e.jp+'</span></div>'+exLine+'</div>';}
-function renderSec(s,gi){const id='c'+(LID++);learnIds.push(id);
- const rows=s.words.map(w=>renderWord(w,gi)).join('');
- const dlg=s.dlg?renderDlg(s.dlg):'';
- return '<div class="ptn" data-id="'+id+'"><div class="ptn-head"><div class="ptn-form">'+s.t+'</div>'+learnBtn(id)+'</div><div class="ptn-jp jp">このグループの単語（'+s.words.length+'語）</div><div class="vlist">'+rows+'</div>'+dlg+'</div>';}
+function esc(s){return s.replace(/"/g,'&quot;');}
+function renderItem(it,gi){const id='d'+(DID++);learnIds.push(id);
+ it.L.forEach((ln,i)=>{ALL.push({en:ln[1],jp:ln[2],g:gi});if(ln[0]==='B'&&i>0&&it.L[i-1][0]==='A'){PAIRS.push({line:it.L[i-1][1],linejp:it.L[i-1][2],answer:ln[1],jp:ln[2]});}});
+ const rows=it.L.map(ln=>'<div class="dline" data-en="'+esc(ln[1])+'"><span class="who '+ln[0]+'">'+ln[0]+'</span><div class="dl-main"><div class="dl-en">'+ln[1]+'</div><div class="dl-jp jp">'+ln[2]+'</div></div>'+mini(ln[1])+'</div>').join('');
+ return '<div class="dlg" id="'+id+'" data-id="'+id+'"><div class="dlg-head"><span class="lbl jp">'+it.t+'</span><button class="dlg-play" data-target="'+id+'">▶ 通して聞く</button></div><div class="dlines">'+rows+'</div><div class="dlg-foot">'+learnBtn(id)+'</div></div>';}
 
 const root=$('root');
-SEC.forEach((s,gi)=>{root.insertAdjacentHTML('beforeend',renderSec(s,gi));});
+DLG.forEach((sec,gi)=>{let html='<div class="scene-head"><span class="n">'+(gi+1)+'</span><h3 class="jp">'+sec.sc+'</h3></div>';html+=sec.items.map(it=>renderItem(it,gi)).join('');root.insertAdjacentHTML('beforeend',html);});
 $('totalCount').textContent=learnIds.length;
 
-function playDlg(tid){const lines=[...document.querySelectorAll('#'+tid+' .dline')];let i=0;const run=()=>{lines.forEach(l=>l.classList.remove('playing'));if(i>=lines.length)return;const l=lines[i];l.classList.add('playing');l.scrollIntoView({behavior:'smooth',block:'center'});const en=l.dataset.en;i++;speak(en,null,()=>setTimeout(run,420));};run();}
+function playDlg(tid){const lines=[...document.querySelectorAll('#'+tid+' .dline')];let i=0;const run=()=>{lines.forEach(l=>l.classList.remove('playing'));if(i>=lines.length)return;const l=lines[i];l.classList.add('playing');l.scrollIntoView({behavior:'smooth',block:'center'});const en=l.dataset.en;i++;speak(en,null,()=>setTimeout(run,430));};run();}
 document.addEventListener('click',(e)=>{
  const dp=e.target.closest('.dlg-play');if(dp){playDlg(dp.dataset.target);return;}
  const sp=e.target.closest('.speak');if(sp){speak(sp.dataset.say,sp);practiceXP(sp);return;}
@@ -817,49 +795,49 @@ document.addEventListener('click',(e)=>{
    updateCount();renderProg();saveState();return;}
 });
 
-/* ============ 単語フラッシュ ============ */
-let fQ=[],fcur=0,fscore=0;const _fDone={};
-$('flMicNote').textContent=SR?'※ 🎤 を押すと英単語を聞き取って判定します（Chrome / Edge 推奨）。':'※ マイク判定に未対応。自分で言って 🔊 で確認 → 言えたら ✅。';
-function flStart(){fQ=shuffle(WORDS).slice(0,20);fcur=0;fscore=0;for(const k in _fDone)delete _fDone[k];registerStudyDay();$('flSetup').hidden=true;$('flResult').hidden=true;$('flDrill').hidden=false;flCard();}
-function flCard(){const c=fQ[fcur];$('flProg').textContent=(fcur+1)+' / '+fQ.length;$('flScore').textContent=fscore+' 言えた';$('flJp').textContent=c.jp;$('flAnswer').hidden=true;$('flEn').textContent=c.w;$('flFb').textContent='';$('flFb').className='tr-feedback';$('flRate').hidden=true;$('flMic').classList.remove('live');$('flMic').style.display=SR?'':'none';}
-function flPass(v){if(_fDone[fcur])return;_fDone[fcur]=true;fscore++;$('flScore').textContent=fscore+' 言えた';const r=$('flMic').getBoundingClientRect();awardXP(v?12:10,r.left+r.width/2-20,r.top-6);sPop();}
-function flMic(){if(!SR)return;const c=fQ[fcur];let rec;try{rec=new SR();}catch(e){return;}rec.lang='en-US';rec.interimResults=false;rec.maxAlternatives=5;$('flMic').classList.add('live');const f=$('flFb');f.textContent='🎙 聞いてるよ… 英語で言ってみて';f.className='tr-feedback listening';
- rec.onresult=e=>{const alts=[...e.results[0]].map(a=>a.transcript);let best=0;const heard=alts[0]||'';alts.forEach(a=>{const s=sim(a,c.w);if(s>best)best=s;});$('flMic').classList.remove('live');$('flAnswer').hidden=false;$('flRate').hidden=false;
-   if(best>=0.7){f.textContent='✅ 正解！ 「'+heard+'」';f.className='tr-feedback ok';flPass(true);confetti(30);setTimeout(flNext,900);}
-   else if(best>=0.4){f.textContent='🟡 おしい！ 聞こえた→「'+heard+'」';f.className='tr-feedback close';}
-   else{f.textContent='❌ もう一回！ 聞こえた→「'+heard+'」';f.className='tr-feedback miss';}};
- rec.onerror=ev=>{$('flMic').classList.remove('live');if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){f.textContent='マイクが使えないみたい。自分で言って ✅ で判定してね';f.className='tr-feedback close';$('flMic').style.display='none';$('flAnswer').hidden=false;$('flRate').hidden=false;}else if(ev.error==='no-speech'){f.textContent='聞き取れなかった。もう一度どうぞ';f.className='tr-feedback close';}else{f.textContent='うまくいかなかった。自己判定でどうぞ';f.className='tr-feedback close';$('flAnswer').hidden=false;$('flRate').hidden=false;}};
- rec.onend=()=>{$('flMic').classList.remove('live');};
- try{rec.start();}catch(e){f.textContent='マイクが使えないので自己判定でどうぞ';f.className='tr-feedback close';$('flMic').style.display='none';$('flAnswer').hidden=false;$('flRate').hidden=false;}}
-function flNext(){fcur++;if(fcur>=fQ.length)flEnd();else flCard();}
-function flEnd(){$('flDrill').hidden=true;$('flResult').hidden=false;$('flResBig').textContent=fscore+' / '+fQ.length;const ra=fscore/fQ.length;$('flResMsg').textContent=ra>=0.9?'すごい！ 単語が瞬間で出てる 🎉':ra>=0.6?'いい感じ！ 出なかった語をもう一周 💪':'語彙は回数。くり返すほど速くなるよ 👍';const bonus=10+fscore*2;G.xp+=bonus;renderStats();saveState();fx('+'+bonus+' XP',innerWidth/2-24,innerHeight*0.34,'bonus');if(ra>=0.6){confetti(150);sLevel();}}
-$('flStart').onclick=flStart;$('flAgain').onclick=()=>{$('flResult').hidden=true;$('flSetup').hidden=false;};
-$('flQuit').onclick=()=>{$('flDrill').hidden=true;$('flSetup').hidden=false;};
-$('flMic').onclick=flMic;
-$('flHear').onclick=()=>{$('flAnswer').hidden=false;speak(fQ[fcur].w,$('flHear'));$('flRate').hidden=false;};
-$('flShow').onclick=()=>{$('flAnswer').hidden=false;$('flRate').hidden=false;};
-$('flYes').onclick=()=>{flPass(false);confetti(20);setTimeout(flNext,400);};
-$('flNo').onclick=()=>{$('flFb').textContent='もう一回どうぞ！';$('flFb').className='tr-feedback close';};
-$('flNext').onclick=flNext;
+/* ============ ロールプレイ・トレ ============ */
+let rQ=[],rcur=0,rscore=0;const _rDone={};
+$('rpMicNote').textContent=SR?'※ 🎤 を押すとBの返事を聞き取って判定します（Chrome / Edge 推奨）。':'※ マイク判定に未対応。自分で言って 🔊 で確認 → 言えたら ✅。';
+function rStart(){rQ=shuffle(PAIRS).slice(0,15);rcur=0;rscore=0;for(const k in _rDone)delete _rDone[k];registerStudyDay();$('rpSetup').hidden=true;$('rpResult').hidden=true;$('rpDrill').hidden=false;rCard();}
+function rCard(){const c=rQ[rcur];$('rpProg').textContent=(rcur+1)+' / '+rQ.length;$('rpScore').textContent=rscore+' 言えた';$('rpLine').innerHTML='<span class="who-a">A</span>'+c.line;$('rpLineJp').textContent=c.linejp;$('rpAnswer').hidden=true;$('rpEn').textContent=c.answer+'（'+c.jp+'）';$('rpFb').textContent='';$('rpFb').className='tr-feedback';$('rpRate').hidden=true;$('rpMic').classList.remove('live');$('rpMic').style.display=SR?'':'none';}
+function rPass(v){if(_rDone[rcur])return;_rDone[rcur]=true;rscore++;$('rpScore').textContent=rscore+' 言えた';const r=$('rpMic').getBoundingClientRect();awardXP(v?16:13,r.left+r.width/2-20,r.top-6);sPop();}
+function rMic(){if(!SR)return;const c=rQ[rcur];let rec;try{rec=new SR();}catch(e){return;}rec.lang='en-US';rec.interimResults=false;rec.maxAlternatives=4;$('rpMic').classList.add('live');const f=$('rpFb');f.textContent='🎙 聞いてるよ… B役で返してみて';f.className='tr-feedback listening';
+ rec.onresult=e=>{const alts=[...e.results[0]].map(a=>a.transcript);let best=0;const heard=alts[0]||'';alts.forEach(a=>{const s=sim(a,c.answer);if(s>best)best=s;});$('rpMic').classList.remove('live');$('rpAnswer').hidden=false;$('rpRate').hidden=false;
+   if(best>=0.62){f.textContent='✅ ばっちり！ 「'+heard+'」';f.className='tr-feedback ok';rPass(true);confetti(40);setTimeout(rNext,1100);}
+   else if(best>=0.38){f.textContent='🟡 おしい！ 聞こえた→「'+heard+'」';f.className='tr-feedback close';}
+   else{f.textContent='❌ もう一回！ 聞こえた→「'+heard+'」 ／ 別の自然な返しでもOK';f.className='tr-feedback miss';}};
+ rec.onerror=ev=>{$('rpMic').classList.remove('live');if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){f.textContent='マイクが使えないみたい。自分で言って ✅ で判定してね';f.className='tr-feedback close';$('rpMic').style.display='none';$('rpAnswer').hidden=false;$('rpRate').hidden=false;}else if(ev.error==='no-speech'){f.textContent='聞き取れなかった。もう一度どうぞ';f.className='tr-feedback close';}else{f.textContent='うまくいかなかった。自己判定でどうぞ';f.className='tr-feedback close';$('rpAnswer').hidden=false;$('rpRate').hidden=false;}};
+ rec.onend=()=>{$('rpMic').classList.remove('live');};
+ try{rec.start();}catch(e){f.textContent='マイクが使えないので自己判定でどうぞ';f.className='tr-feedback close';$('rpMic').style.display='none';$('rpAnswer').hidden=false;$('rpRate').hidden=false;}}
+function rNext(){rcur++;if(rcur>=rQ.length)rEnd();else rCard();}
+function rEnd(){$('rpDrill').hidden=true;$('rpResult').hidden=false;$('rpResBig').textContent=rscore+' / '+rQ.length;const ra=rscore/rQ.length;$('rpResMsg').textContent=ra>=0.9?'すごい！ 会話の流れで返せてる 🎉':ra>=0.6?'いい感じ！ 実際の会話に近づいてる 💪':'返しは慣れ。場面ごとくり返そう 👍';const bonus=12+rscore*3;G.xp+=bonus;renderStats();saveState();fx('+'+bonus+' XP',innerWidth/2-24,innerHeight*0.34,'bonus');if(ra>=0.6){confetti(150);sLevel();}}
+$('rpStart').onclick=rStart;$('rpAgain').onclick=()=>{$('rpResult').hidden=true;$('rpSetup').hidden=false;};
+$('rpQuit').onclick=()=>{$('rpDrill').hidden=true;$('rpSetup').hidden=false;};
+$('rpMic').onclick=rMic;
+$('rpHear').onclick=()=>{$('rpAnswer').hidden=false;speak(rQ[rcur].answer,$('rpHear'));$('rpRate').hidden=false;};
+$('rpShow').onclick=()=>{$('rpAnswer').hidden=false;$('rpRate').hidden=false;};
+$('rpYes').onclick=()=>{rPass(false);confetti(30);setTimeout(rNext,500);};
+$('rpNo').onclick=()=>{$('rpFb').textContent='もう一回どうぞ！';$('rpFb').className='tr-feedback close';};
+$('rpNext').onclick=rNext;
 
 /* ============ 口頭作文トレ ============ */
 let pQ=[],pi=0,pscore=0,ppick='all';const _pDone={};
-(function(){const p=$('prPicks');const present=new Set(ALL.map(x=>x.g));const opts=[['all','ぜんぶミックス']].concat(SEC.map((s,i)=>[String(i),s.short]).filter(o=>present.has(+o[0])&&o[1]));opts.forEach(([v,l],idx)=>{const b=document.createElement('button');b.className='pick'+(idx===0?' sel':'');b.textContent=l;b.onclick=()=>{ppick=v;p.querySelectorAll('.pick').forEach(x=>x.classList.toggle('sel',x===b));};p.appendChild(b);});})();
+(function(){const p=$('prPicks');const present=new Set(ALL.map(x=>x.g));const opts=[['all','ぜんぶミックス']].concat(DLG.map((s,i)=>[String(i),s.short]).filter(o=>present.has(+o[0])&&o[1]));opts.forEach(([v,l],idx)=>{const b=document.createElement('button');b.className='pick'+(idx===0?' sel':'');b.textContent=l;b.onclick=()=>{ppick=v;p.querySelectorAll('.pick').forEach(x=>x.classList.toggle('sel',x===b));};p.appendChild(b);});})();
 $('prMicNote').textContent=SR?'※ 🎤 を押すと発音を聞き取って判定します（マイク許可が必要・Chrome / Edge 推奨）。':'※ このブラウザはマイク判定に未対応。自分で言って 🔊 で確認 → 言えたら ✅。';
 function pBuild(){let pool=ppick==='all'?ALL:ALL.filter(x=>x.g===+ppick);pQ=shuffle(pool).slice(0,15);for(const k in _pDone)delete _pDone[k];}
-function pStart(){pBuild();if(!pQ.length){toast('このテーマは例文なし');return;}pi=0;pscore=0;registerStudyDay();$('prSetup').hidden=true;$('prResult').hidden=true;$('prDrill').hidden=false;pCard();}
+function pStart(){pBuild();if(!pQ.length){toast('この場面は文なし');return;}pi=0;pscore=0;registerStudyDay();$('prSetup').hidden=true;$('prResult').hidden=true;$('prDrill').hidden=false;pCard();}
 function pCard(){const c=pQ[pi];$('prProg').textContent=(pi+1)+' / '+pQ.length;$('prScore').textContent=pscore+' 言えた';$('prJp').textContent=c.jp;$('prAnswer').hidden=true;$('prEn').textContent=c.en;$('prFb').textContent='';$('prFb').className='tr-feedback';$('prRate').hidden=true;$('prMic').classList.remove('live');$('prMic').style.display=SR?'':'none';}
-function pPass(v){if(_pDone[pi])return;_pDone[pi]=true;pscore++;$('prScore').textContent=pscore+' 言えた';const r=$('prMic').getBoundingClientRect();awardXP(v?15:12,r.left+r.width/2-20,r.top-6);sPop();}
+function pPass(v){if(_pDone[pi])return;_pDone[pi]=true;pscore++;$('prScore').textContent=pscore+' 言えた';const r=$('prMic').getBoundingClientRect();awardXP(v?16:13,r.left+r.width/2-20,r.top-6);sPop();}
 function pMic(){if(!SR)return;const c=pQ[pi];let rec;try{rec=new SR();}catch(e){return;}rec.lang='en-US';rec.interimResults=false;rec.maxAlternatives=4;$('prMic').classList.add('live');const f=$('prFb');f.textContent='🎙 聞いてるよ… 英語で言ってみて';f.className='tr-feedback listening';
  rec.onresult=e=>{const alts=[...e.results[0]].map(a=>a.transcript);let best=0;const heard=alts[0]||'';alts.forEach(a=>{const s=sim(a,c.en);if(s>best)best=s;});$('prMic').classList.remove('live');$('prAnswer').hidden=false;$('prRate').hidden=false;
-   if(best>=0.72){f.textContent='✅ ばっちり！ 「'+heard+'」';f.className='tr-feedback ok';pPass(true);confetti(40);setTimeout(pNext,1100);}
-   else if(best>=0.45){f.textContent='🟡 おしい！ 聞こえた→「'+heard+'」';f.className='tr-feedback close';}
+   if(best>=0.7){f.textContent='✅ ばっちり！ 「'+heard+'」';f.className='tr-feedback ok';pPass(true);confetti(40);setTimeout(pNext,1100);}
+   else if(best>=0.42){f.textContent='🟡 おしい！ 聞こえた→「'+heard+'」';f.className='tr-feedback close';}
    else{f.textContent='❌ もう一回！ 聞こえた→「'+heard+'」';f.className='tr-feedback miss';}};
  rec.onerror=ev=>{$('prMic').classList.remove('live');if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){f.textContent='マイクが使えないみたい。自分で言って ✅ で判定してね';f.className='tr-feedback close';$('prMic').style.display='none';$('prAnswer').hidden=false;$('prRate').hidden=false;}else if(ev.error==='no-speech'){f.textContent='聞き取れなかった。もう一度どうぞ';f.className='tr-feedback close';}else{f.textContent='うまくいかなかった。自己判定でどうぞ';f.className='tr-feedback close';$('prAnswer').hidden=false;$('prRate').hidden=false;}};
  rec.onend=()=>{$('prMic').classList.remove('live');};
  try{rec.start();}catch(e){f.textContent='マイクが使えないので自己判定でどうぞ';f.className='tr-feedback close';$('prMic').style.display='none';$('prAnswer').hidden=false;$('prRate').hidden=false;}}
 function pNext(){pi++;if(pi>=pQ.length)pEnd();else pCard();}
-function pEnd(){$('prDrill').hidden=true;$('prResult').hidden=false;$('prResBig').textContent=pscore+' / '+pQ.length;const ra=pscore/pQ.length;$('prResMsg').textContent=ra>=0.9?'すごい！ 例文がスラスラ 🎉':ra>=0.6?'いい感じ！ 言えなかったのをもう一周 💪':'声に出した分だけ定着するよ 👍';const bonus=10+pscore*3;G.xp+=bonus;renderStats();saveState();fx('+'+bonus+' XP',innerWidth/2-24,innerHeight*0.34,'bonus');if(ra>=0.6){confetti(150);sLevel();}}
+function pEnd(){$('prDrill').hidden=true;$('prResult').hidden=false;$('prResBig').textContent=pscore+' / '+pQ.length;const ra=pscore/pQ.length;$('prResMsg').textContent=ra>=0.9?'すごい！ 会話の文がスラスラ 🎉':ra>=0.6?'いい感じ！ 言えなかったのをもう一周 💪':'声に出した分だけ話せるようになるよ 👍';const bonus=12+pscore*3;G.xp+=bonus;renderStats();saveState();fx('+'+bonus+' XP',innerWidth/2-24,innerHeight*0.34,'bonus');if(ra>=0.6){confetti(150);sLevel();}}
 $('prStart').onclick=pStart;$('prAgain').onclick=()=>{$('prResult').hidden=true;$('prSetup').hidden=false;};
 $('prQuit').onclick=()=>{$('prDrill').hidden=true;$('prSetup').hidden=false;};
 $('prMic').onclick=pMic;
@@ -869,7 +847,7 @@ $('prYes').onclick=()=>{pPass(false);confetti(30);setTimeout(pNext,500);};
 $('prNo').onclick=()=>{$('prFb').textContent='もう一回どうぞ！';$('prFb').className='tr-feedback close';};
 $('prNext').onclick=pNext;
 
-(function GAME_init(){(G.learned||[]).forEach(id=>{const card=document.querySelector('.ptn[data-id="'+id+'"]');if(card){card.classList.add('learned');learned.add(id);}});updateCount();renderProg();renderStats();})();
+(function GAME_init(){(G.learned||[]).forEach(id=>{const card=document.querySelector('.dlg[data-id="'+id+'"]');if(card){card.classList.add('learned');learned.add(id);}});updateCount();renderProg();renderStats();})();
 
 </script>
 </body>
