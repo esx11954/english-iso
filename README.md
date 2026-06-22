@@ -15,6 +15,7 @@
 | `page5.html` | 第5部 ― 自然に話す |
 | `page6-1.html` 〜 `page6-13.html` | 第6部 ― 語彙（全13章） |
 | `lesson.html` | AI英会話レッスン（Practice セクション） |
+| `shadowing.html` | シャドーイング練習（Practice セクション） |
 
 ## 新しいページを追加するには
 
